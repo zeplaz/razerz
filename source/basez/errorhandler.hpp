@@ -15,4 +15,41 @@
    SHADER_LINK_FAIL = -19,
  };
 
+
+ std::string error_to_string(int in_error)
+ {
+   switch(in_error)
+   {
+     case PARSER_FAIL :
+     return "PARSER_FAIL";
+
+     case TEXTURE_FAIL:
+     return "TEXTURE_FAIL";
+
+     case SHADER_FAIL :
+     return "SHADER_FAIL";
+
+     case MAIN_FAIL :
+     return "MAIN_FAIL";
+     
+     case ENGINE_FAILURE:
+     return "ENGINE_FAILURE";
+
+     case OPENGL_FAILCAUGHT:
+     return "OPENGL_FAILCAUGHT";
+
+     case FILE_FORMATE_ERROR:
+     return "FILE_FORMATE_ERROR" ;
+
+     case MAPLOOKUP_FAIL:
+     return "MAPLOOKUP_FAIL";
+
+     case SHADER_LINK_FAIL:
+     return "SHADER_LINK_FAIL";
+
+     default :
+     return "UNKNOWN_ERROR";
+   }
+ }
+
  #endif

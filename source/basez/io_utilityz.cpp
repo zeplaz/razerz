@@ -4,8 +4,8 @@
 void pathz::output_display()
 {
   std::cout << "filename IZ::" << file_name<< '\n';
-  std::cout << "rawpath IZ::" << raw_path <<'\n';
-
+  std::cout << "drectory IZ::" << drectory_path <<'\n';
+std::cout << "full IZ::" << full_path <<'\n';
   switch(extention)
   {
     case File_Extention::FE_XML :
@@ -43,27 +43,32 @@ void  pathz::set_file_name(const char* in_path)
   {
     size_t path_size = strlen(in_path);
     char* temp_path =  const_cast<char*> (strrchr(in_path,'/'));
-    int pos = temp_path-in_path+1;
+    size_t pos = temp_path-in_path+1;
     std::cout << "tepos::" << pos << '\n';
     std::cout << "tempath::" << temp_path << '\n';
     int j = 0;
-    for(size_t i =pos; i< path_size; i++)
-    {
+    int i =pos;
+  //  std::cout << "size::" << path_size-pos;
+    file_name= new char [path_size-pos];
+    drectory_path = new char[path_size];
+    for(j; j< pos; j++)
+    { //std::cout <<  in_path[j];
+      drectory_path[j] += in_path[j];
+    }
+    j=0;
+
+    for(i; i< path_size; i++)
+    { std::cout <<  in_path[i];
       file_name[j] += in_path[i];
       j++;
     }
-
     std::cout << "##->filenameset\n";
   }
 void  pathz::set_extention(const char* in_path)
 {
     size_t path_size = strlen(in_path);
-    //const char* tempext;
     char* tempext =  const_cast<char*> (strrchr(in_path,'.'));
     int pos = tempext-in_path+1;
-
-  //  std::cout << "tepos::" << pos << '\n';
-  //  std::cout << "tempext::" << tempext << '\n';
 
     int j = 0;
     char temp_ext[255] ={NULL} ;

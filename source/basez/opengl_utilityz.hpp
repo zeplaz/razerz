@@ -1,7 +1,7 @@
 #pragma once
 
 #include "gl_lib_z.hpp"
-
+#include "lenz.hpp"
 static bool screen_beenresized = false;
 
 

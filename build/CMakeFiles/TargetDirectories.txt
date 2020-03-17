@@ -1,0 +1,15 @@
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/rebuild_cache.dir
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/install/strip.dir
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/install/local.dir
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/edit_cache.dir
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/list_install_components.dir
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/install.dir
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/install.dir
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/list_install_components.dir
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/install/strip.dir
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/install/local.dir
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/basez.dir
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/3rdparty.dir
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/rebuild_cache.dir
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/razerz_SRC.dir
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/edit_cache.dir

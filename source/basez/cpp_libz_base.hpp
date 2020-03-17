@@ -1,6 +1,4 @@
 
-
-
 #ifndef RA_CPP_LIBZ_BASEZ_HPP
 #define RA_CPP_LIBZ_BASEZ_HPP
 

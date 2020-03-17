@@ -160,7 +160,7 @@ glfwSetFramebufferSizeCallback(out_window, framebuffer_size_callback);
 
 GLenum glewErr = glewInit();
 std::cout << "glew_code::" << glewErr <<'\n' <<'\n';
-glViewport( 0, 0, MAIN_SCREEN_WIDTH, MAIN_SCREEN_HIGHT );
+glViewport( 0, 0, Screen::MAIN_SCREEN_WIDTH, Screen::MAIN_SCREEN_HIGHT );
 GLint flags;
 glGetIntegerv(GL_CONTEXT_FLAGS, &flags);
 

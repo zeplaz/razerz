@@ -11,6 +11,10 @@ utility
 -
 memory
 -
+algorithm
+-
+stdlib.h
+-
 string
 -
 cstring
@@ -50,6 +54,16 @@ errorhandler.hpp
 cpp_libz_base.hpp
 /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
 
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.cpp
+io_utilityz.hpp
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.hpp
+
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.hpp
+cpp_libz_base.hpp
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
+mathII.hpp
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/mathII.hpp
+
 /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/lenz.hpp
 gl_lib_z.hpp
 /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/gl_lib_z.hpp
@@ -75,4 +89,12 @@ gl_lib_z.hpp
 /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/gl_lib_z.hpp
 lenz.hpp
 /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/lenz.hpp
+
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.cpp
+sym_object.hpp
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.hpp
+
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.hpp
+cpp_libz_base.hpp
+/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
 

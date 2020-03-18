@@ -70,14 +70,14 @@ CMAKE_BINARY_DIR = /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build
 # Convenience name for "all" pass in the directory.
 source/all: source/CMakeFiles/basez.dir/all
 source/all: source/CMakeFiles/3rdparty.dir/all
-source/all: source/CMakeFiles/razerz_SRC.dir/all
+source/all: source/CMakeFiles/razerz.dir/all
 
 .PHONY : source/all
 
 # Convenience name for "clean" pass in the directory.
 source/clean: source/CMakeFiles/basez.dir/clean
 source/clean: source/CMakeFiles/3rdparty.dir/clean
-source/clean: source/CMakeFiles/razerz_SRC.dir/clean
+source/clean: source/CMakeFiles/razerz.dir/clean
 
 .PHONY : source/clean
 
@@ -161,40 +161,40 @@ clean: source/CMakeFiles/3rdparty.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target source/CMakeFiles/razerz_SRC.dir
+# Target rules for target source/CMakeFiles/razerz.dir
 
 # All Build rule for target.
-source/CMakeFiles/razerz_SRC.dir/all: source/CMakeFiles/basez.dir/all
-source/CMakeFiles/razerz_SRC.dir/all: source/CMakeFiles/3rdparty.dir/all
-	$(MAKE) -f source/CMakeFiles/razerz_SRC.dir/build.make source/CMakeFiles/razerz_SRC.dir/depend
-	$(MAKE) -f source/CMakeFiles/razerz_SRC.dir/build.make source/CMakeFiles/razerz_SRC.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=7,8 "Built target razerz_SRC"
-.PHONY : source/CMakeFiles/razerz_SRC.dir/all
+source/CMakeFiles/razerz.dir/all: source/CMakeFiles/basez.dir/all
+source/CMakeFiles/razerz.dir/all: source/CMakeFiles/3rdparty.dir/all
+	$(MAKE) -f source/CMakeFiles/razerz.dir/build.make source/CMakeFiles/razerz.dir/depend
+	$(MAKE) -f source/CMakeFiles/razerz.dir/build.make source/CMakeFiles/razerz.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=7,8 "Built target razerz"
+.PHONY : source/CMakeFiles/razerz.dir/all
 
 # Include target in all.
-all: source/CMakeFiles/razerz_SRC.dir/all
+all: source/CMakeFiles/razerz.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-source/CMakeFiles/razerz_SRC.dir/rule: cmake_check_build_system
+source/CMakeFiles/razerz.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 8
-	$(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/razerz_SRC.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/razerz.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 0
-.PHONY : source/CMakeFiles/razerz_SRC.dir/rule
+.PHONY : source/CMakeFiles/razerz.dir/rule
 
 # Convenience name for target.
-razerz_SRC: source/CMakeFiles/razerz_SRC.dir/rule
+razerz: source/CMakeFiles/razerz.dir/rule
 
-.PHONY : razerz_SRC
-
-# clean rule for target.
-source/CMakeFiles/razerz_SRC.dir/clean:
-	$(MAKE) -f source/CMakeFiles/razerz_SRC.dir/build.make source/CMakeFiles/razerz_SRC.dir/clean
-.PHONY : source/CMakeFiles/razerz_SRC.dir/clean
+.PHONY : razerz
 
 # clean rule for target.
-clean: source/CMakeFiles/razerz_SRC.dir/clean
+source/CMakeFiles/razerz.dir/clean:
+	$(MAKE) -f source/CMakeFiles/razerz.dir/build.make source/CMakeFiles/razerz.dir/clean
+.PHONY : source/CMakeFiles/razerz.dir/clean
+
+# clean rule for target.
+clean: source/CMakeFiles/razerz.dir/clean
 
 .PHONY : clean
 

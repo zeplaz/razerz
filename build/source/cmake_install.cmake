@@ -38,29 +38,29 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}/usr/local/bin/razerz_SRC" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/razerz_SRC")
+  if(EXISTS "$ENV{DESTDIR}/usr/local/bin/razerz" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/razerz")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}/usr/local/bin/razerz_SRC"
+         FILE "$ENV{DESTDIR}/usr/local/bin/razerz"
          RPATH "")
   endif()
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/usr/local/bin/razerz_SRC")
+   "/usr/local/bin/razerz")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/bin/razerz_SRC")
-  if(EXISTS "$ENV{DESTDIR}/usr/local/bin/razerz_SRC" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/razerz_SRC")
+file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/bin/razerz")
+  if(EXISTS "$ENV{DESTDIR}/usr/local/bin/razerz" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/razerz")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/usr/local/bin/razerz_SRC"
+         FILE "$ENV{DESTDIR}/usr/local/bin/razerz"
          OLD_RPATH "/usr/local/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/razerz_SRC")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/razerz")
     endif()
   endif()
 endif()

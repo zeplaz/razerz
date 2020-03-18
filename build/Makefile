@@ -183,17 +183,17 @@ basez/fast:
 .PHONY : 3rdparty/fast
 
 #=============================================================================
-# Target rules for targets named razerz_SRC
+# Target rules for targets named razerz
 
 # Build rule for target.
-razerz_SRC: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 razerz_SRC
-.PHONY : razerz_SRC
+razerz: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 razerz
+.PHONY : razerz
 
 # fast build rule for target.
-razerz_SRC/fast:
-	$(MAKE) -f source/CMakeFiles/razerz_SRC.dir/build.make source/CMakeFiles/razerz_SRC.dir/build
-.PHONY : razerz_SRC/fast
+razerz/fast:
+	$(MAKE) -f source/CMakeFiles/razerz.dir/build.make source/CMakeFiles/razerz.dir/build
+.PHONY : razerz/fast
 
 # Help Target
 help:
@@ -209,7 +209,7 @@ help:
 	@echo "... install"
 	@echo "... basez"
 	@echo "... 3rdparty"
-	@echo "... razerz_SRC"
+	@echo "... razerz"
 .PHONY : help
 
 

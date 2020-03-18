@@ -9,7 +9,7 @@
 set(CMAKE_BUILD_DIR ${PROJECT_SOURCE_DIR}/build)
 
 #Add any other src file you may write
-set(razerz_SRC
+set(razerz
     "ttestz/sysm_test.cpp"
 )
 
@@ -20,6 +20,9 @@ add_library(3rdparty STATIC
   "basez/3rdparty/frame_to_video.cpp"
   "basez/3rdparty/frame_to_video.hpp"
 )
+
+
+
 
 add_library(basez STATIC
 "basez/cpp_libz_base.hpp"
@@ -34,6 +37,7 @@ add_library(basez STATIC
 "basez/opengl_utilityz.cpp"
 "basez/sym_object.cpp"
 "basez/sym_object.hpp"
+"modualz/phyziz/pysic_lib.hpp"
 )
 #Rename the source files that will create the library, to a proper name!
 #set(razerz_basez_LIB
@@ -72,11 +76,11 @@ file(MAKE_DIRECTORY ${LIBRARY_OUTPUT_PATH})
 
 # Tell CMake to create the  executable and/or shared libs
 #add_library(somename SHARED ${_LIB})
-add_executable(razerz_SRC ${razerz_SRC})
+add_executable(razerz ${razerz})
 #target_link_libraries(  somename )
 
 #If your app, links to an external lib -ie Boost
-target_link_libraries(razerz_SRC ${LIBS} ${OPENGL_LIBRARIES} Threads::Threads OpenGL::GL ${CMAKE_DL_LIBS} ${FREETYPE_LIBRARY} ${OpenCV_LIBS} ${GLUT_LIBRARY} ${X11_LIBRARIES})
+target_link_libraries(razerz ${LIBS} ${OPENGL_LIBRARIES} Threads::Threads OpenGL::GL ${CMAKE_DL_LIBS} ${FREETYPE_LIBRARY} ${OpenCV_LIBS} ${GLUT_LIBRARY} ${X11_LIBRARIES})
 # Install the executable and libraries (don't forget to uncomment the lib line if you want)
-install(TARGETS razerz_SRC DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+install(TARGETS razerz DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 #install(TARGETS somename DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)

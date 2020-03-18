@@ -31,6 +31,10 @@ utility
 -
 memory
 -
+algorithm
+-
+stdlib.h
+-
 string
 -
 cstring

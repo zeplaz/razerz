@@ -33,6 +33,10 @@ utility
 -
 memory
 -
+algorithm
+-
+stdlib.h
+-
 string
 -
 cstring
@@ -69,12 +73,6 @@ cpp_libz_base.hpp
 /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
 
 /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/phyziz/pysic_lib.hpp
-array
--
-cmath
--
-algorithm
--
 ../basez/gl_lib_z.hpp
 /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/basez/gl_lib_z.hpp
 glm/gtx/norm.hpp

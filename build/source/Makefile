@@ -187,19 +187,19 @@ source/CMakeFiles/3rdparty.dir/rule:
 .PHONY : 3rdparty/fast
 
 # Convenience name for target.
-source/CMakeFiles/razerz_SRC.dir/rule:
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/razerz_SRC.dir/rule
-.PHONY : source/CMakeFiles/razerz_SRC.dir/rule
+source/CMakeFiles/razerz.dir/rule:
+	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/razerz.dir/rule
+.PHONY : source/CMakeFiles/razerz.dir/rule
 
 # Convenience name for target.
-razerz_SRC: source/CMakeFiles/razerz_SRC.dir/rule
+razerz: source/CMakeFiles/razerz.dir/rule
 
-.PHONY : razerz_SRC
+.PHONY : razerz
 
 # fast build rule for target.
-razerz_SRC/fast:
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/razerz_SRC.dir/build.make source/CMakeFiles/razerz_SRC.dir/build
-.PHONY : razerz_SRC/fast
+razerz/fast:
+	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/razerz.dir/build.make source/CMakeFiles/razerz.dir/build
+.PHONY : razerz/fast
 
 basez/3rdparty/frame_to_video.o: basez/3rdparty/frame_to_video.cpp.o
 
@@ -315,7 +315,7 @@ ttestz/sysm_test.o: ttestz/sysm_test.cpp.o
 
 # target to build an object file
 ttestz/sysm_test.cpp.o:
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/razerz_SRC.dir/build.make source/CMakeFiles/razerz_SRC.dir/ttestz/sysm_test.cpp.o
+	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/razerz.dir/build.make source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.o
 .PHONY : ttestz/sysm_test.cpp.o
 
 ttestz/sysm_test.i: ttestz/sysm_test.cpp.i
@@ -324,7 +324,7 @@ ttestz/sysm_test.i: ttestz/sysm_test.cpp.i
 
 # target to preprocess a source file
 ttestz/sysm_test.cpp.i:
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/razerz_SRC.dir/build.make source/CMakeFiles/razerz_SRC.dir/ttestz/sysm_test.cpp.i
+	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/razerz.dir/build.make source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.i
 .PHONY : ttestz/sysm_test.cpp.i
 
 ttestz/sysm_test.s: ttestz/sysm_test.cpp.s
@@ -333,7 +333,7 @@ ttestz/sysm_test.s: ttestz/sysm_test.cpp.s
 
 # target to generate assembly for a file
 ttestz/sysm_test.cpp.s:
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/razerz_SRC.dir/build.make source/CMakeFiles/razerz_SRC.dir/ttestz/sysm_test.cpp.s
+	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/razerz.dir/build.make source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.s
 .PHONY : ttestz/sysm_test.cpp.s
 
 # Help Target
@@ -348,8 +348,8 @@ help:
 	@echo "... install/local"
 	@echo "... basez"
 	@echo "... 3rdparty"
+	@echo "... razerz"
 	@echo "... rebuild_cache"
-	@echo "... razerz_SRC"
 	@echo "... edit_cache"
 	@echo "... basez/3rdparty/frame_to_video.o"
 	@echo "... basez/3rdparty/frame_to_video.i"

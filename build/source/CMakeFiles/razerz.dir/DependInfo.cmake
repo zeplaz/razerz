@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/ttestz/sysm_test.cpp" "/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/razerz_SRC.dir/ttestz/sysm_test.cpp.o"
+  "/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/ttestz/sysm_test.cpp" "/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

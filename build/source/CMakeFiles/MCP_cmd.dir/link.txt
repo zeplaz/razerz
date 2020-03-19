@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libMCP_cmd.a  CMakeFiles/MCP_cmd.dir/MCP_cmd/shader_pipeline_CMD.cpp.o
+/usr/bin/ranlib ../lib/libMCP_cmd.a

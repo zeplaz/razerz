@@ -81,6 +81,9 @@ bin/razerz: source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.o
 bin/razerz: source/CMakeFiles/razerz.dir/build.make
 bin/razerz: lib/lib3rdparty.a
 bin/razerz: lib/libbasez.a
+bin/razerz: lib/libmodualz.a
+bin/razerz: lib/libparserz.a
+bin/razerz: lib/libMCP_cmd.a
 bin/razerz: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 bin/razerz: /usr/lib/x86_64-linux-gnu/libGLX.so
 bin/razerz: /usr/lib/x86_64-linux-gnu/libGLU.so

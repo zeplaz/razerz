@@ -14,7 +14,25 @@ source/CMakeFiles/basez.dir/basez/opengl_utilityz.cpp.o
  /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/mathII.hpp
  /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/opengl_utilityz.cpp
  /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/opengl_utilityz.hpp
+source/CMakeFiles/basez.dir/basez/shader_lib.cpp.o
+ /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
+ /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/errorhandler.hpp
+ /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/gl_lib_z.hpp
+ /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/mathII.hpp
+ /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/shader_lib.cpp
+ /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/shader_lib.hpp
+ /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.hpp
 source/CMakeFiles/basez.dir/basez/sym_object.cpp.o
  /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
  /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.cpp
  /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.hpp
+source/CMakeFiles/basez.dir/basez/texture.cpp.o
+ /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/3rdparty/stb_image.h
+ /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
+ /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/errorhandler.hpp
+ /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/gl_lib_z.hpp
+ /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/mathII.hpp
+ /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/shader_lib.hpp
+ /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.hpp
+ /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/texture.cpp
+ /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/texture.hpp

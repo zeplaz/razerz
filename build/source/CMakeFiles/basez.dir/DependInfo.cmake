@@ -6,13 +6,15 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.cpp" "/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.o"
   "/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/opengl_utilityz.cpp" "/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/basez.dir/basez/opengl_utilityz.cpp.o"
+  "/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/shader_lib.cpp" "/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/basez.dir/basez/shader_lib.cpp.o"
   "/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.cpp" "/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/basez.dir/basez/sym_object.cpp.o"
+  "/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/texture.cpp" "/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/basez.dir/basez/texture.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
-  "GIT_BRANCH=281c3d0e24034222247a68a14bd34ad379a6709d"
+  "GIT_BRANCH=bf2a3f5e58464b75659425d8714d0caede8aea24"
   )
 
 # The include file search paths:

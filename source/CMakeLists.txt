@@ -20,9 +20,22 @@ add_library(3rdparty STATIC
   "basez/3rdparty/frame_to_video.cpp"
   "basez/3rdparty/frame_to_video.hpp"
 )
+add_library(MCP_cmd STATIC
+"MCP_cmd/shader_pipeline_CMD.hpp"
+"MCP_cmd/shader_pipeline_CMD.cpp"
+)
+add_library(parserz STATIC
+  "parserz/geometry_parser.cpp"
+  "parserz/geometry_parser.hpp"
+  "parserz/parserlib.hpp"
+  "parserz/parserlib.cpp"
+)
 
-
-
+add_library(modualz STATIC
+"modualz/geometry/geometry.cpp"
+"modualz/geometry/geometry.hpp"
+"modualz/phyziz/pysic_lib.hpp"
+ )
 
 add_library(basez STATIC
 "basez/cpp_libz_base.hpp"
@@ -35,9 +48,12 @@ add_library(basez STATIC
 "basez/mathz.hpp"
 "basez/opengl_utilityz.hpp"
 "basez/opengl_utilityz.cpp"
+"basez/shader_lib.cpp"
+"basez/shader_lib.hpp"
 "basez/sym_object.cpp"
 "basez/sym_object.hpp"
-"modualz/phyziz/pysic_lib.hpp"
+"basez/texture.cpp"
+"basez/texture.hpp"
 )
 #Rename the source files that will create the library, to a proper name!
 #set(razerz_basez_LIB
@@ -50,7 +66,7 @@ add_library(basez STATIC
 #)
 
 include_directories( ${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS} ${OpenCV_INCLUDE_DIRS})
-set(LIBS glfw3 assimp GLEW  freetype 3rdparty basez)
+set(LIBS glfw3 assimp GLEW  freetype 3rdparty basez modualz parserz MCP_cmd)
 
 
 

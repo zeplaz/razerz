@@ -154,6 +154,10 @@ struct kinematic_steering_output
 
 constexpr float TIMETO_TARGET_BASE = 0.25f;
 constexpr float TIMETO_TARGET_VAR  = 0.1f;
+constexpr float BASE_MAX_ACCEL = 7.f;
+constexpr float BASE_MAX_SPEED = 7.f;
+constexpr float BASE_TAREGET_RADIUS = 4.f;
+constexpr float BASE_SLOWDOWN_RADIUS = 12.f;
 
 struct kinematic_variable_behav
 {
@@ -164,8 +168,22 @@ struct kinematic_variable_behav
   float target_radius;
   float slowdown_radius;
 
+  kinematic_variable_behav (const kinematic& in_self) : max_acceleration{BASE_MAX_ACCEL},max_speed{BASE_MAX_SPEED},target_radius{BASE_TAREGET_RADIUS}, slowdown_radius{BASE_SLOWDOWN_RADIUS}
+{
+  agent = in_self;
+}
+  void set_target(const kinematic& in_target)
+  {
+    target= in_target;
+  }
 
 
+  steeringoutput get_steering_align(float acceleration = 0)
+  {
+    steeringoutput result;
+    float rotation = target.staticz.orientation-agent.staticz.orientation;
+    
+  }
   steeringoutput get_steering_seek(float acceleration = 0)
   {
     steeringoutput result;
@@ -204,9 +222,43 @@ struct kinematic_variable_behav
 
   }
 
-    steeringoutput get_steering_arrive(float acceleration = 0)
+    steeringoutput get_steering_arrive(float speed = 0)
     {
+     steeringoutput result;
+     float set_speed;
+     if(speed ==0)
+     {
+       set_speed= max_speed;
+     }
+     else
+     {
+       set_speed = max_speed;
+     }
+    glm::vec3 direction = target.staticz.pos - agent.staticz.pos;
+    float distance = direction.length();
 
+    if(distance < target_radius)
+    { result.linear =glm::vec3(0.0f);
+      result.angular = 0.0f;
+
+      return result;
+    }
+    if(distance < slowdown_radius)
+    {
+      set_speed = set_speed*distance/slowdown_radius;
+    }
+    direction = glm::normalize(direction);
+    direction *=set_speed;
+    result.linear = direction - agent.velocity;
+    result.linear /= TIMETO_TARGET_VAR;
+
+    if(result.linear.length()>max_acceleration)
+    {
+      result.linear = glm::normalize(result.linear);
+      result.linear *=max_acceleration;
+    }
+    result.angular =0;
+    return result;
     }
 };
 

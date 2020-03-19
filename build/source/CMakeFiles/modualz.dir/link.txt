@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libmodualz.a  CMakeFiles/modualz.dir/modualz/geometry/geometry.cpp.o
+/usr/bin/ranlib ../lib/libmodualz.a

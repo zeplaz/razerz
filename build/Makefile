@@ -157,6 +157,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named modualz
+
+# Build rule for target.
+modualz: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 modualz
+.PHONY : modualz
+
+# fast build rule for target.
+modualz/fast:
+	$(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/build
+.PHONY : modualz/fast
+
+#=============================================================================
+# Target rules for targets named parserz
+
+# Build rule for target.
+parserz: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 parserz
+.PHONY : parserz
+
+# fast build rule for target.
+parserz/fast:
+	$(MAKE) -f source/CMakeFiles/parserz.dir/build.make source/CMakeFiles/parserz.dir/build
+.PHONY : parserz/fast
+
+#=============================================================================
 # Target rules for targets named basez
 
 # Build rule for target.
@@ -183,6 +209,19 @@ basez/fast:
 .PHONY : 3rdparty/fast
 
 #=============================================================================
+# Target rules for targets named MCP_cmd
+
+# Build rule for target.
+MCP_cmd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MCP_cmd
+.PHONY : MCP_cmd
+
+# fast build rule for target.
+MCP_cmd/fast:
+	$(MAKE) -f source/CMakeFiles/MCP_cmd.dir/build.make source/CMakeFiles/MCP_cmd.dir/build
+.PHONY : MCP_cmd/fast
+
+#=============================================================================
 # Target rules for targets named razerz
 
 # Build rule for target.
@@ -207,8 +246,11 @@ help:
 	@echo "... edit_cache"
 	@echo "... list_install_components"
 	@echo "... install"
+	@echo "... modualz"
+	@echo "... parserz"
 	@echo "... basez"
 	@echo "... 3rdparty"
+	@echo "... MCP_cmd"
 	@echo "... razerz"
 .PHONY : help
 

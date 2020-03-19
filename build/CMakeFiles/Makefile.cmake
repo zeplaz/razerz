@@ -70,7 +70,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "source/CMakeFiles/modualz.dir/DependInfo.cmake"
+  "source/CMakeFiles/parserz.dir/DependInfo.cmake"
   "source/CMakeFiles/basez.dir/DependInfo.cmake"
   "source/CMakeFiles/3rdparty.dir/DependInfo.cmake"
+  "source/CMakeFiles/MCP_cmd.dir/DependInfo.cmake"
   "source/CMakeFiles/razerz.dir/DependInfo.cmake"
   )

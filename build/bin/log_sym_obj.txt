@@ -142,3 +142,57 @@ OBJECTID::2332122128
 
  priotry::-1
 testloglolal
+###Log_OUt::
+OBJECTID::1454295776
+ TYPE::|-TEXTTURE_OBJ-|
+
+ priotry::-1
+testloglolal
+###Log_OUt::
+OBJECTID::3381886512
+ TYPE::|-TEXTTURE_OBJ-|
+
+ priotry::-1
+testloglolal
+###Log_OUt::
+OBJECTID::265261232
+ TYPE::|-TEXTTURE_OBJ-|
+
+ priotry::-1
+testloglolal
+###Log_OUt::
+OBJECTID::1355426016
+ TYPE::|-TEXTTURE_OBJ-|
+
+ priotry::-1
+testloglolal
+###Log_OUt::
+OBJECTID::2654696448
+ TYPE::|-TEXTTURE_OBJ-|
+
+ priotry::-1
+testloglolal
+###Log_OUt::
+OBJECTID::2414810352
+ TYPE::|-TEXTTURE_OBJ-|
+
+ priotry::-1
+testloglolal
+###Log_OUt::
+OBJECTID::3397484352
+ TYPE::|-TEXTTURE_OBJ-|
+
+ priotry::-1
+testloglolal
+###Log_OUt::
+OBJECTID::2671527984
+ TYPE::|-TEXTTURE_OBJ-|
+
+ priotry::-1
+testloglolal
+###Log_OUt::
+OBJECTID::563209472
+ TYPE::|-TEXTTURE_OBJ-|
+
+ priotry::-1
+testloglolal

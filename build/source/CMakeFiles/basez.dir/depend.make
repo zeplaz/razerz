@@ -14,7 +14,25 @@ source/CMakeFiles/basez.dir/basez/opengl_utilityz.cpp.o: ../source/basez/mathII.
 source/CMakeFiles/basez.dir/basez/opengl_utilityz.cpp.o: ../source/basez/opengl_utilityz.cpp
 source/CMakeFiles/basez.dir/basez/opengl_utilityz.cpp.o: ../source/basez/opengl_utilityz.hpp
 
+source/CMakeFiles/basez.dir/basez/shader_lib.cpp.o: ../source/basez/cpp_libz_base.hpp
+source/CMakeFiles/basez.dir/basez/shader_lib.cpp.o: ../source/basez/errorhandler.hpp
+source/CMakeFiles/basez.dir/basez/shader_lib.cpp.o: ../source/basez/gl_lib_z.hpp
+source/CMakeFiles/basez.dir/basez/shader_lib.cpp.o: ../source/basez/mathII.hpp
+source/CMakeFiles/basez.dir/basez/shader_lib.cpp.o: ../source/basez/shader_lib.cpp
+source/CMakeFiles/basez.dir/basez/shader_lib.cpp.o: ../source/basez/shader_lib.hpp
+source/CMakeFiles/basez.dir/basez/shader_lib.cpp.o: ../source/basez/sym_object.hpp
+
 source/CMakeFiles/basez.dir/basez/sym_object.cpp.o: ../source/basez/cpp_libz_base.hpp
 source/CMakeFiles/basez.dir/basez/sym_object.cpp.o: ../source/basez/sym_object.cpp
 source/CMakeFiles/basez.dir/basez/sym_object.cpp.o: ../source/basez/sym_object.hpp
+
+source/CMakeFiles/basez.dir/basez/texture.cpp.o: ../source/basez/3rdparty/stb_image.h
+source/CMakeFiles/basez.dir/basez/texture.cpp.o: ../source/basez/cpp_libz_base.hpp
+source/CMakeFiles/basez.dir/basez/texture.cpp.o: ../source/basez/errorhandler.hpp
+source/CMakeFiles/basez.dir/basez/texture.cpp.o: ../source/basez/gl_lib_z.hpp
+source/CMakeFiles/basez.dir/basez/texture.cpp.o: ../source/basez/mathII.hpp
+source/CMakeFiles/basez.dir/basez/texture.cpp.o: ../source/basez/shader_lib.hpp
+source/CMakeFiles/basez.dir/basez/texture.cpp.o: ../source/basez/sym_object.hpp
+source/CMakeFiles/basez.dir/basez/texture.cpp.o: ../source/basez/texture.cpp
+source/CMakeFiles/basez.dir/basez/texture.cpp.o: ../source/basez/texture.hpp
 

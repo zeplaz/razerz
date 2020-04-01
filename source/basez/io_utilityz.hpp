@@ -19,6 +19,10 @@ constexpr char ch_bmp[] = "bmp";
 constexpr char ch_ojb[] = "ojb";
 constexpr char ch_ply[] = "ply";
 
+static unsigned char* stbi_image_loader(const  char* inpath,int*width, int* height, int * nrComponents, int in_n=0);
+static void free_stbi_data(unsigned char* in_data);
+static unsigned char* stbi_image_from_memory(const unsigned char *buffer, int len, int *x, int *y, int *channels_in_file, int desired_channels);
+
 struct pathz {
 
   File_Extention extention;
@@ -28,7 +32,7 @@ struct pathz {
 
   pathz() = default;
 
-  pathz(const std::string& in_path)
+  /*pathz(const std::string& in_path)
   {
   //
     char* raw_path= new char [in_path.length()+1];
@@ -37,9 +41,21 @@ struct pathz {
     set_extention(raw_path);
     set_full_path();
     delete raw_path;
+  }*/
+
+   pathz(const std::string& in_path)
+  {
+  //
+    char* raw_path= new char [in_path.length()+1];
+    //constexpr auto raw_path =  {in_path.c_str()};//= new char [in_path.length()+1];
+    std::strcpy (raw_path, in_path.c_str());
+    set_file_name(raw_path);
+    set_extention(raw_path);
+    set_full_path();
+  //  delete raw_path;
   }
 
-  pathz(const char* in_path)
+   pathz(const char* in_path)
   {
     set_file_name(in_path);
     set_extention(in_path);

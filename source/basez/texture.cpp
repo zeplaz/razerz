@@ -1,9 +1,6 @@
 //texture.cpp
 #include "texture.hpp"
 
-#define STBI_FAILURE_USERMSG
-#define STB_IMAGE_IMPLEMENTATION
-#include "3rdparty/stb_image.h"
 
 unsigned int TextureFromFile(const char *path, const std::string &directory,bool gamma)
   {  std::string filename = std::string(path);
@@ -13,7 +10,8 @@ unsigned int TextureFromFile(const char *path, const std::string &directory,bool
     glGenTextures(1, &textureID);
 
     int width, height, nrComponents;
-    unsigned char *data = stbi_load(filename.c_str(), &width, &height, &nrComponents, 0);
+    unsigned char *data = stbi_image_loader(filename.c_str(), &width, &height, &nrComponents);
+
     if (data)
     {
         GLenum format;
@@ -32,13 +30,14 @@ unsigned int TextureFromFile(const char *path, const std::string &directory,bool
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T,  GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        free_stbi_data(data);
 
-        stbi_image_free(data);
     }
     else
     {
         std::cout << "Texture failed to load at path: " << path << std::endl;
-        stbi_image_free(data);
+        free_stbi_data(data);
+        exit(STBI_LOAD_FAIL);
     }
 
     return textureID;
@@ -57,7 +56,7 @@ unsigned int TextureFromFile(std::string& file_path, bool gamma)
     glGenTextures(1, &textureID);
 
     int width, height, nrComponents;
-    unsigned char *data = stbi_load(file_path.c_str(), &width, &height, &nrComponents, 0);
+    unsigned char *data = stbi_image_loader(file_path.c_str(), &width, &height, &nrComponents);
     if (data)
     {
         GLenum format;
@@ -77,12 +76,12 @@ unsigned int TextureFromFile(std::string& file_path, bool gamma)
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-        stbi_image_free(data);
+        free_stbi_data(data);
     }
     else
     {
         std::cout << "Texture failed to load at path: " << file_path << std::endl;
-        stbi_image_free(data);
+        free_stbi_data(data);
     }
 
     return textureID;
@@ -112,14 +111,14 @@ GLenum Texture_gl::return_TextureFormat(Format formate)
 
 void image2::cleanup()
 {
-  stbi_image_free(image);
+  free_stbi_data(image);
   delete [] image;
 }
 
 void image2::load(std::string& path,int in_n=0)
 {
 
-  image = stbi_load(path.c_str(),&columns,&rows,&n,in_n);
+  image = stbi_image_loader(path.c_str(),&columns,&rows,&n,in_n);
   std::cout <<"stbi_loadcompleate\n";
   }
 
@@ -130,14 +129,14 @@ void Texture_gl::init_texture()
   glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
   glTexImage2D(GL_TEXTURE_2D, 0, return_TextureFormat(formate_internal), width,
               height, 0,return_TextureFormat(formate_external), GL_UNSIGNED_BYTE, image);
-  stbi_image_free(image);
+  free_stbi_data(image);
   glBindTexture(GL_TEXTURE_2D,0);
 }
 
 void Texture_gl::load_texture(std::string path,int force_channel,int text_unitindex)
 {
   std::cout <<"stbi_begin\n";
-  image = stbi_load(path.c_str(),&width,&height,&n,force_channel);
+  image = stbi_image_loader(path.c_str(),&width,&height,&n,force_channel);
   std::cout <<"stbi_loadcompleate\n";
   set_texture_unit_index(text_unitindex);
 }

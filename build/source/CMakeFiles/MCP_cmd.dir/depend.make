@@ -6,6 +6,7 @@ source/CMakeFiles/MCP_cmd.dir/MCP_cmd/shader_pipeline_CMD.cpp.o: ../source/MCP_c
 source/CMakeFiles/MCP_cmd.dir/MCP_cmd/shader_pipeline_CMD.cpp.o: ../source/basez/cpp_libz_base.hpp
 source/CMakeFiles/MCP_cmd.dir/MCP_cmd/shader_pipeline_CMD.cpp.o: ../source/basez/errorhandler.hpp
 source/CMakeFiles/MCP_cmd.dir/MCP_cmd/shader_pipeline_CMD.cpp.o: ../source/basez/gl_lib_z.hpp
+source/CMakeFiles/MCP_cmd.dir/MCP_cmd/shader_pipeline_CMD.cpp.o: ../source/basez/io_utilityz.hpp
 source/CMakeFiles/MCP_cmd.dir/MCP_cmd/shader_pipeline_CMD.cpp.o: ../source/basez/mathII.hpp
 source/CMakeFiles/MCP_cmd.dir/MCP_cmd/shader_pipeline_CMD.cpp.o: ../source/basez/shader_lib.hpp
 source/CMakeFiles/MCP_cmd.dir/MCP_cmd/shader_pipeline_CMD.cpp.o: ../source/basez/sym_object.hpp

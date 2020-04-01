@@ -31,7 +31,6 @@ struct  screenz{
 
 };
 
-
 class view_lenz
 {
   private :

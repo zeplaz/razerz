@@ -16,44 +16,49 @@ set(razerz
 add_library(3rdparty STATIC
   #"/basez/3rdparty/sb7ktx.h"
 #  "/basez/3rdparty/sb7ktx.cpp"
-  "basez/3rdparty/stb_image.h"
+  #"basez/3rdparty/stb_image.h"
   "basez/3rdparty/frame_to_video.cpp"
-  "basez/3rdparty/frame_to_video.hpp"
+  "basez/3rdparty/b3Logging.cpp"
+  "basez/3rdparty/b3ResourcePath.cpp"
+    #"basez/3rdparty/frame_to_video.hpp"
 )
 add_library(MCP_cmd STATIC
-"MCP_cmd/shader_pipeline_CMD.hpp"
+#"MCP_cmd/shader_pipeline_CMD.hpp"
 "MCP_cmd/shader_pipeline_CMD.cpp"
 )
 add_library(parserz STATIC
   "parserz/geometry_parser.cpp"
-  "parserz/geometry_parser.hpp"
-  "parserz/parserlib.hpp"
+#  "parserz/geometry_parser.hpp"
+#  "parserz/parserlib.hpp"
   "parserz/parserlib.cpp"
 )
 
 add_library(modualz STATIC
 "modualz/geometry/geometry.cpp"
-"modualz/geometry/geometry.hpp"
-"modualz/phyziz/pysic_lib.hpp"
+"modualz/phyziz/collision_AI.cpp"
+"modualz/phyziz/bullet_collision.cpp"
+"modualz/phyziz/pysic_lib.cpp"
+#"modualz/geometry/geometry.hpp"
+#"modualz/phyziz/pysic_lib.hpp"
  )
 
 add_library(basez STATIC
-"basez/cpp_libz_base.hpp"
-"basez/errorhandler.hpp"
-"basez/gl_lib_z.hpp"
-"basez/io_utilityz.hpp"
+#"basez/cpp_libz_base.hpp"
+#"basez/errorhandler.hpp"
+#"basez/gl_lib_z.hpp"
+#"basez/io_utilityz.hpp"
 "basez/io_utilityz.cpp"
-"basez/lenz.hpp"
-"basez/mathII.hpp"
-"basez/mathz.hpp"
-"basez/opengl_utilityz.hpp"
+#"basez/lenz.hpp"
+#"basez/mathII.hpp"
+#"basez/mathz.hpp"
+#"basez/opengl_utilityz.hpp"
 "basez/opengl_utilityz.cpp"
 "basez/shader_lib.cpp"
-"basez/shader_lib.hpp"
+#"basez/shader_lib.hpp"
 "basez/sym_object.cpp"
-"basez/sym_object.hpp"
+#"basez/sym_object.hpp"
 "basez/texture.cpp"
-"basez/texture.hpp"
+#"basez/texture.hpp"
 )
 #Rename the source files that will create the library, to a proper name!
 #set(razerz_basez_LIB
@@ -65,7 +70,7 @@ add_library(basez STATIC
 #    headers/_facilities.h
 #)
 
-include_directories( ${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS} ${OpenCV_INCLUDE_DIRS})
+include_directories( ${OPENGL_INCLUDE_DIRS} ${BULLET_INCLUDE_DIR} ${GLUT_INCLUDE_DIRS} ${OpenCV_INCLUDE_DIRS})
 set(LIBS glfw3 assimp GLEW  freetype 3rdparty basez modualz parserz MCP_cmd)
 
 
@@ -96,7 +101,7 @@ add_executable(razerz ${razerz})
 #target_link_libraries(  somename )
 
 #If your app, links to an external lib -ie Boost
-target_link_libraries(razerz ${LIBS} ${OPENGL_LIBRARIES} Threads::Threads OpenGL::GL ${CMAKE_DL_LIBS} ${FREETYPE_LIBRARY} ${OpenCV_LIBS} ${GLUT_LIBRARY} ${X11_LIBRARIES})
+target_link_libraries(razerz ${LIBS} ${OPENGL_LIBRARIES} Threads::Threads OpenGL::GL ${CMAKE_DL_LIBS} ${FREETYPE_LIBRARY} ${OpenCV_LIBS} ${GLUT_LIBRARY} ${BULLET_LIBRARIES} ${X11_LIBRARIES})
 # Install the executable and libraries (don't forget to uncomment the lib line if you want)
 install(TARGETS razerz DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 #install(TARGETS somename DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)

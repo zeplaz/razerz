@@ -62,7 +62,7 @@ GLuint gl_shader_t::return_uniform(std::string name)
  }
 }
 
-void gl_shader_t::create_shader(shader_type shad_type, int s_index)
+void gl_shader_t::create_shader(shader_type shad_type, unsigned int s_index)
 { std::cout <<"creating shader gl\n";
   if(shad_type == shader_type::VERTEX_SHADER)
   {
@@ -125,15 +125,15 @@ bool gl_shader_t::create_link_program(std::vector<int>& to_attach_shaders)
          return true;
 }
 
-void gl_shader_t::setup_shader_code(shader_tupl* in_shader_tuple)
+void gl_shader_t::setup_shader_code(unsigned int s_index,shader_tupl* in_shader_tuple)
 {
   std::cout << "->Loading shader tuple into shader\n";
 
-  int s_index        = std::get<ST_INDEX>(*in_shader_tuple);
+//  int s_index        = std::get<ST_INDEX>(*in_shader_tuple);
   shader_type s_type = std::get<ST_SHADER_TYPE>(*in_shader_tuple);
-  std::string path   = std::get<ST_FILEPATH>(*in_shader_tuple);
+  pathz path   = std::get<ST_FILEPATH>(*in_shader_tuple);
 
-  std::ifstream file(path);
+  std::ifstream file(path.full_path);
   std::string ret = "";
   std::string line_buff ="";
   if(file.is_open())
@@ -151,7 +151,7 @@ void gl_shader_t::setup_shader_code(shader_tupl* in_shader_tuple)
   this->load_complie(s_index);
 }
 
-void gl_shader_t::load_complie(int map_index)
+void gl_shader_t::load_complie(unsigned int map_index)
 {
   GLchar* log_shader;
   std::cout << "compling newshader:\n";

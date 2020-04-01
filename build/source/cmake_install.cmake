@@ -1,4 +1,4 @@
-# Install script for directory: /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source
+# Install script for directory: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -52,7 +52,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/bin/razerz")
+file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/bin/razerz")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/razerz" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/razerz")
     file(RPATH_CHANGE

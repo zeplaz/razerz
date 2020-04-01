@@ -5,7 +5,6 @@
 static bool screen_beenresized = false;
 
 
-
 void APIENTRY GLAPIENTRY glDebugOutput(GLenum source,
                          GLenum type,
                          GLuint id,

@@ -13,6 +13,7 @@
    FILE_FORMATE_ERROR = -17,
    MAPLOOKUP_FAIL = -18,
    SHADER_LINK_FAIL = -19,
+   STBI_LOAD_FAIL = -20
  };
 
 
@@ -31,7 +32,7 @@
 
      case MAIN_FAIL :
      return "MAIN_FAIL";
-     
+
      case ENGINE_FAILURE:
      return "ENGINE_FAILURE";
 
@@ -46,6 +47,9 @@
 
      case SHADER_LINK_FAIL:
      return "SHADER_LINK_FAIL";
+
+     case STBI_LOAD_FAIL:
+     return "STBI_LOAD_FAIL";
 
      default :
      return "UNKNOWN_ERROR";

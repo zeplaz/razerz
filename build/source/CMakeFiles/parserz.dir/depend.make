@@ -4,6 +4,7 @@
 source/CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.o: ../source/basez/cpp_libz_base.hpp
 source/CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.o: ../source/basez/errorhandler.hpp
 source/CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.o: ../source/basez/gl_lib_z.hpp
+source/CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.o: ../source/basez/io_utilityz.hpp
 source/CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.o: ../source/basez/mathII.hpp
 source/CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.o: ../source/parserz/geometry_parser.cpp
 source/CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.o: ../source/parserz/geometry_parser.hpp
@@ -12,6 +13,7 @@ source/CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.o: ../source/parserz/p
 source/CMakeFiles/parserz.dir/parserz/parserlib.cpp.o: ../source/basez/cpp_libz_base.hpp
 source/CMakeFiles/parserz.dir/parserz/parserlib.cpp.o: ../source/basez/errorhandler.hpp
 source/CMakeFiles/parserz.dir/parserz/parserlib.cpp.o: ../source/basez/gl_lib_z.hpp
+source/CMakeFiles/parserz.dir/parserz/parserlib.cpp.o: ../source/basez/io_utilityz.hpp
 source/CMakeFiles/parserz.dir/parserz/parserlib.cpp.o: ../source/basez/mathII.hpp
 source/CMakeFiles/parserz.dir/parserz/parserlib.cpp.o: ../source/parserz/parserlib.cpp
 source/CMakeFiles/parserz.dir/parserz/parserlib.cpp.o: ../source/parserz/parserlib.hpp

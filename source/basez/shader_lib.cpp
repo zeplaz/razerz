@@ -17,7 +17,6 @@
         glDetachShader(gl_shaderprgm_ID,gl_shader_objkz_IDz.at(i));
         glDeleteShader(gl_shader_objkz_IDz.at(i));
       }
-
     }
 
     //GL_VERTEX_SHADER_BIT, GL_TESS_CONTROL_SHADER_BIT,
@@ -25,7 +24,6 @@
 //    and GL_COMPUTE_SHADER_BIT. Additionally, the special value GL_ALL_SHADER_BITS
     void shader_seprate::load_shader_file(shader_type in_shd_type,const GLchar* in_shader_text)
     {
-
       if(in_shd_type == shader_type::VERTEX_SHADER)
       {
         std::cout << "NEW VERTEX SHADER GENREATING\n";

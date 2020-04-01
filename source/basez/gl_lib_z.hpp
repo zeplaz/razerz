@@ -2,7 +2,6 @@
 #pragma once
 
 //inlcuded openglfilez
-
 #include <GL/glew.h>
 #include <GL/gl.h>
 #include <GL/glu.h>
@@ -17,14 +16,8 @@
 #include "mathII.hpp"
 #include  "errorhandler.hpp"
 #include "cpp_libz_base.hpp"
+#include "io_utilityz.hpp"
 //#include "rez_utility_lib.hpp"
-
-//#include <glm.hpp> // glm::mat4
-//may need to be used. and extenad lookk at were dpet glm ovlzy butnother?
-//#include <GL/glut.h>
-//#include <GL/freeglut.h>
-
-
 
 /*
 * file contains the headers need for opengl and glfw
@@ -319,14 +312,19 @@ enum class Camera_Movement {
 /*
 ##typedefz
 */
+enum Shader_Touple_pos{
+//  ST_INDEX = 0,
+  ST_SHADER_TYPE=0,
+  //ST_NAME=2,
+  ST_FILEPATH=1
+};
 
 //target,internalformate,pixel data format,textture_type
 typedef std::tuple<GLenum,GLint,GLenum,GLenum> teximage2d_parmz;
 //,teximage2d_parmz,name,filepath,flagz
 typedef std::tuple<teximage2d_parmz,std::string,std::string,unsigned char> texture_tupl;
 //index,shader_type,name,filepath
-typedef std::tuple<unsigned int,shader_type,std::string,std::string> shader_tupl;
-
+typedef std::tuple<shader_type,pathz> shader_tupl;
 
 //MAPS
 typedef std::unordered_map<unsigned int,texture_tupl*> tt_map;

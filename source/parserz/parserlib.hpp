@@ -2,24 +2,10 @@
 #ifndef PARSERLIB_HPP
 #define PARSERLIB_HPP
 
-#include <regex>
-
-#include <fstream>
-#include <sstream>
-#include <iostream>
-
-#include <utility>
-#include <memory>
-#include <algorithm>
-#include <iterator>
-
-#include <vector>
-#include <array>
-#include <tuple>
-#include <string>
-#include <unordered_map>
-
 #include "../basez/gl_lib_z.hpp"
+
+
+
 
 namespace parser{
 //string int handles
@@ -48,12 +34,8 @@ TI2D_PIX_FORMATE, //GLenum
 TI2D_PIX_DATATYPE //GLenum
 };
 
-enum Shader_Touple_pos{
-  ST_INDEX = 0,
-  ST_SHADER_TYPE=1,
-  ST_NAME=2,
-  ST_FILEPATH=3
-};
+
+
 
 enum class Reg_Express{
   FILE_FIRST_LINE,
@@ -79,7 +61,6 @@ enum class Parse_File_Type{
 };
 
 constexpr char resource_dlim_char = '>';
-
 
 //NULLtouples
 constexpr teximage2d_parmz NULL_TI2D = std::make_tuple(0,0,0,0);
@@ -111,39 +92,45 @@ constexpr unsigned int t_pixdata_type  = str2int("gl_pixdata_type");
 /*
 XMLBASEPARSE FUNCTIONz
 */
-
-  std::vector<std::string> run_xmlobj_parse(std::string& in_xml_path);
+  std::vector<std::string> run_xmlobj_parse(const pathz& in_xml_path);
   unsigned int index_pars(std::string& in_substring);
 
   struct parsed_file{
-
     Parse_File_Type pf_type;
     float version;
     unsigned int encodeing;
-
     std::vector<std::string> pf_substringz;
   };
 
-/*  struct xml_file :public parsed_file{
-float version;
-unsigned int encodeing;
+  enum file_list_pos{
+    SHADER_XML_POS,
+    NEIL_OBJ_XML_LIST
+  };
+  const  pathz shaders_xml_path("../../shaderzglsl/file_list_shader.xml");
+  const pathz neil_xml_path("../../data_extrn/neil/file_list_shader.xml");
+  const static  std::array<pathz,25> file_list{shaders_xml_path,neil_xml_path};
 
+/*class parser_sym_CMD
+{
+  shader_xml_parser shd_parser;
+
+  void handle_shaders()
+  {
+
+  }
 };*/
-
-  static std::unordered_map<std::string,parsed_file> file_map;
-
-  class parser_sym{
+  class parser_base{
 
     public :
-    int  load_run(std::string in_pathxml);
-    std::string header_read(std::string& in_path);
-    void parse_data(std::string& file_name);
+    int  load_run(const pathz& in_pathxml);
+    void header_read(const pathz& in_path);
+    void parse_data(const pathz& file_name);
 
     virtual int item_selection(std::vector<std::string>& in_substingz,int i) = 0;
-  //  protected:
 
+    protected:
+    std::unordered_map<std::string,parsed_file>file_map;
     //virtual void register_with_ecouterion(std::string& in_name,unsigned int in_index) =0;
-
     };
 
   }//endnamespace

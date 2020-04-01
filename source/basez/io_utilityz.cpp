@@ -1,6 +1,40 @@
 
 
 #include "io_utilityz.hpp"
+
+#define STBI_FAILURE_USERMSG
+#define STB_IMAGE_IMPLEMENTATION
+#include "3rdparty/stb_image.h"
+
+static unsigned char* stbi_image_loader(const  char* inpath,int*width, int* height, int * nrComponents, int in_n)
+{
+    unsigned char *data = stbi_load(inpath, width, height, nrComponents, in_n);
+    if(data)
+  return data;
+  else
+  {
+    std::cerr << "ERROR STBI failed load;";
+    return nullptr;
+  }
+}
+
+static void free_stbi_data(unsigned char* in_data)
+{
+  stbi_image_free(in_data);
+}
+static unsigned char* stbi_image_from_memory(const unsigned char *buffer, int len, int *x, int *y, int *channels_in_file, int desired_channels = 3)
+{
+  unsigned char* data = stbi_load_from_memory(buffer, len, x, y, channels_in_file, desired_channels);
+  if(data)
+  return data;
+  else
+  {
+    std::cerr<< "ERROR STBI from memory fail";
+    return nullptr;
+  }
+}
+
+
 void pathz::output_display()
 {
   std::cout << "filename IZ::" << file_name<< '\n';

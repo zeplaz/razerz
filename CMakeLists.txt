@@ -39,6 +39,10 @@ find_package(Freetype REQUIRED)
 include_directories(/usr/include/freetype2)
 
 find_package( OpenCV REQUIRED )
+
+find_package(Bullet REQUIRED)
+
+
 #Add any other header files
 include_directories( ${CMAKE_SOURCE_DIR}/source/)
 include_directories( ${CMAKE_SOURCE_DIR}/source/basez)

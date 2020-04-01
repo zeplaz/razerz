@@ -1,2 +1,2 @@
-/usr/bin/ar qc ../lib/libmodualz.a  CMakeFiles/modualz.dir/modualz/geometry/geometry.cpp.o
+/usr/bin/ar qc ../lib/libmodualz.a  CMakeFiles/modualz.dir/modualz/geometry/geometry.cpp.o CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o CMakeFiles/modualz.dir/modualz/phyziz/pysic_lib.cpp.o
 /usr/bin/ranlib ../lib/libmodualz.a

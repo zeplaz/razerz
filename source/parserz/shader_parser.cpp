@@ -1,15 +1,14 @@
 
 #include "shader_parser.hpp"
 
-
-
 shader_tupl* new_st_ptr()
 {
     shader_tupl* shader_tuple_ptr = new shader_tupl();
-    *shader_tuple_ptr = std::make_tuple(0,shader_type::SHADER_NULL,"","");
+    *shader_tuple_ptr = std::make_tuple("\0",shader_type::SHADER_NULL,pathz);
 
   return shader_tuple_ptr;
 }
+
 int shader_xml_parser::item_selection(std::vector<std::string>& in_substingz,
                                        int str_pos)
 {
@@ -22,24 +21,9 @@ int shader_xml_parser::item_selection(std::vector<std::string>& in_substingz,
       {
         case h_shad_title :
         {
-
           std::cout << "newSHADER!:\n";
           break;
         }
-      /*  case index :
-        {
-          current_tuple_prt = return_new_shader_tuple();
-          unsigned int  temp_index = index_pars(sub_string_view);
-            //std::get<0>(*current_tuple_prt) =temp_index;
-
-           std::cout << "shaderrawindex::"<< in_substingz.at(i+1) <<'\n';
-           std::cout << "shaderindexnum::"<< temp_index <<'\n';
-           std::get<ST_INDEX>(*current_tuple_prt) = temp_index;
-           shader_tupl_map.insert(std::pair<unsigned int,shader_tupl*>(temp_index,current_tuple_prt));
-
-          break;
-        }*/
-
         case h_shad_type :
         {
           std::cout << "shaderType:::"<< in_substingz.at(i+1)  <<'\n';
@@ -75,25 +59,37 @@ int shader_xml_parser::item_selection(std::vector<std::string>& in_substingz,
         case file_root :
          {
            std::cout << "shader_source_loc::"<< in_substingz.at(i+1) <<'\n';
-          std::get<ST_FILEPATH>(*current_tuple_prt) = in_substingz.at(i+1);
+           pathz new_path( in_substingz.at(i+1));
+          std::get<ST_FILEPATH>(*current_tuple_prt) =new_path;
           break;
          }
 
          case name :
           {
             std::cout << "shadername::"<< in_substingz.at(i+1) <<'\n';
-           std::get<ST_NAME>(*current_tuple_prt) = in_substingz.at(i+1);
+            unsigned int  temp_index = str2int_run(in_substingz.at(i+1));
+          // std::get<ST_NAME>(*current_tuple_prt) = temp_index;//in_substingz.at(i+1);
+           shader_tupl_map.insert(std::pair<unsigned int,shader_tupl*>(temp_index,current_tuple_prt));
            break;
           }
-
+          /*
           default :
           {
           //endswitch
           std::cerr <<"did not hit flagz..error on file read...or somthing...\n"<< "##ERRORCODE::"<< PARSER_FAIL;
           exit(PARSER_FAIL);
-          }
+        }*/
 
         }//end switch
 }//end for
 std::cout << "\n #####shader parser run compleate of vec size:final::" << shader_tupl_map.size() <<'\n' <<'\n';
 }
+
+/*  case index :
+  {
+    current_tuple_prt = return_new_shader_tuple();
+     std::cout << "shaderrawindex::"<< in_substingz.at(i+1) <<'\n';
+     std::cout << "shaderindexnum::"<< temp_index <<'\n';
+     std::get<ST_INDEX>(*current_tuple_prt) = temp_index;
+    break;
+  }*/

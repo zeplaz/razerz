@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03
+CMAKE_SOURCE_DIR = /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build
+CMAKE_BINARY_DIR = /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build
 
 # Include any dependencies generated for this target.
 include source/CMakeFiles/razerz.dir/depend.make
@@ -59,16 +59,16 @@ include source/CMakeFiles/razerz.dir/flags.make
 
 source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.o: source/CMakeFiles/razerz.dir/flags.make
 source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.o: ../source/ttestz/sysm_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.o"
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.o -c /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/ttestz/sysm_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.o"
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/ttestz/sysm_test.cpp
 
 source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.i"
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/ttestz/sysm_test.cpp > CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.i
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/ttestz/sysm_test.cpp > CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.i
 
 source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.s"
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/ttestz/sysm_test.cpp -o CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.s
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/ttestz/sysm_test.cpp -o CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.s
 
 # Object files for target razerz
 razerz_OBJECTS = \
@@ -117,6 +117,10 @@ bin/razerz: /usr/local/lib/libopencv_xobjdetect.so.4.1.0
 bin/razerz: /usr/local/lib/libopencv_xphoto.so.4.1.0
 bin/razerz: /usr/lib/x86_64-linux-gnu/libglut.so
 bin/razerz: /usr/lib/x86_64-linux-gnu/libXi.so
+bin/razerz: /usr/lib/x86_64-linux-gnu/libBulletDynamics.so
+bin/razerz: /usr/lib/x86_64-linux-gnu/libBulletCollision.so
+bin/razerz: /usr/lib/x86_64-linux-gnu/libLinearMath.so
+bin/razerz: /usr/lib/x86_64-linux-gnu/libBulletSoftBody.so
 bin/razerz: /usr/lib/x86_64-linux-gnu/libSM.so
 bin/razerz: /usr/lib/x86_64-linux-gnu/libICE.so
 bin/razerz: /usr/lib/x86_64-linux-gnu/libX11.so
@@ -144,8 +148,8 @@ bin/razerz: /usr/local/lib/libopencv_photo.so.4.1.0
 bin/razerz: /usr/local/lib/libopencv_imgproc.so.4.1.0
 bin/razerz: /usr/local/lib/libopencv_core.so.4.1.0
 bin/razerz: source/CMakeFiles/razerz.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../bin/razerz"
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/razerz.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../bin/razerz"
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/razerz.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 source/CMakeFiles/razerz.dir/build: bin/razerz
@@ -153,10 +157,10 @@ source/CMakeFiles/razerz.dir/build: bin/razerz
 .PHONY : source/CMakeFiles/razerz.dir/build
 
 source/CMakeFiles/razerz.dir/clean:
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && $(CMAKE_COMMAND) -P CMakeFiles/razerz.dir/cmake_clean.cmake
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && $(CMAKE_COMMAND) -P CMakeFiles/razerz.dir/cmake_clean.cmake
 .PHONY : source/CMakeFiles/razerz.dir/clean
 
 source/CMakeFiles/razerz.dir/depend:
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03 /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/razerz.dir/DependInfo.cmake --color=$(COLOR)
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/razerz.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : source/CMakeFiles/razerz.dir/depend
 

@@ -1,7 +1,7 @@
 
 
 #include "parserlib.hpp"
-
+using namespace parser;
 unsigned int parser::str2int_run(const char* str, int h = 0)
 {
 return !str[h] ? 5381 : (str2int(str, h+1) * 33) ^ str[h];
@@ -25,15 +25,16 @@ unsigned int parser::index_pars(std::string& in_substring)
       }
     }
   }
+
    unsigned int out_index = stoul(parsindx);
    return out_index;
 }
 
-  std::string parser::parser_sym::header_read(std::string& in_path)
+void parser::parser_base::header_read(const pathz&  in_path)
   {
     std::cout << "\n ###PARSING::setup;\n";
 
-    std::ifstream file(in_path);
+    std::ifstream file(in_path.full_path);
     std::string line;
 
     std::getline(file,line);
@@ -110,22 +111,15 @@ unsigned int parser::index_pars(std::string& in_substring)
          new_file.pf_type   =Parse_File_Type::SHADER_LIST;
         }
 
-        file_map.insert(std::make_pair(filename,new_file));
-
-        return filename;
-//end of header read.
-        //new_file.pf_substringz
+        file_map.insert(std::make_pair(in_path.file_name,new_file));
     }
-    //
-     std::cout << '\a';
-     return "\0";
-      }
+  }
 
 
-  std::vector<std::string> parser::run_xmlobj_parse(std::string& in_xml_path)
+  std::vector<std::string> parser::run_xmlobj_parse(const pathz& in_xml_path)
   {
-    std::cout <<"\n#->running textture parser func\n";
-    std::ifstream file_config(in_xml_path);
+    //std::cout <<"\n#->running textture parser func\n";
+    std::ifstream file_config(in_xml_path.full_path);
     std::string file_in_string;
     file_config.seekg(0, std::ios::end);
     file_in_string.reserve(file_config.tellg());
@@ -153,15 +147,15 @@ unsigned int parser::index_pars(std::string& in_substring)
   }
 
 
-  int parser::parser_sym::load_run(std::string in_pathxml)
+  int parser::parser_base::load_run(const pathz& in_pathxml)
   {
 
-     std::vector<std::string> substingz = parser::run_xmlobj_parse(in_pathxml);
+     std::vector<std::string> substingz = parser::run_xmlobj_parse(in_pathxml.full_path);
 
      std::cout <<"->###begin sort\n";
      unsigned int current_0jk_index;
-
-     for(size_t i =0; i<substingz.size(); i++)
+      int i;
+     for( i =0; i<substingz.size(); i++)
        {
         switch(str2int_run(substingz.at(i).c_str()))
          {
@@ -172,6 +166,7 @@ unsigned int parser::index_pars(std::string& in_substring)
              }
          }//endswitch
        }//endfor
+       return i;
   }
 
 

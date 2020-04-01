@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03
+CMAKE_SOURCE_DIR = /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build
+CMAKE_BINARY_DIR = /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build
 
 # Include any dependencies generated for this target.
 include source/CMakeFiles/parserz.dir/depend.make
@@ -59,29 +59,29 @@ include source/CMakeFiles/parserz.dir/flags.make
 
 source/CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.o: source/CMakeFiles/parserz.dir/flags.make
 source/CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.o: ../source/parserz/geometry_parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object source/CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.o"
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.o -c /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/geometry_parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object source/CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.o"
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/geometry_parser.cpp
 
 source/CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.i"
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/geometry_parser.cpp > CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.i
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/geometry_parser.cpp > CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.i
 
 source/CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.s"
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/geometry_parser.cpp -o CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.s
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/geometry_parser.cpp -o CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.s
 
 source/CMakeFiles/parserz.dir/parserz/parserlib.cpp.o: source/CMakeFiles/parserz.dir/flags.make
 source/CMakeFiles/parserz.dir/parserz/parserlib.cpp.o: ../source/parserz/parserlib.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object source/CMakeFiles/parserz.dir/parserz/parserlib.cpp.o"
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parserz.dir/parserz/parserlib.cpp.o -c /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/parserlib.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object source/CMakeFiles/parserz.dir/parserz/parserlib.cpp.o"
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parserz.dir/parserz/parserlib.cpp.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/parserlib.cpp
 
 source/CMakeFiles/parserz.dir/parserz/parserlib.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/parserz.dir/parserz/parserlib.cpp.i"
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/parserlib.cpp > CMakeFiles/parserz.dir/parserz/parserlib.cpp.i
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/parserlib.cpp > CMakeFiles/parserz.dir/parserz/parserlib.cpp.i
 
 source/CMakeFiles/parserz.dir/parserz/parserlib.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/parserz.dir/parserz/parserlib.cpp.s"
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/parserlib.cpp -o CMakeFiles/parserz.dir/parserz/parserlib.cpp.s
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/parserlib.cpp -o CMakeFiles/parserz.dir/parserz/parserlib.cpp.s
 
 # Object files for target parserz
 parserz_OBJECTS = \
@@ -95,9 +95,9 @@ lib/libparserz.a: source/CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.o
 lib/libparserz.a: source/CMakeFiles/parserz.dir/parserz/parserlib.cpp.o
 lib/libparserz.a: source/CMakeFiles/parserz.dir/build.make
 lib/libparserz.a: source/CMakeFiles/parserz.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library ../lib/libparserz.a"
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && $(CMAKE_COMMAND) -P CMakeFiles/parserz.dir/cmake_clean_target.cmake
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/parserz.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library ../lib/libparserz.a"
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && $(CMAKE_COMMAND) -P CMakeFiles/parserz.dir/cmake_clean_target.cmake
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/parserz.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 source/CMakeFiles/parserz.dir/build: lib/libparserz.a
@@ -105,10 +105,10 @@ source/CMakeFiles/parserz.dir/build: lib/libparserz.a
 .PHONY : source/CMakeFiles/parserz.dir/build
 
 source/CMakeFiles/parserz.dir/clean:
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && $(CMAKE_COMMAND) -P CMakeFiles/parserz.dir/cmake_clean.cmake
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && $(CMAKE_COMMAND) -P CMakeFiles/parserz.dir/cmake_clean.cmake
 .PHONY : source/CMakeFiles/parserz.dir/clean
 
 source/CMakeFiles/parserz.dir/depend:
-	cd /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03 /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/parserz.dir/DependInfo.cmake --color=$(COLOR)
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/parserz.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : source/CMakeFiles/parserz.dir/depend
 

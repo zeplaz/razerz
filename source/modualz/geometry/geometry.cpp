@@ -410,6 +410,7 @@ void mesh::pack_mesh_vertex(parsed_paket_type* par_pak)
     base_model_matrix = glm::scale(base_model_matrix,scale_base);
   }
 
+  
   void mesh::update_mesh_model(model_ajustment ajust_in)
   {
     rotation_base.x +=ajust_in.rotation_ajust.x;

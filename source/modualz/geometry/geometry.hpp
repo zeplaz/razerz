@@ -39,6 +39,14 @@ struct Meterialz
     //GLint spekular_texture;
 };
 
+struct render_state_cache
+{
+  bool is_elm;
+  shader_seprate* shader;
+  glm::mat4 view;
+  glm::mat4 proj;
+};
+
 class mesh : public sym_object
 {
   private :
@@ -64,7 +72,10 @@ class mesh : public sym_object
 
   bool cal_lightz= false;
 
+  render_state_cache render_cache;
+
   public :
+
 
   std::shared_ptr<std::vector<mesh_vertex>> m_vertices;
   std::shared_ptr<std::vector<unsigned int>> m_v_indices;
@@ -79,7 +90,26 @@ class mesh : public sym_object
     set_obj_type(Sym_Object_Type::MESH_OBJ);
   }
   void bindmesh_buf();
+  inline void set_render_cache(shader_seprate* shader,glm::mat4& view,glm::mat4& proj, bool is_elm)
+  {
 
+    render_cache.shader= shader;
+    render_cache.view=view;
+    render_cache.proj=proj;
+    render_cache.is_elm=is_elm;
+  }
+
+  inline void draw_via_cache()
+  {
+    if(render_cache.is_elm == true)
+    {
+      draw_element(render_cache.shader,render_cache.view,render_cache.proj);
+    }
+    else
+    {
+      draw(render_cache.shader,render_cache.view,render_cache.proj);
+    }
+  }
   void set_texture_via_assip(std::vector<ai_texture>& in_aitex)
   {
     use_auto_texturez = true;
@@ -130,7 +160,10 @@ class mesh : public sym_object
 
   void update_mesh_model(model_ajustment ajust_in);
   void set_mesh_model_origin(model_ajustment intial_model);
-
+  inline void update_motion_matrix(glm::mat4 in_mat)
+  {
+    base_model_matrix*= in_mat;
+  }
   void buff_setup_viaAssimp();
 
   inline void set_tex_flags(M_Tex_Flag t_flag)

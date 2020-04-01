@@ -6,24 +6,28 @@
 
 #IncludeRegexTransform: 
 
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/MCP_cmd/shader_pipeline_CMD.cpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/MCP_cmd/shader_pipeline_CMD.cpp
 shader_pipeline_CMD.hpp
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/MCP_cmd/shader_pipeline_CMD.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/MCP_cmd/shader_pipeline_CMD.hpp
 
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/MCP_cmd/shader_pipeline_CMD.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/MCP_cmd/shader_pipeline_CMD.hpp
 ../parserz/shader_parser.hpp
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/shader_parser.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/shader_parser.hpp
 ../basez/sym_object.hpp
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.hpp
 ../basez/shader_lib.hpp
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/shader_lib.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/shader_lib.hpp
 
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
+regex
+-
 utility
 -
 memory
 -
 algorithm
+-
+iterator
 -
 stdlib.h
 -
@@ -39,14 +43,20 @@ array
 -
 unordered_map
 -
+tuple
+-
+list
+-
 fstream
 -
 iostream
 -
+sstream
+-
 
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/errorhandler.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/errorhandler.hpp
 
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/gl_lib_z.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/gl_lib_z.hpp
 GL/glew.h
 -
 GL/gl.h
@@ -60,13 +70,21 @@ glm/glm.hpp
 glm/ext.hpp
 -
 mathII.hpp
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/mathII.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/mathII.hpp
 errorhandler.hpp
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/errorhandler.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/errorhandler.hpp
 cpp_libz_base.hpp
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
+io_utilityz.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.hpp
 
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/mathII.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.hpp
+cpp_libz_base.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
+mathII.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/mathII.hpp
+
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/mathII.hpp
 iostream
 -
 valarray
@@ -74,47 +92,21 @@ valarray
 cmath
 -
 
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/shader_lib.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/shader_lib.hpp
 sym_object.hpp
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.hpp
 gl_lib_z.hpp
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/gl_lib_z.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/gl_lib_z.hpp
 
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.hpp
 cpp_libz_base.hpp
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
 
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/parserlib.hpp
-regex
--
-fstream
--
-sstream
--
-iostream
--
-utility
--
-memory
--
-algorithm
--
-iterator
--
-vector
--
-array
--
-tuple
--
-string
--
-unordered_map
--
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/parserlib.hpp
 ../basez/gl_lib_z.hpp
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/gl_lib_z.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/gl_lib_z.hpp
 
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/shader_parser.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/shader_parser.hpp
 parserlib.hpp
-/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/parserlib.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/parserlib.hpp
 

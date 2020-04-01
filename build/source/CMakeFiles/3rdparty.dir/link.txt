@@ -1,2 +1,2 @@
-/usr/bin/ar qc ../lib/lib3rdparty.a  CMakeFiles/3rdparty.dir/basez/3rdparty/frame_to_video.cpp.o
+/usr/bin/ar qc ../lib/lib3rdparty.a  CMakeFiles/3rdparty.dir/basez/3rdparty/frame_to_video.cpp.o CMakeFiles/3rdparty.dir/basez/3rdparty/b3Logging.cpp.o CMakeFiles/3rdparty.dir/basez/3rdparty/b3ResourcePath.cpp.o
 /usr/bin/ranlib ../lib/lib3rdparty.a

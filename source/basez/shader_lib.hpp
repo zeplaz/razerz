@@ -167,8 +167,8 @@ class gl_shader_t : public shader_base
   private :
   shader_type contained_shaders=shader_type::SHADER_NULL;
   unsigned char shader_flags;
-  std::unordered_map<int,std::pair<shader_type,std::string>> shader_code_map;
-  std::unordered_map<int,std::pair<shader_type,GLuint>> shader_IDz_map;
+  std::unordered_map<unsigned int,std::pair<shader_type,std::string>> shader_code_map;
+  std::unordered_map<unsigned int,std::pair<shader_type,GLuint>> shader_IDz_map;
 
   public :
   GLuint program_ID = 0;
@@ -176,16 +176,15 @@ class gl_shader_t : public shader_base
   std::unordered_map<std::string,GLuint> uniform_loc_map;
 
   bool create_link_program(std::vector<int>& to_attach_shaders);
-  void create_shader(shader_type shad_type, int s_index);
-  void setup_shader_code(shader_tupl* in_shader_tuple);
-  void load_complie(int map_index);
+  void create_shader(shader_type shad_type, unsigned int s_index);
+  void setup_shader_code(unsigned int s_index, shader_tupl* in_shader_tuple);
+  void load_complie(unsigned int map_index);
   GLuint return_uniform(std::string name);
 
   gl_shader_t()
   {
     use_pipe = false;
   }
-
 
   shader_type get_contaned_shdertypes()
   {

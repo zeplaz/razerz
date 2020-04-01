@@ -59,10 +59,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03
+CMAKE_SOURCE_DIR = /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build
+CMAKE_BINARY_DIR = /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build
 
 #=============================================================================
 # Directory level rules for directory source
@@ -99,7 +99,7 @@ source/preinstall:
 source/CMakeFiles/modualz.dir/all:
 	$(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/depend
 	$(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=11,12 "Built target modualz"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=13,14,15,16,17 "Built target modualz"
 .PHONY : source/CMakeFiles/modualz.dir/all
 
 # Include target in all.
@@ -109,9 +109,9 @@ all: source/CMakeFiles/modualz.dir/all
 
 # Build rule for subdir invocation for target.
 source/CMakeFiles/modualz.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/modualz.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 0
 .PHONY : source/CMakeFiles/modualz.dir/rule
 
 # Convenience name for target.
@@ -136,7 +136,7 @@ clean: source/CMakeFiles/modualz.dir/clean
 source/CMakeFiles/parserz.dir/all:
 	$(MAKE) -f source/CMakeFiles/parserz.dir/build.make source/CMakeFiles/parserz.dir/depend
 	$(MAKE) -f source/CMakeFiles/parserz.dir/build.make source/CMakeFiles/parserz.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=13,14,15 "Built target parserz"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=18,19,20 "Built target parserz"
 .PHONY : source/CMakeFiles/parserz.dir/all
 
 # Include target in all.
@@ -146,9 +146,9 @@ all: source/CMakeFiles/parserz.dir/all
 
 # Build rule for subdir invocation for target.
 source/CMakeFiles/parserz.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/parserz.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 0
 .PHONY : source/CMakeFiles/parserz.dir/rule
 
 # Convenience name for target.
@@ -173,7 +173,7 @@ clean: source/CMakeFiles/parserz.dir/clean
 source/CMakeFiles/basez.dir/all:
 	$(MAKE) -f source/CMakeFiles/basez.dir/build.make source/CMakeFiles/basez.dir/depend
 	$(MAKE) -f source/CMakeFiles/basez.dir/build.make source/CMakeFiles/basez.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=5,6,7,8,9,10 "Built target basez"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=7,8,9,10,11,12 "Built target basez"
 .PHONY : source/CMakeFiles/basez.dir/all
 
 # Include target in all.
@@ -183,9 +183,9 @@ all: source/CMakeFiles/basez.dir/all
 
 # Build rule for subdir invocation for target.
 source/CMakeFiles/basez.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/basez.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 0
 .PHONY : source/CMakeFiles/basez.dir/rule
 
 # Convenience name for target.
@@ -210,7 +210,7 @@ clean: source/CMakeFiles/basez.dir/clean
 source/CMakeFiles/3rdparty.dir/all:
 	$(MAKE) -f source/CMakeFiles/3rdparty.dir/build.make source/CMakeFiles/3rdparty.dir/depend
 	$(MAKE) -f source/CMakeFiles/3rdparty.dir/build.make source/CMakeFiles/3rdparty.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=1,2 "Built target 3rdparty"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=1,2,3,4 "Built target 3rdparty"
 .PHONY : source/CMakeFiles/3rdparty.dir/all
 
 # Include target in all.
@@ -220,9 +220,9 @@ all: source/CMakeFiles/3rdparty.dir/all
 
 # Build rule for subdir invocation for target.
 source/CMakeFiles/3rdparty.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/3rdparty.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 0
 .PHONY : source/CMakeFiles/3rdparty.dir/rule
 
 # Convenience name for target.
@@ -247,7 +247,7 @@ clean: source/CMakeFiles/3rdparty.dir/clean
 source/CMakeFiles/MCP_cmd.dir/all:
 	$(MAKE) -f source/CMakeFiles/MCP_cmd.dir/build.make source/CMakeFiles/MCP_cmd.dir/depend
 	$(MAKE) -f source/CMakeFiles/MCP_cmd.dir/build.make source/CMakeFiles/MCP_cmd.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=3,4 "Built target MCP_cmd"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=5,6 "Built target MCP_cmd"
 .PHONY : source/CMakeFiles/MCP_cmd.dir/all
 
 # Include target in all.
@@ -257,9 +257,9 @@ all: source/CMakeFiles/MCP_cmd.dir/all
 
 # Build rule for subdir invocation for target.
 source/CMakeFiles/MCP_cmd.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/MCP_cmd.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 0
 .PHONY : source/CMakeFiles/MCP_cmd.dir/rule
 
 # Convenience name for target.
@@ -288,7 +288,7 @@ source/CMakeFiles/razerz.dir/all: source/CMakeFiles/3rdparty.dir/all
 source/CMakeFiles/razerz.dir/all: source/CMakeFiles/MCP_cmd.dir/all
 	$(MAKE) -f source/CMakeFiles/razerz.dir/build.make source/CMakeFiles/razerz.dir/depend
 	$(MAKE) -f source/CMakeFiles/razerz.dir/build.make source/CMakeFiles/razerz.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=16,17 "Built target razerz"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=21,22 "Built target razerz"
 .PHONY : source/CMakeFiles/razerz.dir/all
 
 # Include target in all.
@@ -298,9 +298,9 @@ all: source/CMakeFiles/razerz.dir/all
 
 # Build rule for subdir invocation for target.
 source/CMakeFiles/razerz.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/razerz.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/orgburo/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles 0
 .PHONY : source/CMakeFiles/razerz.dir/rule
 
 # Convenience name for target.

@@ -1,8 +1,9 @@
 #include "../basez/sym_object.hpp"
 #include "../basez/io_utilityz.hpp"
-#include "../modualz/phyziz/pysic_lib.hpp"
+//#include "../modualz/phyziz/pysic_lib.hpp"
 #include "../modualz/geometry/geometry.hpp"
-
+#include "../modualz/phyziz/collision_AI.hpp"
+#include "../modualz/committee/simula_entity.hpp"
 
 #define TINYOBJLOADER_IMPLEMENTATION
 #include "tiny_obj_loader.h"
@@ -40,8 +41,14 @@ static bool TestLoadObj(const char* filename, const char* basepath = NULL,
   return true;
 }
 
+
+
+
+
 int main(int argc, char* argv[])
 {
+
+  bullet_collision_detector bullet_phyz_systm;
 
   sym_object tso;
   //pathz tpath;
@@ -71,8 +78,11 @@ glm::vec3 end(200.f,10.f,500.f);
 
 result = calc_fire_solution(start,end,muzzle,gravity);
 std::cout << "result::" << result.x << " " << result.y << " " << result.z;
+btTransform sheredp_tranformer;
+bullet_phyz_systm.add_sphere(sheredp_tranformer,1.0,0,20,0,1.0,0);
 
-
+  // fake loop
+  bullet_phyz_systm.dynamicsWorld->stepSimulation(1/60.0);
   //std::cout << tpath.full_path;
   std::cout <<"\n #####compleate\n \n  \a";
   return 0;

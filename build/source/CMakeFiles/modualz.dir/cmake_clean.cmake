@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/modualz.dir/modualz/geometry/geometry.cpp.o"
+  "CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o"
+  "CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o"
+  "CMakeFiles/modualz.dir/modualz/phyziz/pysic_lib.cpp.o"
   "../lib/libmodualz.pdb"
   "../lib/libmodualz.a"
 )

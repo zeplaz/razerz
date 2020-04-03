@@ -87,28 +87,6 @@ unsigned int TextureFromFile(std::string& file_path, bool gamma)
     return textureID;
 }
 
-
-
-
-
-
-
-
-
-GLenum Texture_gl::return_TextureFormat(Format formate)
-{
-  switch (formate)
-   {
-      case Format::Format_Grayscale: return GL_LUMINANCE;
-      case Format::Format_GrayscaleAlpha: return GL_LUMINANCE_ALPHA;
-      case Format::Format_RGB: return GL_RGB;
-      case Format::Format_RGBA: return GL_RGBA;
-      case Format::Format_RGBA8: return GL_RGBA8;
-      case Format::Format_RGB8: return GL_RGB8;
-      default: throw std::runtime_error("Unrecognised Bitmap::Format");
-  }
-}
-
 void image2::cleanup()
 {
   free_stbi_data(image);
@@ -120,6 +98,21 @@ void image2::load(std::string& path,int in_n=0)
 
   image = stbi_image_loader(path.c_str(),&columns,&rows,&n,in_n);
   std::cout <<"stbi_loadcompleate\n";
+  }
+
+
+  GLenum Texture_gl::return_TextureFormat(Format formate)
+  {
+    switch (formate)
+     {
+        case Format::Format_Grayscale: return GL_LUMINANCE;
+        case Format::Format_GrayscaleAlpha: return GL_LUMINANCE_ALPHA;
+        case Format::Format_RGB: return GL_RGB;
+        case Format::Format_RGBA: return GL_RGBA;
+        case Format::Format_RGBA8: return GL_RGBA8;
+        case Format::Format_RGB8: return GL_RGB8;
+        default: throw std::runtime_error("Unrecognised Bitmap::Format");
+    }
   }
 
 void Texture_gl::init_texture()

@@ -24,39 +24,49 @@ struct image2 {
   }
 };
 
+struct texture_paramz{
+  GLint wrapMode_S;
+  GLint wrapMode_T;
+  GLint magFiler;
+  GLint minFiler;
+  texture_paramz(GLint& wms,GLint& smt,GLint in_mag, GLint in_min ) : wrapMode_S{wms},wrapMode_T{smt},magFiler{in_mag},minFiler{in_min}
+  {}
+    texture_paramz(): wrapMode_S{GL_CLAMP_TO_EDGE},wrapMode_T{GL_CLAMP_TO_EDGE},magFiler{GL_LINEAR},minFiler{GL_LINEAR}
+  {}
+};
+
+
 class texture_2 : public sym_object
 {
   private :
   GLenum t_target;
   GLuint textureObj;
-  std::string t_filename;
+  pathz texture_path;
   bool min_map;
   GLenum formate;
+  int current_texture_unit;
+  texture_paramz t_paramz;
 
   public :
 
   texture_2()
   {
-    //set_id();
     t_target = NULL;
-    t_filename = '\0';
+    //texture_path;
     set_obj_type(Sym_Object_Type::TEXTURE_OBJ);
   }
-  void config(GLenum text, const std::string& in_path,int index =NULL, bool in_min_map = false, GLenum in_tform= GL_RGBA)
+  void config(GLenum text, const pathz& in_path,  bool in_min_map = false, GLenum in_tform= GL_RGBA, int def_texture_unit = 0)
   {
-
-      if(index == NULL)
-      {
-        set_id(NULL);
-      }
-      set_id(index);
-      set_obj_type(Sym_Object_Type::TEXTURE_OBJ);
-
       t_target    = text;
-      t_filename  = in_path;
+      texture_path  = in_path;
       min_map     =  in_min_map;
       formate     =  in_tform;
+      def_texture_unit = current_texture_unit;
+  }
 
+  void set_teture_paramz(texture_paramz& in_parmz)
+  {
+    t_paramz=  in_parmz;
   }
 
   void setup(image2& inimage)
@@ -67,13 +77,31 @@ class texture_2 : public sym_object
       glBindTexture(t_target, textureObj);
       glTexImage2D(t_target, 0, GL_RGBA, inimage.columns, inimage.rows, 0,
                   GL_RGBA, GL_UNSIGNED_BYTE, inimage.data());
-      glTexParameterf(t_target, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-      glTexParameterf(t_target, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-      glBindTexture(t_target, 0);
+      glTexParameterf(t_target, GL_TEXTURE_MIN_FILTER, t_paramz.minFiler);
+      glTexParameterf(t_target, GL_TEXTURE_MAG_FILTER, t_paramz.magFiler);
+      glTexParameteri(t_target, GL_TEXTURE_WRAP_S, t_paramz.wrapMode_S); //GL_REPEAT//GL_CLAMP_TO_EDGE//GL_CLAMP_TO_BORDER//GL_MIRRORED_REPEAT
+      glTexParameteri(t_target, GL_TEXTURE_WRAP_T, t_paramz.wrapMode_T);
+      glBindTexture(t_target, 0+current_texture_unit);
     }
+  }
 
+  inline void activate()
+  {
+    glActiveTexture(GL_TEXTURE0+current_texture_unit);
+  }
+
+  inline void change_texture_unit(int in_unit)
+  {
+    current_texture_unit = in_unit;
+  }
+  inline void set_texture_sampler_uniform(shader_seprate* s_in,std::string uniform_name)
+  {
+    glBindTexture(t_target,0+current_texture_unit);
+    glUniform1i(glGetUniformLocation(s_in->gl_shaderprgm_ID, uniform_name.c_str()), 0+current_texture_unit);
   }
 };
+
+
 
 
 struct texture_paramz_pak

@@ -7,6 +7,10 @@
 #include "../phyziz/bullet_collision.hpp"
 #include "../geometry/geometry.hpp"
 
+
+enum class Contact_type
+{CONTACT_ENTER,CONTACT_EXIT,CONTACT_STAY};
+
 struct bullet_object;
 class simula_entity : public sym_object
 {
@@ -41,6 +45,31 @@ class simula_entity : public sym_object
   void disable_physiz()
   {
     has_physiz = false;
+  }
+
+  void on_contact_event(simula_entity* in_other_entity, Contact_type in_type_contact)
+  {
+    switch(in_type_contact)
+    {
+
+      case Contact_type::CONTACT_ENTER :
+      {
+        std::cout <<"objectID::" <<this->get_id()  << ", has made a collison with objectID::" << in_other_entity->get_id() <<'\n';
+        break;
+      }
+
+      case Contact_type::CONTACT_EXIT :
+      {
+          std::cout <<"objectID::" <<this->get_id()  << ",  has exited a collison with objectID::" << in_other_entity->get_id() <<'\n';
+        break;
+      }
+
+      case Contact_type::CONTACT_STAY :
+      {
+        std::cout << "stillcontacts....dooom resolve call?\n";
+        break;
+      }
+    }
   }
 
 
@@ -80,8 +109,7 @@ class simula_entity : public sym_object
 
 };
 
-enum contact_type
-{CONTACT_ENTER,CONTACT_EXIT,CONTACT_STAY};
+
 
 struct Object_pair{
   simula_entity* _a;
@@ -93,7 +121,7 @@ struct Object_pair{
     _b = objB;
   }
 
-  bool operator < (const object_pair& pair) const
+  bool operator < (const Object_pair& pair) const
    {
     unsigned int ourlow =std::min(_a->get_id(),_b->get_id());
     unsigned int ourhigh= std::max(_a->get_id(),_b->get_id());
@@ -128,10 +156,10 @@ struct Contact_info{
 
   bool is_new_contact()
   {
-  return (total_frames_in_contact ==1)
+  return (total_frames_in_contact ==1);
   }
 
-   bool is_contact_stale()
+   bool is_contact_stale(const int current_frame)
    {
      return last_frame_in_contact !=current_frame;
    }
@@ -139,7 +167,60 @@ struct Contact_info{
 };
 
 typedef std::map<Object_pair,Contact_info> contact_map_type;
-//call post simstef
 
+
+//call post simstef
+void check_collision_simula_obj(bullet_collision_detector* in_detector,contact_map_type& in_contact_map)
+{
+  static int this_frame = 0;
+  ++this_frame;
+  int num_manifolds = in_detector->dynamicsWorld->getDispatcher()->getNumManifolds();
+
+  for(int i =0; i< num_manifolds; i++)
+  {
+    btPersistentManifold* contact_manfold = in_detector->dynamicsWorld->getDispatcher()->getManifoldByIndexInternal(i);
+    const btCollisionObject* objA = static_cast<const btCollisionObject*>(contact_manfold->getBody0());
+    const btCollisionObject* objB = static_cast<const btCollisionObject*>(contact_manfold->getBody1());
+
+    int num_contacts = contact_manfold->getNumContacts();
+
+    if(num_contacts >0)
+    {
+      simula_entity* a = static_cast<simula_entity*>(objA->getUserPointer());
+      simula_entity* b = static_cast<simula_entity*>(objB->getUserPointer());
+
+      if(a&&b)
+      {
+        in_contact_map[Object_pair(a,b)].update(this_frame);
+      }
+    }
+  }
+
+contact_map_type::iterator iter= in_contact_map.begin();
+
+while(iter!=in_contact_map.end())
+{
+  if(iter->second.is_new_contact())
+  {
+    iter->first._a->on_contact_event(iter->first._b,Contact_type::CONTACT_ENTER);
+    iter->first._b->on_contact_event(iter->first._a,Contact_type::CONTACT_ENTER);
+    ++iter;
+  }
+  else if(iter->second.is_contact_stale(this_frame))
+  {
+    iter->first._a->on_contact_event(iter->first._b,Contact_type::CONTACT_EXIT);
+    iter->first._b->on_contact_event(iter->first._a,Contact_type::CONTACT_EXIT);
+    contact_map_type::iterator iter_to_delete = iter;
+    ++iter;
+    in_contact_map.erase(iter_to_delete);
+  }
+
+  else {
+    iter->first._a->on_contact_event(iter->first._b,Contact_type::CONTACT_STAY);
+    iter->first._b->on_contact_event(iter->first._a,Contact_type::CONTACT_STAY);
+    ++iter;
+  }
+}
+}
 
 #endif

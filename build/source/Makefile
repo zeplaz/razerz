@@ -489,6 +489,33 @@ basez/texture.cpp.s:
 	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/basez.dir/build.make source/CMakeFiles/basez.dir/basez/texture.cpp.s
 .PHONY : basez/texture.cpp.s
 
+modualz/geometry/assimp_model.o: modualz/geometry/assimp_model.cpp.o
+
+.PHONY : modualz/geometry/assimp_model.o
+
+# target to build an object file
+modualz/geometry/assimp_model.cpp.o:
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.o
+.PHONY : modualz/geometry/assimp_model.cpp.o
+
+modualz/geometry/assimp_model.i: modualz/geometry/assimp_model.cpp.i
+
+.PHONY : modualz/geometry/assimp_model.i
+
+# target to preprocess a source file
+modualz/geometry/assimp_model.cpp.i:
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.i
+.PHONY : modualz/geometry/assimp_model.cpp.i
+
+modualz/geometry/assimp_model.s: modualz/geometry/assimp_model.cpp.s
+
+.PHONY : modualz/geometry/assimp_model.s
+
+# target to generate assembly for a file
+modualz/geometry/assimp_model.cpp.s:
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.s
+.PHONY : modualz/geometry/assimp_model.cpp.s
+
 modualz/geometry/geometry.o: modualz/geometry/geometry.cpp.o
 
 .PHONY : modualz/geometry/geometry.o
@@ -723,6 +750,9 @@ help:
 	@echo "... basez/texture.o"
 	@echo "... basez/texture.i"
 	@echo "... basez/texture.s"
+	@echo "... modualz/geometry/assimp_model.o"
+	@echo "... modualz/geometry/assimp_model.i"
+	@echo "... modualz/geometry/assimp_model.s"
 	@echo "... modualz/geometry/geometry.o"
 	@echo "... modualz/geometry/geometry.i"
 	@echo "... modualz/geometry/geometry.s"

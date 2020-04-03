@@ -38,6 +38,7 @@ add_library(modualz STATIC
 "modualz/phyziz/collision_AI.cpp"
 "modualz/phyziz/bullet_collision.cpp"
 "modualz/phyziz/pysic_lib.cpp"
+"modualz/geometry/assimp_model.cpp"
 #"modualz/geometry/geometry.hpp"
 #"modualz/phyziz/pysic_lib.hpp"
  )

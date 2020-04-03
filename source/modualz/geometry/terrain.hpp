@@ -14,7 +14,7 @@ class terrain : public sym_object
 {
   protected  :
 
-  GLuint           terrian_VAO;
+  GLuint          terrian_VAO;
   GLuint          gltexture_displacement_glID;
   GLuint          gltexture_matte_colour_glID;
 
@@ -55,7 +55,7 @@ void set_emiter(emetteur* in_emettuer)
 
   void configure()
   {
-    set_obj_type(Sym_Object_Type::TERRERAIN_OBJ);  
+    set_obj_type(Sym_Object_Type::TERRERAIN_OBJ);
     displacemap_depth = 6.0;
     enable_displacement= true;
     wireframe= false;
@@ -112,6 +112,8 @@ void set_emiter(emetteur* in_emettuer)
   {
       displacemap_depth  += dmap_depth;
   }
+
+  //void set_
   void draw(glm::mat4 Projection, glm::mat4 mv_matrix) //
   {
 

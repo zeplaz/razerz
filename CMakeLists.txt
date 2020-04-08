@@ -30,7 +30,7 @@ find_package(ASSIMP REQUIRED)
 message(STATUS "Found ASSIMP in ${ASSIMP_INCLUDE_DIR}")
 
 find_package(GLEW REQUIRED)
-message(STATUS "GLEW included at ${GLM_INCLUDE_DIR}")
+message(STATUS "GLEW included at ${GLEW_INCLUDE_DIR}")
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)

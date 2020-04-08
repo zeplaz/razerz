@@ -195,17 +195,20 @@ void* get_body()
 class simula_entity;
 struct bullet_object
 {
-  bool hit;
-  glm::vec4 base_colour;
-  simula_entity* root_entity;
+  bool hit = false;
+  glm::vec4 base_colour glm::vec3(1,1,1,1);
+  simula_entity* root_entity = nullptr;
   bullet_body bp_body;
+  Interaction_Method inter_method =Interaction_Method::GHOST;
 
-  bullet_object(void* in_body, simula_entity* in_root_entity)
+
+  bullet_object() = default;
+
+
+  bullet_object(const Phys_Mesh_Type& in_phy_obj,simula_entity* in_root_entity)
   {
-    hit           = false;
-    //body_type     =dirive_Body_type(in_body);
-    bp_body.set_bb(in_body);
-    root_entity   =in_root_entity;
+    hit = false;
+
   }
 
   bullet_object(void* in_body, glm::vec4 in_colour,simula_entity* in_root_entity )
@@ -216,17 +219,50 @@ struct bullet_object
     root_entity     = in_root_entity;
 
   }
+
+  static std::shared_ptr<bullet_object> gen_bullet_object(void* in_body, simula_entity* in_root_entity)
+  {
+    bp_body.set_bb(in_body);
+    root_entity   =in_root_entity;
+  }
+
+  glm::mat4 reurn_bt_tanz_as_matrix(j)
+  {
+      if (bp_body.body_type == Body_type::B_RIGID_BODY)
+      {
+        btTransform tranz = bp_body.rigid_body->getWorldTransform();
+        float mat[16];
+        tranz.getOpenGLMatrix(mat);
+        glm::mat4 gmmat4 = glm::make_mat4(mat);
+      return gmmat4;
+      }
 };
 
 
 //static bool callback_manfold(btManifoldPoint& cp, const btCollisionObject* o0, int id0, int index0,const btCollisionObject* o2, int id2, int index2);
 //static void update_model_view(bullet_object* bul_obj, glm::mat4& model_view_matrix);
 
+glm::mat4 btScalar2mat4(btScalar* matrix) {
+    return glm::mat4(
+        matrix[0], matrix[1], matrix[2], matrix[3],
+        matrix[4], matrix[5], matrix[6], matrix[7],
+        matrix[8], matrix[9], matrix[10], matrix[11],
+        matrix[12], matrix[13], matrix[14], matrix[15]);
+}
 
-
-static void update_model_view(bullet_object* bul_obj, glm::mat4& model_view_matrix)
+void update_model_matrix (bullet_object* bul_obj ,glm::mat4& in_T)
 {
+  if (bul_obj->bp_body.body_type == Body_type::B_RIGID_BODY) {
+        btTransform transform = bul_obj->bp_body.rigid_body->getWorldTransform();
+        glm::mat4  m_modelMatrix = btScalar2glmMat4(transform);
+        m_modelMatrix = in_T * m_modelMatrix;
+        in_T = m_modelMatrix;
+      }
+}
 
+
+
+/*
   switch(bul_obj->bp_body.bullet_shape)
   {
     case CUSTOM_CONVEX_SHAPE_TYPE :
@@ -254,16 +290,13 @@ static void update_model_view(bullet_object* bul_obj, glm::mat4& model_view_matr
     {
     //  btSphereShape* bp_shape =  static_cast<btSphereShape*>(bul_body->getCollisionShape());
     //  float radius = bp_shape->getRadius;
-      btTransform tranz;
       //bul_obj->b_body->getMotionState()->getWorldTransform(tranz);
-      float mat[16];
 
-      tranz.getOpenGLMatrix(mat);
-      glm::mat4 gmmat4 = glm::make_mat4(mat);
     //  model_view_matrix*=gmmat4;
       break;
     }
   }
+  */
 }
 
 
@@ -358,6 +391,69 @@ if(RayCallback.hasHit())
 }
 }
 //void add_sphere(btTransform& dp_t, float rad, float x, float y, float z, float mass, int flagz);
+struct shape_paramz{
+  float rad;
+  float mass;
+  glm::vec3 pos;
+  int flagz;
+  glm::vec3 boxxyz;
+  glm::vec3 normal;
+  float d;
+  float height;
+};
+typedef std::tuple<Phys_Mesh_Type,bullet_body*,shape_paramz> bullet_pramz_tuple;
+
+void add_bullet_shape(const Phys_Mesh_Type phyz_shape, const bullet_pramz_tuple& in_p_t)
+{
+
+  shape_paramz* shapepramz = &std::get<1>(in_p_t);
+
+  switch(phyz_shape)
+  {
+    case Phys_Mesh_Type::SPHERE :
+    {
+      btTransform dp_t;
+      dp_t.setIdentity();
+      dp_t.setOrigin(btVector3(shapepramz->pos.x,shapepramz->pos.y,shapepramz->pos.z));
+
+      btSphereShape* sphere = new   btSphereShape(shapepramz.rad);
+      btVector3 inertia(0,0,0);
+      if(mass !=0.0)
+      {
+        sphere->calculateLocalInertia(shapepramz->mass,inertia);
+      }
+      btMotionState* motion_def = new btDefaultMotionState(dp_t);
+      btRigidBody::btRigidBodyConstructionInfo info(mass,motion_def,sphere,inertia);
+      btRigidBody *sphere_body = new btRigidBody(info);
+      sphere_body->setCollisionFlags(sphere_body->getCollisionFlags()|shapepramz->flagz);
+    //  dynamicsWorld->addRigidBody(sphere_body);
+      //bodiez.push_back(sphere_body);
+      //
+      //sphere_body->setUserPointer(bodiez[bodiez.size()-1]);
+      break;
+    }
+
+    case Phys_Mesh_Type::CYLINDER :
+    {
+
+      break;
+    }
+
+    case Phys_Mesh_Type::CUBE :
+    {
+
+      break;
+    }
+
+    case Phys_Mesh_Type::CONVEX :
+    {
+
+      break;
+    }
+
+
+  }
+}
 void add_sphere(btTransform& dp_t, float rad, float x, float y, float z, float mass, int flagz)
 {
   dp_t.setIdentity();
@@ -368,7 +464,6 @@ void add_sphere(btTransform& dp_t, float rad, float x, float y, float z, float m
   {
     sphere->calculateLocalInertia(mass,inertia);
   }
-
   btMotionState* motion_def = new btDefaultMotionState(dp_t);
   btRigidBody::btRigidBodyConstructionInfo info(mass,motion_def,sphere,inertia);
   btRigidBody *sphere_body = new btRigidBody(info);
@@ -428,7 +523,7 @@ byte_t* load_terrian_file(const pathz& in_path,	btScalar& minHeight, btScalar& m
         {
             int width, height,n;
 
-            unsigned char* image = stbi_image_from_memory((const unsigned char*)&buffer[0], buffer.size(), &width, &height, &n, 3);
+            unsigned char* image = iolocal::stbi_image_from_memory((const unsigned char*)&buffer[0], buffer.size(), &width, &height, &n, 3);
             if (image)
             {
               printf("width=%d, height=%d at %d channels\n", width,height, n);

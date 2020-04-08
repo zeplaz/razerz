@@ -79,6 +79,8 @@ cpp_libz_base.hpp
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
 mathII.hpp
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/mathII.hpp
+errorhandler.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/errorhandler.hpp
 
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/lenz.hpp
 gl_lib_z.hpp
@@ -113,13 +115,17 @@ assimp_model.hpp
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/geometry/assimp_model.hpp
 geometry.hpp
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/geometry/geometry.hpp
-assimp/cimport.h
+assimp/material.h
 -
-assimp/scene.h
+assimp/cimport.h
 -
 assimp/postprocess.h
 -
-assimp/material.h
+../../basez/io_utilityz.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.hpp
+assimp/Importer.hpp
+-
+assimp/scene.h
 -
 
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/geometry/geometry.hpp

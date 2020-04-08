@@ -1,6 +1,11 @@
 
+
+//#ifndef DEBUG_01
+#define DEBUG_01
+
 #ifndef RA_ERROR_HANDLER_HPP
 #define RA_ERROR_HANDLER_HPP
+
 
  enum Exit_Error_Code : int{
 
@@ -13,11 +18,12 @@
    FILE_FORMATE_ERROR = -17,
    MAPLOOKUP_FAIL = -18,
    SHADER_LINK_FAIL = -19,
-   STBI_LOAD_FAIL = -20
+   STBI_LOAD_FAIL = -20,
+   OI_UTILITYZ_FAIL =-31
  };
 
 
- std::string error_to_string(int in_error)
+ static std::string error_to_string(int in_error)
  {
    switch(in_error)
    {
@@ -50,6 +56,9 @@
 
      case STBI_LOAD_FAIL:
      return "STBI_LOAD_FAIL";
+
+     case OI_UTILITYZ_FAIL:
+     return "OI_UTILITYZ_FAIL";
 
      default :
      return "UNKNOWN_ERROR";

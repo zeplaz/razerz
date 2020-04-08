@@ -57,7 +57,7 @@ file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/media/orgburo/
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/razerz")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}/usr/local/bin/razerz"
-         OLD_RPATH "/usr/local/lib:"
+         OLD_RPATH "/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/lib/basez:/usr/local/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/bin/razerz")

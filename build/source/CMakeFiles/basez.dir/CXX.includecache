@@ -71,6 +71,8 @@ cpp_libz_base.hpp
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
 mathII.hpp
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/mathII.hpp
+errorhandler.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/errorhandler.hpp
 
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/mathII.hpp
 iostream

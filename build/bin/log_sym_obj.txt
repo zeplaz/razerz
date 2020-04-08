@@ -1,0 +1,6 @@
+###Log_OUt::
+OBJECTID::30361664
+ TYPE::|-TEXTTURE_OBJ-|
+
+ priotry::-1
+testloglolal

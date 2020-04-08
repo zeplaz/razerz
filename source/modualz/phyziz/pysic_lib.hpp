@@ -3,7 +3,7 @@
 #ifndef RA_PYSIC_LIB_HPP
 #define RA_PYSIC_LIB_HPP
 
-#include "../basez/gl_lib_z.hpp"
+#include "../../basez/gl_lib_z.hpp"
 #define GLM_ENABLE_EXPERIMENTAL
 
 #include  <glm/gtx/norm.hpp>
@@ -14,7 +14,15 @@ CONVEX,
 CUBE,
 SPHERE,
 CONE,
-CYLINDER
+CYLINDER,
+PLANE,
+CAPSULE,
+COMPOUND,
+TRIANGLE,
+HIGHTFEILD,
+SOFTBODY,
+MULTI_SHERE,
+CONVEX_POINT_CLOUD
 };
 
 enum class Interaction_Method
@@ -53,7 +61,18 @@ glm::vec3 normal;
 bool is_null;
 };
 
+glm::mat4 array2mat4(const float* array) {     // OpenGL row major
 
+    glm::mat4 matrix;
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            matrix[i][j] = array[i + j];
+        }
+    }
+
+    return matrix;
+}
 
 static inline  glm::vec3 prediction_fire_solution_at_t(float t, glm::vec3 start,float muzzle, glm::vec3 gravity)
 {

@@ -87,6 +87,10 @@ bin/razerz: lib/libMCP_cmd.a
 bin/razerz: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 bin/razerz: /usr/lib/x86_64-linux-gnu/libGLX.so
 bin/razerz: /usr/lib/x86_64-linux-gnu/libGLU.so
+bin/razerz: /usr/lib/x86_64-linux-gnu/libOpenGL.so
+bin/razerz: /usr/lib/x86_64-linux-gnu/libGLX.so
+bin/razerz: /usr/lib/x86_64-linux-gnu/libGLU.so
+bin/razerz: /usr/lib/x86_64-linux-gnu/libGLEW.so
 bin/razerz: /usr/lib/x86_64-linux-gnu/libfreetype.so
 bin/razerz: /usr/local/lib/libopencv_gapi.so.4.1.0
 bin/razerz: /usr/local/lib/libopencv_stitching.so.4.1.0

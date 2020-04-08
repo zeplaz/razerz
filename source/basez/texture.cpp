@@ -1,62 +1,18 @@
 //texture.cpp
 #include "texture.hpp"
 
-
-unsigned int TextureFromFile(const char *path, const std::string &directory,bool gamma)
-  {  std::string filename = std::string(path);
-     filename = directory + '/' + filename;
-
-     unsigned int textureID;
-    glGenTextures(1, &textureID);
-
-    int width, height, nrComponents;
-    unsigned char *data = stbi_image_loader(filename.c_str(), &width, &height, &nrComponents);
-
-    if (data)
-    {
-        GLenum format;
-        if (nrComponents == 1)
-            format = GL_RED;
-        else if (nrComponents == 3)
-            format = GL_RGB;
-        else if (nrComponents == 4)
-            format = GL_RGBA;
-
-        glBindTexture(GL_TEXTURE_2D, textureID);
-        glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
-        glGenerateMipmap(GL_TEXTURE_2D);
-
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S,  GL_CLAMP_TO_EDGE);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T,  GL_CLAMP_TO_EDGE);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-        free_stbi_data(data);
-
-    }
-    else
-    {
-        std::cout << "Texture failed to load at path: " << path << std::endl;
-        free_stbi_data(data);
-        exit(STBI_LOAD_FAIL);
-    }
-
-    return textureID;
-}
-
-unsigned int TextureFromFile(std::string& file_path, bool gamma)
+/*
+unsigned int ai_texture::ai_TextureFromFile(const char* file_pathname, const char* in_path)
 {
-    /* std::string name = std::string(path);
-    std::string filename;
-    filename = directory;
-    filename += '/' ;
-    filename += name;
-    */
-    std::cout << "##TEXT_FMFILE__aitexture_file:"<<file_path;
+    std::string full_path = std::string(file_pathname) +'/'+ std::string(file_pathname);
+
+    std::cout << "ai texturefile::" << full_path << '\n';
+
     unsigned int textureID;
     glGenTextures(1, &textureID);
 
     int width, height, nrComponents;
-    unsigned char *data = stbi_image_loader(file_path.c_str(), &width, &height, &nrComponents);
+    unsigned char *data = iolocal::stbi_image_loader(full_path.c_str(), &width, &height, &nrComponents);
     if (data)
     {
         GLenum format;
@@ -76,12 +32,99 @@ unsigned int TextureFromFile(std::string& file_path, bool gamma)
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-        free_stbi_data(data);
+        iolocal::free_stbi_data(data);
+    }
+    else
+    {
+        std::cout << "Texture failed to load at path: " << in_path << std::endl;
+        iolocal::free_stbi_data(data);
+    }
+
+    return textureID;
+  }
+/*
+
+unsigned int TextureFromFile(const char *path, const std::string &directory,bool gamma)
+  {  std::string filename = std::string(path);
+     filename = directory + '/' + filename;
+
+     unsigned int textureID;
+    glGenTextures(1, &textureID);
+
+    int width, height, nrComponents;
+    unsigned char *data = iolocal::stbi_image_loader(filename.c_str(), &width, &height, &nrComponents);
+
+    if (data)
+    {
+        GLenum format;
+        if (nrComponents == 1)
+            format = GL_RED;
+        else if (nrComponents == 3)
+            format = GL_RGB;
+        else if (nrComponents == 4)
+            format = GL_RGBA;
+
+        glBindTexture(GL_TEXTURE_2D, textureID);
+        glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
+        glGenerateMipmap(GL_TEXTURE_2D);
+
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S,  GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T,  GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        iolocal::free_stbi_data(data);
+
+    }
+    else
+    {
+        std::cout << "Texture failed to load at path: " << path << std::endl;
+        iolocal::free_stbi_data(data);
+        exit(STBI_LOAD_FAIL);
+    }
+
+    return textureID;
+}
+*/
+/*
+unsigned int TextureFromFile(std::string& file_path, bool gamma)
+{
+    std::string name = std::string(path);
+    std::string filename;
+    filename = directory;
+    filename += '/' ;
+    filename += name;
+
+    std::cout << "##TEXT_FMFILE__aitexture_file:"<<file_path;
+    unsigned int textureID;
+    glGenTextures(1, &textureID);
+
+    int width, height, nrComponents;
+    unsigned char *data = iolocal::stbi_image_loader(file_path.c_str(), &width, &height, &nrComponents);
+    if (data)
+    {
+        GLenum format;
+        if (nrComponents == 1)
+            format = GL_RED;
+        else if (nrComponents == 3)
+            format = GL_RGB;
+        else if (nrComponents == 4)
+            format = GL_RGBA;
+
+        glBindTexture(GL_TEXTURE_2D, textureID);
+        glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
+        glGenerateMipmap(GL_TEXTURE_2D);
+
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+        iolocal::free_stbi_data(data);
     }
     else
     {
         std::cout << "Texture failed to load at path: " << file_path << std::endl;
-        free_stbi_data(data);
+        iolocal::free_stbi_data(data);
     }
 
     return textureID;
@@ -89,14 +132,14 @@ unsigned int TextureFromFile(std::string& file_path, bool gamma)
 
 void image2::cleanup()
 {
-  free_stbi_data(image);
+  iolocal::free_stbi_data(image);
   delete [] image;
 }
 
 void image2::load(std::string& path,int in_n=0)
 {
 
-  image = stbi_image_loader(path.c_str(),&columns,&rows,&n,in_n);
+  image = iolocal::stbi_image_loader(path.c_str(),&columns,&rows,&n,in_n);
   std::cout <<"stbi_loadcompleate\n";
   }
 
@@ -114,7 +157,7 @@ void image2::load(std::string& path,int in_n=0)
         default: throw std::runtime_error("Unrecognised Bitmap::Format");
     }
   }
-
+*/
 void Texture_gl::init_texture()
 {
   glActiveTexture(GL_TEXTURE0+texture_indexUnit);
@@ -122,14 +165,14 @@ void Texture_gl::init_texture()
   glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
   glTexImage2D(GL_TEXTURE_2D, 0, return_TextureFormat(formate_internal), width,
               height, 0,return_TextureFormat(formate_external), GL_UNSIGNED_BYTE, image);
-  free_stbi_data(image);
+  iolocal::free_stbi_data(image);
   glBindTexture(GL_TEXTURE_2D,0);
 }
 
 void Texture_gl::load_texture(std::string path,int force_channel,int text_unitindex)
 {
   std::cout <<"stbi_begin\n";
-  image = stbi_image_loader(path.c_str(),&width,&height,&n,force_channel);
+  image = iolocal::stbi_image_loader(path.c_str(),&width,&height,&n,force_channel);
   std::cout <<"stbi_loadcompleate\n";
   set_texture_unit_index(text_unitindex);
 }
@@ -162,7 +205,6 @@ void Texture_gl::set_min_Mag_Filter(Filter filt,char min_mag)
         magFiler = GL_MIPMAP;
         break;
       }
-
       default : throw std::runtime_error("Unrecognised Bitmap::Filter");
     }
   }

@@ -70,9 +70,22 @@ source/CMakeFiles/modualz.dir/modualz/geometry/geometry.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/modualz.dir/modualz/geometry/geometry.cpp.s"
 	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/geometry/geometry.cpp -o CMakeFiles/modualz.dir/modualz/geometry/geometry.cpp.s
 
+source/CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.o: source/CMakeFiles/modualz.dir/flags.make
+source/CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.o: ../source/modualz/geometry/assimp_model.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object source/CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.o"
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/geometry/assimp_model.cpp
+
+source/CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.i"
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/geometry/assimp_model.cpp > CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.i
+
+source/CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.s"
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/geometry/assimp_model.cpp -o CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.s
+
 source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o: source/CMakeFiles/modualz.dir/flags.make
 source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o: ../source/modualz/phyziz/collision_AI.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o"
 	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/phyziz/collision_AI.cpp
 
 source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.i: cmake_force
@@ -85,7 +98,7 @@ source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.s: cmake_force
 
 source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: source/CMakeFiles/modualz.dir/flags.make
 source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: ../source/modualz/phyziz/bullet_collision.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o"
 	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/phyziz/bullet_collision.cpp
 
 source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.i: cmake_force
@@ -98,7 +111,7 @@ source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.s: cmake_force
 
 source/CMakeFiles/modualz.dir/modualz/phyziz/pysic_lib.cpp.o: source/CMakeFiles/modualz.dir/flags.make
 source/CMakeFiles/modualz.dir/modualz/phyziz/pysic_lib.cpp.o: ../source/modualz/phyziz/pysic_lib.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object source/CMakeFiles/modualz.dir/modualz/phyziz/pysic_lib.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object source/CMakeFiles/modualz.dir/modualz/phyziz/pysic_lib.cpp.o"
 	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/modualz.dir/modualz/phyziz/pysic_lib.cpp.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/phyziz/pysic_lib.cpp
 
 source/CMakeFiles/modualz.dir/modualz/phyziz/pysic_lib.cpp.i: cmake_force
@@ -109,35 +122,22 @@ source/CMakeFiles/modualz.dir/modualz/phyziz/pysic_lib.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/modualz.dir/modualz/phyziz/pysic_lib.cpp.s"
 	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/phyziz/pysic_lib.cpp -o CMakeFiles/modualz.dir/modualz/phyziz/pysic_lib.cpp.s
 
-source/CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.o: source/CMakeFiles/modualz.dir/flags.make
-source/CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.o: ../source/modualz/geometry/assimp_model.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object source/CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.o"
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/geometry/assimp_model.cpp
-
-source/CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.i"
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/geometry/assimp_model.cpp > CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.i
-
-source/CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.s"
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/geometry/assimp_model.cpp -o CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.s
-
 # Object files for target modualz
 modualz_OBJECTS = \
 "CMakeFiles/modualz.dir/modualz/geometry/geometry.cpp.o" \
+"CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.o" \
 "CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o" \
 "CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o" \
-"CMakeFiles/modualz.dir/modualz/phyziz/pysic_lib.cpp.o" \
-"CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.o"
+"CMakeFiles/modualz.dir/modualz/phyziz/pysic_lib.cpp.o"
 
 # External object files for target modualz
 modualz_EXTERNAL_OBJECTS =
 
 lib/libmodualz.a: source/CMakeFiles/modualz.dir/modualz/geometry/geometry.cpp.o
+lib/libmodualz.a: source/CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.o
 lib/libmodualz.a: source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o
 lib/libmodualz.a: source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o
 lib/libmodualz.a: source/CMakeFiles/modualz.dir/modualz/phyziz/pysic_lib.cpp.o
-lib/libmodualz.a: source/CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.o
 lib/libmodualz.a: source/CMakeFiles/modualz.dir/build.make
 lib/libmodualz.a: source/CMakeFiles/modualz.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library ../lib/libmodualz.a"

@@ -11,40 +11,62 @@
 enum class Contact_type
 {CONTACT_ENTER,CONTACT_EXIT,CONTACT_STAY};
 
+
 struct bullet_object;
 class simula_entity : public sym_object
 {
   private :
-  collision_enity internal_collison_enity;
+  //collision_enity internal_collison_enity;
   btAlignedObjectArray<mesh> mesh_array;
-  bullet_object* bullet_container;
+  std::shared_ptr<bullet_object>  bullet_container;
+  std::shared_ptr<ai_model> assimp_model;
 
   public :
+    bool pure_meshez  = false;
     bool is_ghost = true;
     bool has_physiz = false;
 
- void add_bullet_obj( void* in_body)
+ void add_bullet_obj(const Phys_Mesh_Type& in_phy_obj)
  {
     // bullet_container = bullet_obj;
   //  bullet_object new_object(in_body,this);
-    bullet_container = new bullet_object(in_body, this);
+    bullet_container = new bullet_object(in_phy_obj, this);
     bool has_physiz = true;
+    //phyz_shape = in_phy_obj;
+
  }
 
  void add_mesh(mesh in_mesh)
  {
     mesh_array.push_back(in_mesh);
-    bool is_ghost = false;
+    is_ghost = false;
+    pure_meshez = true;
   }
 
-  void make_ghost()
+  void add_assip_model(const pathz& in_path, glm::mat4& intial_loc)
   {
+    is_ghost = false;
+    assimp_model= ai_model::load_from_file(in_path);
+    assimp_model->set_location(intial_loc);
+    pure_meshez = false;
+  }
+
+  void toggle_ghost()
+  {
+    if(!is_ghost)
     is_ghost = true;
+    else {
+      is_ghost = false;
+    }
   }
 
-  void disable_physiz()
+  void toggle_physiz()
   {
+    if(has_physiz)
     has_physiz = false;
+    else{
+      has_physiz =true;
+    }
   }
 
   void on_contact_event(simula_entity* in_other_entity, Contact_type in_type_contact)
@@ -90,20 +112,37 @@ class simula_entity : public sym_object
       float mat[16];
       tranz.getOpenGLMatrix(mat);
       glm::mat4 gmmat4 = glm::make_mat4(mat);
-      for(size_t i =0; i< mesh_array.size(); i++)
+      if(pure_meshez)
       {
-        mesh_array[i].update_motion_matrix(gmmat4);
+        for(size_t i =0; i< mesh_array.size(); i++)
+        {
+          mesh_array[i].update_motion_matrix(gmmat4);
+        }
       }
+      else
+      {
+
+      }
+
     }
   }
 
   void render(){
     if(!is_ghost)
+
     {
-     for(size_t i = 0; i< mesh_array.size(); i++)
-     {
-       mesh_array[i].draw_via_cache();
-     }
+      if(pure_meshez)
+      {
+        for(size_t i = 0; i< mesh_array.size(); i++)
+        {
+          mesh_array[i].draw_via_cache();
+        }
+      }
+      else
+      {
+        assimp_model->draw();
+      }
+
     }
   }
 

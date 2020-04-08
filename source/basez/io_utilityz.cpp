@@ -6,7 +6,8 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "3rdparty/stb_image.h"
 
-static unsigned char* stbi_image_loader(const  char* inpath,int*width, int* height, int * nrComponents, int in_n)
+//using namespace iolocal;
+ unsigned char* iolocal::stbi_image_loader(const  char* inpath,int*width, int* height, int * nrComponents, int in_n)
 {
     unsigned char *data = stbi_load(inpath, width, height, nrComponents, in_n);
     if(data)
@@ -18,11 +19,11 @@ static unsigned char* stbi_image_loader(const  char* inpath,int*width, int* heig
   }
 }
 
-static void free_stbi_data(unsigned char* in_data)
+ void iolocal::free_stbi_data(unsigned char* in_data)
 {
   stbi_image_free(in_data);
 }
-static unsigned char* stbi_image_from_memory(const unsigned char *buffer, int len, int *x, int *y, int *channels_in_file, int desired_channels = 3)
+ unsigned char* iolocal::stbi_image_from_memory(const unsigned char *buffer, int len, int *x, int *y, int *channels_in_file, int desired_channels = 3)
 {
   unsigned char* data = stbi_load_from_memory(buffer, len, x, y, channels_in_file, desired_channels);
   if(data)
@@ -59,15 +60,21 @@ std::cout << "full IZ::" << full_path <<'\n';
       break;
     }
 
-    case File_Extention::FE_OJB :
+    case File_Extention::FE_OBJ :
     {
-        std::cout << "OJBextention\n";
+        std::cout << "OBJextention\n";
       break;
     }
 
     case File_Extention::FE_PLY :
     {
         std::cout << "PLYextention\n";
+      break;
+    }
+
+    case File_Extention::FE_MTL :
+    {
+        std::cout << "MTLextention\n";
       break;
     }
   }
@@ -130,7 +137,7 @@ void  pathz::set_extention(const char* in_path)
 
     else if (0==strcmp(temp_ext,ch_ojb))
     {
-      extention = File_Extention::FE_OJB;
+      extention = File_Extention::FE_OBJ;
       return;
     }
 
@@ -138,6 +145,15 @@ void  pathz::set_extention(const char* in_path)
     {
       extention = File_Extention::FE_PLY;
       return;
+    }
+    else if (0==strcmp(temp_ext,ch_mtl))
+    {
+      extention = File_Extention::FE_MTL;
+      return;
+    }
+    else {
+      std::cerr <<"seemz...fileformate is invaildeD???..";
+      exit(OI_UTILITYZ_FAIL);
     }
     delete [] temp_ext;
  }

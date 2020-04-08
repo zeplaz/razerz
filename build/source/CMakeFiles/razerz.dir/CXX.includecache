@@ -6,7 +6,29 @@
 
 #IncludeRegexTransform: 
 
-../source/basez/3rdparty/tiny_obj_loader.h
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/MCP_cmd/shader_pipeline_CMD.hpp
+../parserz/shader_parser.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/shader_parser.hpp
+../basez/sym_object.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.hpp
+../basez/shader_lib.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/shader_lib.hpp
+
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/3rdparty/CommonFileIOInterface.h
+
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/3rdparty/b3BulletDefaultFileIO.h
+CommonFileIOInterface.h
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/3rdparty/CommonFileIOInterface.h
+b3ResourcePath.h
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/3rdparty/b3ResourcePath.h
+stdio.h
+-
+
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/3rdparty/b3ResourcePath.h
+string
+-
+
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/3rdparty/tiny_obj_loader.h
 map
 -
 string
@@ -32,28 +54,6 @@ utility
 fstream
 -
 sstream
--
-
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/MCP_cmd/shader_pipeline_CMD.hpp
-../parserz/shader_parser.hpp
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/shader_parser.hpp
-../basez/sym_object.hpp
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.hpp
-../basez/shader_lib.hpp
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/shader_lib.hpp
-
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/3rdparty/CommonFileIOInterface.h
-
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/3rdparty/b3BulletDefaultFileIO.h
-CommonFileIOInterface.h
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/3rdparty/CommonFileIOInterface.h
-b3ResourcePath.h
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/3rdparty/b3ResourcePath.h
-stdio.h
--
-
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/3rdparty/b3ResourcePath.h
-string
 -
 
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
@@ -121,6 +121,8 @@ cpp_libz_base.hpp
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
 mathII.hpp
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/mathII.hpp
+errorhandler.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/errorhandler.hpp
 
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/lenz.hpp
 gl_lib_z.hpp
@@ -155,6 +157,22 @@ shader_lib.hpp
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/phyziz/bullet_collision.hpp
 ../geometry/geometry.hpp
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/geometry/geometry.hpp
+
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/geometry/assimp_model.hpp
+geometry.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/geometry/geometry.hpp
+assimp/material.h
+-
+assimp/cimport.h
+-
+assimp/postprocess.h
+-
+../../basez/io_utilityz.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.hpp
+assimp/Importer.hpp
+-
+assimp/scene.h
+-
 
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/geometry/geometry.hpp
 ../../basez/texture.hpp
@@ -195,8 +213,8 @@ bullet_collision.hpp
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/phyziz/bullet_collision.hpp
 
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/phyziz/pysic_lib.hpp
-../basez/gl_lib_z.hpp
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/basez/gl_lib_z.hpp
+../../basez/gl_lib_z.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/gl_lib_z.hpp
 glm/gtx/norm.hpp
 -
 
@@ -215,18 +233,18 @@ parserlib.hpp
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/parserlib.hpp
 
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/ttestz/sysm_test.cpp
-../basez/sym_object.hpp
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.hpp
-../basez/io_utilityz.hpp
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.hpp
+../basez/texture.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/texture.hpp
 ../modualz/geometry/geometry.hpp
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/geometry/geometry.hpp
 ../modualz/phyziz/collision_AI.hpp
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/phyziz/collision_AI.hpp
 ../modualz/committee/simula_entity.hpp
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/committee/simula_entity.hpp
-tiny_obj_loader.h
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/ttestz/tiny_obj_loader.h
+../modualz/geometry/assimp_model.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/geometry/assimp_model.hpp
+../basez/3rdparty/tiny_obj_loader.h
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/3rdparty/tiny_obj_loader.h
 
 /usr/include/bullet/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h
 LinearMath/btScalar.h

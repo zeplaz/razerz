@@ -3,6 +3,7 @@
 
 source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.o: ../source/basez/3rdparty/stb_image.h
 source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.o: ../source/basez/cpp_libz_base.hpp
+source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.o: ../source/basez/errorhandler.hpp
 source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.o: ../source/basez/io_utilityz.cpp
 source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.o: ../source/basez/io_utilityz.hpp
 source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.o: ../source/basez/mathII.hpp

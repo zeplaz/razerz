@@ -35,17 +35,16 @@ source/CMakeFiles/modualz.dir/modualz/geometry/geometry.cpp.o
  /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/parserlib.hpp
  /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/shader_parser.hpp
 source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o
- ../source/basez/cpp_libz_base.hpp
- ../source/basez/errorhandler.hpp
- ../source/basez/gl_lib_z.hpp
- ../source/basez/io_utilityz.hpp
- ../source/basez/mathII.hpp
  /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/MCP_cmd/shader_pipeline_CMD.hpp
  /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/3rdparty/CommonFileIOInterface.h
  /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/3rdparty/b3BulletDefaultFileIO.h
  /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/3rdparty/b3ResourcePath.h
+ /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
+ /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/errorhandler.hpp
  /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/gl_lib_z.hpp
+ /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.hpp
  /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/lenz.hpp
+ /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/mathII.hpp
  /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/shader_lib.hpp
  /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.hpp
  /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/texture.hpp
@@ -99,14 +98,14 @@ source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o
  /usr/include/bullet/LinearMath/btTransformUtil.h
  /usr/include/bullet/LinearMath/btVector3.h
 source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o
- ../source/basez/cpp_libz_base.hpp
- ../source/basez/errorhandler.hpp
- ../source/basez/gl_lib_z.hpp
- ../source/basez/io_utilityz.hpp
- ../source/basez/mathII.hpp
  /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/3rdparty/CommonFileIOInterface.h
  /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/3rdparty/b3BulletDefaultFileIO.h
  /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/3rdparty/b3ResourcePath.h
+ /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
+ /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/errorhandler.hpp
+ /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/gl_lib_z.hpp
+ /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.hpp
+ /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/mathII.hpp
  /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/phyziz/bullet_collision.hpp
  /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/phyziz/collision_AI.cpp
  /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/phyziz/collision_AI.hpp
@@ -152,10 +151,10 @@ source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o
  /usr/include/bullet/LinearMath/btTransformUtil.h
  /usr/include/bullet/LinearMath/btVector3.h
 source/CMakeFiles/modualz.dir/modualz/phyziz/pysic_lib.cpp.o
- ../source/basez/cpp_libz_base.hpp
- ../source/basez/errorhandler.hpp
- ../source/basez/gl_lib_z.hpp
- ../source/basez/io_utilityz.hpp
- ../source/basez/mathII.hpp
+ /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
+ /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/errorhandler.hpp
+ /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/gl_lib_z.hpp
+ /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.hpp
+ /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/mathII.hpp
  /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/phyziz/pysic_lib.cpp
  /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/modualz/phyziz/pysic_lib.hpp

@@ -34,17 +34,16 @@ source/CMakeFiles/modualz.dir/modualz/geometry/geometry.cpp.o: ../source/parserz
 source/CMakeFiles/modualz.dir/modualz/geometry/geometry.cpp.o: ../source/parserz/parserlib.hpp
 source/CMakeFiles/modualz.dir/modualz/geometry/geometry.cpp.o: ../source/parserz/shader_parser.hpp
 
-source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: ../source/basez/cpp_libz_base.hpp
-source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: ../source/basez/errorhandler.hpp
-source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: ../source/basez/gl_lib_z.hpp
-source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: ../source/basez/io_utilityz.hpp
-source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: ../source/basez/mathII.hpp
 source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: ../source/MCP_cmd/shader_pipeline_CMD.hpp
 source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: ../source/basez/3rdparty/CommonFileIOInterface.h
 source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: ../source/basez/3rdparty/b3BulletDefaultFileIO.h
 source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: ../source/basez/3rdparty/b3ResourcePath.h
+source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: ../source/basez/cpp_libz_base.hpp
+source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: ../source/basez/errorhandler.hpp
 source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: ../source/basez/gl_lib_z.hpp
+source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: ../source/basez/io_utilityz.hpp
 source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: ../source/basez/lenz.hpp
+source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: ../source/basez/mathII.hpp
 source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: ../source/basez/shader_lib.hpp
 source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: ../source/basez/sym_object.hpp
 source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: ../source/basez/texture.hpp
@@ -98,14 +97,14 @@ source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: /usr/includ
 source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: /usr/include/bullet/LinearMath/btTransformUtil.h
 source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o: /usr/include/bullet/LinearMath/btVector3.h
 
+source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o: ../source/basez/3rdparty/CommonFileIOInterface.h
+source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o: ../source/basez/3rdparty/b3BulletDefaultFileIO.h
+source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o: ../source/basez/3rdparty/b3ResourcePath.h
 source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o: ../source/basez/cpp_libz_base.hpp
 source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o: ../source/basez/errorhandler.hpp
 source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o: ../source/basez/gl_lib_z.hpp
 source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o: ../source/basez/io_utilityz.hpp
 source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o: ../source/basez/mathII.hpp
-source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o: ../source/basez/3rdparty/CommonFileIOInterface.h
-source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o: ../source/basez/3rdparty/b3BulletDefaultFileIO.h
-source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o: ../source/basez/3rdparty/b3ResourcePath.h
 source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o: ../source/modualz/phyziz/bullet_collision.hpp
 source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o: ../source/modualz/phyziz/collision_AI.cpp
 source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o: ../source/modualz/phyziz/collision_AI.hpp

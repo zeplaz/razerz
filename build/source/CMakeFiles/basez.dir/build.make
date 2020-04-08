@@ -57,22 +57,9 @@ include source/CMakeFiles/basez.dir/progress.make
 # Include the compile flags for this target's objects.
 include source/CMakeFiles/basez.dir/flags.make
 
-source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.o: source/CMakeFiles/basez.dir/flags.make
-source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.o: ../source/basez/io_utilityz.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.o"
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basez.dir/basez/io_utilityz.cpp.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.cpp
-
-source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basez.dir/basez/io_utilityz.cpp.i"
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.cpp > CMakeFiles/basez.dir/basez/io_utilityz.cpp.i
-
-source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basez.dir/basez/io_utilityz.cpp.s"
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.cpp -o CMakeFiles/basez.dir/basez/io_utilityz.cpp.s
-
 source/CMakeFiles/basez.dir/basez/opengl_utilityz.cpp.o: source/CMakeFiles/basez.dir/flags.make
 source/CMakeFiles/basez.dir/basez/opengl_utilityz.cpp.o: ../source/basez/opengl_utilityz.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object source/CMakeFiles/basez.dir/basez/opengl_utilityz.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object source/CMakeFiles/basez.dir/basez/opengl_utilityz.cpp.o"
 	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basez.dir/basez/opengl_utilityz.cpp.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/opengl_utilityz.cpp
 
 source/CMakeFiles/basez.dir/basez/opengl_utilityz.cpp.i: cmake_force
@@ -85,7 +72,7 @@ source/CMakeFiles/basez.dir/basez/opengl_utilityz.cpp.s: cmake_force
 
 source/CMakeFiles/basez.dir/basez/shader_lib.cpp.o: source/CMakeFiles/basez.dir/flags.make
 source/CMakeFiles/basez.dir/basez/shader_lib.cpp.o: ../source/basez/shader_lib.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object source/CMakeFiles/basez.dir/basez/shader_lib.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object source/CMakeFiles/basez.dir/basez/shader_lib.cpp.o"
 	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basez.dir/basez/shader_lib.cpp.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/shader_lib.cpp
 
 source/CMakeFiles/basez.dir/basez/shader_lib.cpp.i: cmake_force
@@ -98,7 +85,7 @@ source/CMakeFiles/basez.dir/basez/shader_lib.cpp.s: cmake_force
 
 source/CMakeFiles/basez.dir/basez/sym_object.cpp.o: source/CMakeFiles/basez.dir/flags.make
 source/CMakeFiles/basez.dir/basez/sym_object.cpp.o: ../source/basez/sym_object.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object source/CMakeFiles/basez.dir/basez/sym_object.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object source/CMakeFiles/basez.dir/basez/sym_object.cpp.o"
 	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basez.dir/basez/sym_object.cpp.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.cpp
 
 source/CMakeFiles/basez.dir/basez/sym_object.cpp.i: cmake_force
@@ -111,7 +98,7 @@ source/CMakeFiles/basez.dir/basez/sym_object.cpp.s: cmake_force
 
 source/CMakeFiles/basez.dir/basez/texture.cpp.o: source/CMakeFiles/basez.dir/flags.make
 source/CMakeFiles/basez.dir/basez/texture.cpp.o: ../source/basez/texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object source/CMakeFiles/basez.dir/basez/texture.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object source/CMakeFiles/basez.dir/basez/texture.cpp.o"
 	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basez.dir/basez/texture.cpp.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/texture.cpp
 
 source/CMakeFiles/basez.dir/basez/texture.cpp.i: cmake_force
@@ -122,22 +109,35 @@ source/CMakeFiles/basez.dir/basez/texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basez.dir/basez/texture.cpp.s"
 	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/texture.cpp -o CMakeFiles/basez.dir/basez/texture.cpp.s
 
+source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.o: source/CMakeFiles/basez.dir/flags.make
+source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.o: ../source/basez/io_utilityz.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.o"
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basez.dir/basez/io_utilityz.cpp.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.cpp
+
+source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basez.dir/basez/io_utilityz.cpp.i"
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.cpp > CMakeFiles/basez.dir/basez/io_utilityz.cpp.i
+
+source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basez.dir/basez/io_utilityz.cpp.s"
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.cpp -o CMakeFiles/basez.dir/basez/io_utilityz.cpp.s
+
 # Object files for target basez
 basez_OBJECTS = \
-"CMakeFiles/basez.dir/basez/io_utilityz.cpp.o" \
 "CMakeFiles/basez.dir/basez/opengl_utilityz.cpp.o" \
 "CMakeFiles/basez.dir/basez/shader_lib.cpp.o" \
 "CMakeFiles/basez.dir/basez/sym_object.cpp.o" \
-"CMakeFiles/basez.dir/basez/texture.cpp.o"
+"CMakeFiles/basez.dir/basez/texture.cpp.o" \
+"CMakeFiles/basez.dir/basez/io_utilityz.cpp.o"
 
 # External object files for target basez
 basez_EXTERNAL_OBJECTS =
 
-lib/libbasez.a: source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.o
 lib/libbasez.a: source/CMakeFiles/basez.dir/basez/opengl_utilityz.cpp.o
 lib/libbasez.a: source/CMakeFiles/basez.dir/basez/shader_lib.cpp.o
 lib/libbasez.a: source/CMakeFiles/basez.dir/basez/sym_object.cpp.o
 lib/libbasez.a: source/CMakeFiles/basez.dir/basez/texture.cpp.o
+lib/libbasez.a: source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.o
 lib/libbasez.a: source/CMakeFiles/basez.dir/build.make
 lib/libbasez.a: source/CMakeFiles/basez.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library ../lib/libbasez.a"

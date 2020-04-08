@@ -1,6 +1,8 @@
 
 #include "assimp_model.hpp"
 
+
+
 //#define GLM_ENABLE_EXPERIMENTAL
 //#include <glm/gtc/quaternion.hpp>
 //#include <glm/gtx/quaternion.hpp>
@@ -84,69 +86,54 @@ ai_Transformz   ai_Transformz::get_tranz_from_martix(const glm::mat4& m)
     return ai_Transformz(out_pos,out_rot,out_scale);
   }
 
-  std::shared_ptr<ai_model> ai_model::load_from_file(const pathz& in_path, const ai_Transformz& in_tranz)
+  //std::shared_ptr<ai_model> ai_model::load_from_file(const pathz& in_path, const ai_Transformz& in_tranz)
+
+
+//  std::vector<ai_Texture> ai_model::ai_loadMaterialTextures(aiMaterial *mat, aiTextureType type, std::string typeName)
+
+
+std::vector<ai_texture> ai_model::ai_loadMaterialTextures(aiMaterial *mat, aiTextureType type, std::string typeName, const pathz& in_path)
   {
+      std::vector<ai_texture> textures;
+      for(unsigned int i = 0; i < mat->GetTextureCount(type); i++)
+      {
+          aiString str;
+          mat->GetTexture(type, i, &str);
+          // check if texture was loaded before and if so, continue to next iteration: skip loading a new texture
+          bool skip = false;
+          for(unsigned int j = 0; j < textures_loaded.size(); j++)
+          {
+              if(std::strcmp(textures_loaded[j].path.data(), str.C_Str()) == 0)
+              {
+                  textures.push_back(textures_loaded[j]);
+                  skip = true; // a texture with the same filepath has already been loaded, continue to next one. (optimization)
+                  break;
+              }
+          }
+          if(!skip)
+          {   // if texture hasn't been loaded already, load it
+              ai_texture texture;
+              const char* tex_path = str.C_Str();
 
-	const aiScene* scene = aiImportFile(in_path.full_path, aiProcessPreset_TargetRealtime_MaxQuality);
-  if(!scene)
-  {
-    std::cerr <<"failed ai loadfilez::"<< in_path.file_name <<'\n';
-    return nullptr;
+              #ifdef DEBUG_01
+              std::cout << "texturePath from mtl:...<<::" << tex_path <<'\n';
+              #endif
+            //  const std::string text_str_path= in_path.drectory_path+ tex_path;
+              //const char* text_dr_path =
+
+              #ifdef DEBUG_01
+            //  std::cout << "texturePath from mtl:...<<" << text_str_path <<'\n';
+              #endif
+            //  const char* drectory= ;
+              texture.id = ai_texture::ai_TextureFromFile(tex_path,in_path.drectory_path);
+              texture.type = typeName;
+              texture.path = str.C_Str();
+              textures.push_back(texture);
+              textures_loaded.push_back(texture);  // store it as texture loaded for entire model, to ensure we won't unnecesery load duplicate textures.
+          }
+      }
+      return textures;
   }
-  std::vector<ai_mesh> new_meshz;
-  new_meshz.reserve(scene->mNumMeshes);
-  for(uint32_t meshIdx = 0u; meshIdx<scene->mNumMeshes; meshIdx++)
-  {
-    aiMesh* mesh = scene->mMeshes[meshIdx];
-    std::vector<ai_vertex> vertx;
-    vertx.reserve(mesh->mNumVertices);
-    aiMaterial* material = scene->mMaterials[mesh->mMaterialIndex];
-    aiColor4D specularColor;
-    aiColor4D diffuseColor;
-    aiColor4D ambientColor;
-    float   shininess;
-
-    aiGetMaterialColor(material, AI_MATKEY_COLOR_SPECULAR, &specularColor);
-		aiGetMaterialColor(material, AI_MATKEY_COLOR_DIFFUSE, &diffuseColor);
-		aiGetMaterialColor(material, AI_MATKEY_COLOR_AMBIENT, &ambientColor);
-		aiGetMaterialFloat(material, AI_MATKEY_SHININESS, &shininess);
-
-    ai_Material mesh_material(
-      glm::vec4(specularColor.r,specularColor.g,specularColor.b,specularColor.a),
-      glm::vec4(diffuseColor.r,diffuseColor.g,diffuseColor.b,diffuseColor.a),
-      glm::vec4(ambientColor.r,ambientColor.g,ambientColor.b,ambientColor.a),shininess
-    );
-    for(uint32_t vertxIdx = 0u; vertxIdx< mesh->mNumVertices; vertxIdx++)
-    {
-      aiVector3D vert = mesh->mVertices[vertxIdx];
-			aiVector3D norm = mesh->mNormals[vertxIdx];
-      aiVector3D uv = mesh->mTextureCoords[0][vertxIdx];
-      vertx.push_back
-      (
-          ai_vertex(glm::vec3(vert.x,vert.y,vert.z),
-                    glm::vec3(norm.x,norm.y,norm.z),
-                    uv.x, uv.y
-                    )
-      );
-    }
-
-    std::vector<uint32_t> indices;
-    indices.reserve(mesh->mNumFaces*3u);
-    for(uint32_t faceIdx= 0u; faceIdx<mesh->mNumFaces; faceIdx++)
-    {
-      indices.push_back(mesh->mFaces[faceIdx].mIndices[0u]);
-			indices.push_back(mesh->mFaces[faceIdx].mIndices[1u]);
-			indices.push_back(mesh->mFaces[faceIdx].mIndices[2u]);
-    }
-    //the call set_
-    ai_render_call rcall(vertx,indices);
-
-    //verts, indices
-    new_meshz.push_back(ai_mesh(rcall,mesh_material));
-  }
-  return std::make_shared<ai_model>(new_meshz,in_tranz);
-  }
-
 
 /*
 assimp_model(const std::vector<assimp_mesh> am_meshez, const Transform& tranz);

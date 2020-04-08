@@ -2,7 +2,9 @@
 #pragma once
 
 //inlcuded openglfilez
+#define GLEW_STATIC
 #include <GL/glew.h>
+//#include <GL/wglew.h>
 #include <GL/gl.h>
 #include <GL/glu.h>
 

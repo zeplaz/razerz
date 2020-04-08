@@ -1,5 +1,8 @@
-#pragma once
 
+
+#ifndef RZ_TEXTURE_HPP
+#define RZ_TEXTURE_HPP
+#define GLEW_STATIC
 //#include "../MCP_cmd/shader_pipeline_CMD.hpp"
 #include "shader_lib.hpp"
 
@@ -8,9 +11,68 @@ struct ai_texture
   unsigned int id;
   std::string type;
   std::string path;
+  static unsigned int ai_TextureFromFile(const char* file_pathname, const char* in_path)
+  {
+      std::string full_path = std::string(in_path) +std::string(file_pathname);//+'/'+ std::string(file_pathname);
+
+      std::cout << "ai texturefile::" << full_path << '\n';
+
+      unsigned int textureID;
+      glGenTextures(1, &textureID);
+
+      int width, height, nrComponents;
+      unsigned char *data = iolocal::stbi_image_loader(full_path.c_str(), &width, &height, &nrComponents);
+      std::cout << "data genrated from image\n";
+      if (data)
+      {
+          GLenum format;
+          if (nrComponents == 1)
+              format = GL_RED;
+          else if (nrComponents == 3)
+              format = GL_RGB;
+          else if (nrComponents == 4)
+              format = GL_RGBA;
+
+          glBindTexture(GL_TEXTURE_2D, textureID);
+        //  glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_LOD_BIAS, 4.5f);
+          glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+          glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+          glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+          glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+
+         glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
+        //  glTexStorage2D(GL_TEXTURE_2D, 0,format, width, height);
+        //  glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, width, height, format, GL_UNSIGNED_BYTE, data);
+                    //glTexParameteri(GL_TEXTURE_2D, GL_GENERATE_MIPMAP, GL_TRUE);
+        //  glEnable(GL_TEXTURE_2D);
+          std::cout << gluErrorString(glGetError()) << std::endl;
+        //  glGenerateMipmap(GL_TEXTURE_2D);  //Generate num_mipmaps number of mipmaps here.
+        //  assert(glGetError() == GL_NO_ERROR);
+          //std::cout << gluErrorString(glGetError()) << std::endl;
+          glBindTexture(GL_TEXTURE_2D, 0);
+          //
+
+      //    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+      //    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        std::cout << "glTexImage2D \n";
+
+          //glGenerateMipmap(GL_TEXTURE_2D);
+          //glGenerateTextureMipmap(textureID);
+
+              std::cout << "data about to be freed\n";
+          iolocal::free_stbi_data(data);
+      }
+      else
+      {
+          std::cout << "Texture failed to load at path: " << full_path << std::endl;
+          iolocal::free_stbi_data(data);
+      }
+      std::cout << "new texture genreated and dataloaded::"<<textureID <<'\n';
+      return textureID;
+    }
 };
-unsigned int TextureFromFile(const char *path, const std::string &directory,bool gamma = false);
-unsigned int TextureFromFile(std::string& file_path, bool gamma = false);
+//unsigned int TextureFromFile(const char *path, const std::string &directory);
+//unsigned int TextureFromFile(std::string& file_path, bool gamma = false);
 
 struct image2 {
   int columns,rows,n;
@@ -34,6 +96,15 @@ struct texture_paramz{
     texture_paramz(): wrapMode_S{GL_CLAMP_TO_EDGE},wrapMode_T{GL_CLAMP_TO_EDGE},magFiler{GL_LINEAR},minFiler{GL_LINEAR}
   {}
 };
+
+static std::vector<pathz> return_texturez_from_auto_load( const pathz& in_path)
+{
+//  in_path.drectory_path;
+}
+
+
+
+
 
 
 class texture_2 : public sym_object
@@ -203,3 +274,4 @@ struct Texture_gl
          }
        }
 };
+#endif

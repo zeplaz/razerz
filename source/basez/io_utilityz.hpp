@@ -4,25 +4,29 @@
 
 #include "cpp_libz_base.hpp"
 #include "mathII.hpp"
+#include "errorhandler.hpp"
 
 enum class File_Extention{
   FE_XML,
   FE_PNG,
   FE_BMP,
-  FE_OJB,
+  FE_OBJ,
   FE_PLY,
+  FE_MTL
 };
 
 constexpr char ch_xml[] = "xml";
 constexpr char ch_png[] = "png";
 constexpr char ch_bmp[] = "bmp";
-constexpr char ch_ojb[] = "ojb";
+constexpr char ch_ojb[] = "obj";
 constexpr char ch_ply[] = "ply";
-
+constexpr char ch_mtl[] = "mtl";
+class iolocal{
+public :
 static unsigned char* stbi_image_loader(const  char* inpath,int*width, int* height, int * nrComponents, int in_n=0);
 static void free_stbi_data(unsigned char* in_data);
 static unsigned char* stbi_image_from_memory(const unsigned char *buffer, int len, int *x, int *y, int *channels_in_file, int desired_channels);
-
+};
 struct pathz {
 
   File_Extention extention;

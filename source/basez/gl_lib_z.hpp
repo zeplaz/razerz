@@ -37,24 +37,30 @@ static float lastFrame = 0.0f;
 /*
 *definez
 */
-
+/*
 #define L_AMBIENT 1
 #define L_DIFFUSE 2
 #define L_SPEKLER 3
 #define L_DRECTION 4
 #define L_POINT 5
-#define L_SPOT 6
+#define L_SPOT 6*/
+
+
+template<typename E>
+constexpr auto to_integral(E e) -> typename std::underlying_type<E>::type
+{
+   return static_cast<typename std::underlying_type<E>::type>(e);
+}
+
+
 
 /*
 * BITMASK ENUMZ template work
 */
 //setup bitmaskable veratic Enums
 //note check better veratdic template oprator sharing
-template<typename E>
-constexpr auto to_integral(E e) -> typename std::underlying_type<E>::type
-{
-   return static_cast<typename std::underlying_type<E>::type>(e);
-}
+
+
 
 
 template<typename Enum>
@@ -118,6 +124,12 @@ operator &=(Enum &lhs, Enum rhs)
 */
 
 
+
+template<>
+struct EnableBitMaskOperators<light_channelz>
+{
+    static const bool enable = true;
+};
 enum class shader_type : unsigned char {
      SHADER_NULL         = 0x00,
      COMPUTE_SHADER      = 0x02,
@@ -134,6 +146,17 @@ struct EnableBitMaskOperators<shader_type>
     static const bool enable = true;
 };
 
+enum class Ai_Model_Flagz : unsigned char
+{
+  MIPMAP_LOAD,
+  MIPMAP_GEN
+}
+
+template<>
+struct EnableBitMaskOperators<Ai_Model_Flagz>
+{
+    static const bool enable = true;
+};
 
 enum class M_Tex_Flag : unsigned char
 {

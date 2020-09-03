@@ -13,6 +13,24 @@ enum class Contact_type
 
 
 struct bullet_object;
+
+class simula_light_bst : public simula_entity
+{
+
+};
+
+template<class solz_type>
+class  suleztialz : public simula_entity
+{
+    Defined_solestialz solestal_name;
+    solz_type* solestial_object;
+};
+
+class simula_lamp_entity : public simula_entity
+{
+
+};
+
 class simula_entity : public sym_object
 {
   private :

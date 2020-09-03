@@ -10,7 +10,7 @@ set(CMAKE_BUILD_DIR ${PROJECT_SOURCE_DIR}/build)
 
 #Add any other src file you may write
 set(razerz
-    "ttestz/sysm_test.cpp"
+    "ttestz/func_par_test.cpp"
 )
 
 add_library(3rdparty STATIC
@@ -22,31 +22,32 @@ add_library(3rdparty STATIC
   #  "/basez/3rdparty/sb7ktx.cpp"
     #"basez/3rdparty/stb_image.h"
 )
-add_library(MCP_cmd STATIC
+#add_library(MCP_cmd STATIC
 #"MCP_cmd/shader_pipeline_CMD.hpp"
-"MCP_cmd/shader_pipeline_CMD.cpp"
-)
+#"MCP_cmd/shader_pipeline_CMD.cpp"
+#)
 add_library(parserz STATIC
-  "parserz/geometry_parser.cpp"
+  #"parserz/geometry_parser.cpp"
   "parserz/parserlib.cpp"
   #  "parserz/geometry_parser.hpp"
   #  "parserz/parserlib.hpp"
 )
 
-add_library(modualz STATIC
-"modualz/geometry/geometry.cpp"
-"modualz/geometry/assimp_model.cpp"
-"modualz/phyziz/collision_AI.cpp"
-"modualz/phyziz/bullet_collision.cpp"
-"modualz/phyziz/pysic_lib.cpp"
- )
+#add_library(modualz STATIC
+#"modualz/geometry/geometry.cpp"
+#"modualz/geometry/assimp_model.cpp"
+#"modualz/phyziz/collision_AI.cpp"
+#"modualz/phyziz/bullet_collision.cpp"
+#"modualz/phyziz/pysic_lib.cpp"
+# )
 
 add_library(basez STATIC
   "basez/opengl_utilityz.cpp"
-  "basez/shader_lib.cpp"
-  "basez/sym_object.cpp"
-  "basez/texture.cpp"
+  #"basez/shader_lib.cpp"
+#"basez/sym_object.cpp"
+  #"basez/texture.cpp"
   "basez/io_utilityz.cpp"
+
 #"basez/lenz.hpp"
 #"basez/mathII.hpp"
 #"basez/mathz.hpp"
@@ -70,8 +71,8 @@ add_library(basez STATIC
 #)
 link_directories(lib/basez)
 include_directories( ${OPENGL_INCLUDE_DIRS} ${BULLET_INCLUDE_DIR} ${GLUT_INCLUDE_DIRS} ${OpenCV_INCLUDE_DIRS} ${GLEW_INCLUDE_DIRS} )
-set(LIBS glfw3 assimp GLEW freetype 3rdparty basez modualz parserz MCP_cmd)
-
+#set(LIBS glfw3 assimp GLEW freetype 3rdparty basez modualz parserz MCP_cmd)
+set(LIBS glfw3 assimp GLEW freetype 3rdparty basez parserz )
 
 
 if(EXISTS "${CMAKE_SOURCE_DIR}/.git")

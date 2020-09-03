@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Header_razar>
+  <?Resource?>
+  E_MODIFERZ
+  <Artifact_count>
+5
+  </Artifact_count>
+  <SUB_TYPE>
+  SPOT_LIGHT
+  </SUB_TYPE>
+  <NAME>
+  basic_white_blue_spot
+  </NAME>
+<A_CONSTSTANT>
+
+
+<COS_INNER_CUTTOFF_0>
+0.2181662
+</COS_INNER_CUTTOFF_0>
+<COS_OUTER_CUTTOFF_0>
+0.2617994
+</COS_OUTER_CUTTOFF_0>

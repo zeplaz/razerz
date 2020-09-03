@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.o"
+  "CMakeFiles/razerz.dir/ttestz/func_par_test.cpp.o"
   "../bin/razerz.pdb"
   "../bin/razerz"
 )

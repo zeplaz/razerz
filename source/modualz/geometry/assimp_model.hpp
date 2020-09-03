@@ -269,7 +269,7 @@ public :
     render_cache.is_elm=is_elm;
   }
 
-  static std::shared_ptr<ai_model> load_from_file(const pathz& in_path)
+  static std::shared_ptr<ai_model> load_from_file(const pathz& in_path, Ai_Model_Flagz flagz)
         //  static ai_model* load_from_file(const pathz& in_path,  ai_Transformz& in_tranz)
 				{
 			  //model_path= in_path;

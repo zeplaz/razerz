@@ -1,4 +1,4 @@
-The system is: Linux - 5.3.0-45-generic - x86_64
+The system is: Linux - 5.3.0-46-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
 Build flags: 
@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/media/orgburo/07bccd33-16a5-4
 Determining if the C compiler works passed with the following output:
 Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_678b4/fast"
-/usr/bin/make -f CMakeFiles/cmTC_678b4.dir/build.make CMakeFiles/cmTC_678b4.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_31d5e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_31d5e.dir/build.make CMakeFiles/cmTC_31d5e.dir/build
 make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_678b4.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_678b4.dir/testCCompiler.c.o   -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_678b4
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_678b4.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_678b4.dir/testCCompiler.c.o  -o cmTC_678b4 
+Building C object CMakeFiles/cmTC_31d5e.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_31d5e.dir/testCCompiler.c.o   -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_31d5e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31d5e.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_31d5e.dir/testCCompiler.c.o  -o cmTC_31d5e 
 make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_fa6ad/fast"
-/usr/bin/make -f CMakeFiles/cmTC_fa6ad.dir/build.make CMakeFiles/cmTC_fa6ad.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_6c39e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6c39e.dir/build.make CMakeFiles/cmTC_6c39e.dir/build
 make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fa6ad.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_fa6ad.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.13/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_fa6ad
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa6ad.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTC_fa6ad.dir/CMakeCCompilerABI.c.o  -o cmTC_fa6ad 
+Building C object CMakeFiles/cmTC_6c39e.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_6c39e.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.13/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_6c39e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c39e.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_6c39e.dir/CMakeCCompilerABI.c.o  -o cmTC_6c39e 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper
@@ -61,9 +61,9 @@ Thread model: posix
 gcc version 9.2.1 20191008 (Ubuntu 9.2.1-9ubuntu2) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fa6ad' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3v3lGJ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_fa6ad /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_fa6ad.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fa6ad' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6c39e' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccN8BL4W.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_6c39e /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_6c39e.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6c39e' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
 
 
@@ -71,14 +71,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_fa6ad/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_fa6ad.dir/build.make CMakeFiles/cmTC_fa6ad.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_6c39e/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_6c39e.dir/build.make CMakeFiles/cmTC_6c39e.dir/build]
   ignore line: [make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_fa6ad.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_fa6ad.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.13/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_fa6ad]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa6ad.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_fa6ad.dir/CMakeCCompilerABI.c.o  -o cmTC_fa6ad ]
+  ignore line: [Building C object CMakeFiles/cmTC_6c39e.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_6c39e.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.13/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_6c39e]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c39e.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_6c39e.dir/CMakeCCompilerABI.c.o  -o cmTC_6c39e ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper]
@@ -90,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 9.2.1 20191008 (Ubuntu 9.2.1-9ubuntu2) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fa6ad' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3v3lGJ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_fa6ad /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_fa6ad.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6c39e' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccN8BL4W.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_6c39e /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_6c39e.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc3v3lGJ.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccN8BL4W.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -114,7 +114,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_fa6ad] ==> ignore
+    arg [cmTC_6c39e] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o] ==> ignore
@@ -126,7 +126,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../..]
-    arg [CMakeFiles/cmTC_fa6ad.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_6c39e.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -158,14 +158,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_723e6/fast"
-/usr/bin/make -f CMakeFiles/cmTC_723e6.dir/build.make CMakeFiles/cmTC_723e6.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_adcc1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_adcc1.dir/build.make CMakeFiles/cmTC_adcc1.dir/build
 make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_723e6.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_723e6.dir/feature_tests.c.o   -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_723e6
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_723e6.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_723e6.dir/feature_tests.c.o  -o cmTC_723e6 
+Building C object CMakeFiles/cmTC_adcc1.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_adcc1.dir/feature_tests.c.o   -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_adcc1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_adcc1.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_adcc1.dir/feature_tests.c.o  -o cmTC_adcc1 
 make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
 
 
@@ -178,14 +178,14 @@ make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ddb98/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ddb98.dir/build.make CMakeFiles/cmTC_ddb98.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_fadb9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fadb9.dir/build.make CMakeFiles/cmTC_fadb9.dir/build
 make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ddb98.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_ddb98.dir/feature_tests.c.o   -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_ddb98
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ddb98.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_ddb98.dir/feature_tests.c.o  -o cmTC_ddb98 
+Building C object CMakeFiles/cmTC_fadb9.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_fadb9.dir/feature_tests.c.o   -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_fadb9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fadb9.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_fadb9.dir/feature_tests.c.o  -o cmTC_fadb9 
 make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
 
 
@@ -198,14 +198,14 @@ make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f1755/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f1755.dir/build.make CMakeFiles/cmTC_f1755.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_2eddc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2eddc.dir/build.make CMakeFiles/cmTC_2eddc.dir/build
 make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f1755.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_f1755.dir/feature_tests.c.o   -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_f1755
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1755.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_f1755.dir/feature_tests.c.o  -o cmTC_f1755 
+Building C object CMakeFiles/cmTC_2eddc.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_2eddc.dir/feature_tests.c.o   -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_2eddc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2eddc.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_2eddc.dir/feature_tests.c.o  -o cmTC_2eddc 
 make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
 
 
@@ -216,28 +216,28 @@ make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7e86d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_7e86d.dir/build.make CMakeFiles/cmTC_7e86d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_bc62a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bc62a.dir/build.make CMakeFiles/cmTC_bc62a.dir/build
 make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_7e86d.dir/testCXXCompiler.cxx.o
-/usr/bin/g++     -o CMakeFiles/cmTC_7e86d.dir/testCXXCompiler.cxx.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_7e86d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7e86d.dir/link.txt --verbose=1
-/usr/bin/g++       CMakeFiles/cmTC_7e86d.dir/testCXXCompiler.cxx.o  -o cmTC_7e86d 
+Building CXX object CMakeFiles/cmTC_bc62a.dir/testCXXCompiler.cxx.o
+/usr/bin/g++     -o CMakeFiles/cmTC_bc62a.dir/testCXXCompiler.cxx.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_bc62a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc62a.dir/link.txt --verbose=1
+/usr/bin/g++       CMakeFiles/cmTC_bc62a.dir/testCXXCompiler.cxx.o  -o cmTC_bc62a 
 make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5dc0f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5dc0f.dir/build.make CMakeFiles/cmTC_5dc0f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_a88c8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a88c8.dir/build.make CMakeFiles/cmTC_a88c8.dir/build
 make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5dc0f.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/g++     -o CMakeFiles/cmTC_5dc0f.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_5dc0f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5dc0f.dir/link.txt --verbose=1
-/usr/bin/g++      -v CMakeFiles/cmTC_5dc0f.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_5dc0f 
+Building CXX object CMakeFiles/cmTC_a88c8.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/g++     -o CMakeFiles/cmTC_a88c8.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_a88c8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a88c8.dir/link.txt --verbose=1
+/usr/bin/g++      -v CMakeFiles/cmTC_a88c8.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_a88c8 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/g++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper
@@ -249,9 +249,9 @@ Thread model: posix
 gcc version 9.2.1 20191008 (Ubuntu 9.2.1-9ubuntu2) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5dc0f' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUtnkpb.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5dc0f /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_5dc0f.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5dc0f' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a88c8' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccg0xHrc.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a88c8 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_a88c8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a88c8' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
 
 
@@ -259,14 +259,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_5dc0f/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_5dc0f.dir/build.make CMakeFiles/cmTC_5dc0f.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a88c8/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_a88c8.dir/build.make CMakeFiles/cmTC_a88c8.dir/build]
   ignore line: [make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_5dc0f.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/g++     -o CMakeFiles/cmTC_5dc0f.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_5dc0f]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5dc0f.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/g++      -v CMakeFiles/cmTC_5dc0f.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_5dc0f ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_a88c8.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/g++     -o CMakeFiles/cmTC_a88c8.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_a88c8]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a88c8.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/g++      -v CMakeFiles/cmTC_a88c8.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_a88c8 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/g++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper]
@@ -278,13 +278,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 9.2.1 20191008 (Ubuntu 9.2.1-9ubuntu2) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5dc0f' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUtnkpb.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5dc0f /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_5dc0f.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a88c8' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccg0xHrc.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a88c8 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_a88c8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccUtnkpb.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccg0xHrc.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -302,7 +302,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_5dc0f] ==> ignore
+    arg [cmTC_a88c8] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o] ==> ignore
@@ -314,7 +314,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../..]
-    arg [CMakeFiles/cmTC_5dc0f.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_a88c8.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -342,14 +342,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++2a] compiler features compiled with the following output:
 Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_aa5e6/fast"
-/usr/bin/make -f CMakeFiles/cmTC_aa5e6.dir/build.make CMakeFiles/cmTC_aa5e6.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_257ec/fast"
+/usr/bin/make -f CMakeFiles/cmTC_257ec.dir/build.make CMakeFiles/cmTC_257ec.dir/build
 make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_aa5e6.dir/feature_tests.cxx.o
-/usr/bin/g++    -std=c++2a -o CMakeFiles/cmTC_aa5e6.dir/feature_tests.cxx.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_aa5e6
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa5e6.dir/link.txt --verbose=1
-/usr/bin/g++       CMakeFiles/cmTC_aa5e6.dir/feature_tests.cxx.o  -o cmTC_aa5e6 
+Building CXX object CMakeFiles/cmTC_257ec.dir/feature_tests.cxx.o
+/usr/bin/g++    -std=c++2a -o CMakeFiles/cmTC_257ec.dir/feature_tests.cxx.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_257ec
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_257ec.dir/link.txt --verbose=1
+/usr/bin/g++       CMakeFiles/cmTC_257ec.dir/feature_tests.cxx.o  -o cmTC_257ec 
 make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
 
 
@@ -415,14 +415,14 @@ make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/
 Detecting CXX [-std=c++17] compiler features compiled with the following output:
 Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c02d3/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c02d3.dir/build.make CMakeFiles/cmTC_c02d3.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_cf636/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cf636.dir/build.make CMakeFiles/cmTC_cf636.dir/build
 make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c02d3.dir/feature_tests.cxx.o
-/usr/bin/g++    -std=c++17 -o CMakeFiles/cmTC_c02d3.dir/feature_tests.cxx.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_c02d3
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c02d3.dir/link.txt --verbose=1
-/usr/bin/g++       CMakeFiles/cmTC_c02d3.dir/feature_tests.cxx.o  -o cmTC_c02d3 
+Building CXX object CMakeFiles/cmTC_cf636.dir/feature_tests.cxx.o
+/usr/bin/g++    -std=c++17 -o CMakeFiles/cmTC_cf636.dir/feature_tests.cxx.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_cf636
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf636.dir/link.txt --verbose=1
+/usr/bin/g++       CMakeFiles/cmTC_cf636.dir/feature_tests.cxx.o  -o cmTC_cf636 
 make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
 
 
@@ -488,14 +488,14 @@ make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b40fc/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b40fc.dir/build.make CMakeFiles/cmTC_b40fc.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_7aa13/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7aa13.dir/build.make CMakeFiles/cmTC_7aa13.dir/build
 make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b40fc.dir/feature_tests.cxx.o
-/usr/bin/g++    -std=c++14 -o CMakeFiles/cmTC_b40fc.dir/feature_tests.cxx.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_b40fc
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b40fc.dir/link.txt --verbose=1
-/usr/bin/g++       CMakeFiles/cmTC_b40fc.dir/feature_tests.cxx.o  -o cmTC_b40fc 
+Building CXX object CMakeFiles/cmTC_7aa13.dir/feature_tests.cxx.o
+/usr/bin/g++    -std=c++14 -o CMakeFiles/cmTC_7aa13.dir/feature_tests.cxx.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_7aa13
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7aa13.dir/link.txt --verbose=1
+/usr/bin/g++       CMakeFiles/cmTC_7aa13.dir/feature_tests.cxx.o  -o cmTC_7aa13 
 make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
 
 
@@ -561,14 +561,14 @@ make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_45194/fast"
-/usr/bin/make -f CMakeFiles/cmTC_45194.dir/build.make CMakeFiles/cmTC_45194.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b5f8a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b5f8a.dir/build.make CMakeFiles/cmTC_b5f8a.dir/build
 make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_45194.dir/feature_tests.cxx.o
-/usr/bin/g++    -std=c++11 -o CMakeFiles/cmTC_45194.dir/feature_tests.cxx.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_45194
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45194.dir/link.txt --verbose=1
-/usr/bin/g++       CMakeFiles/cmTC_45194.dir/feature_tests.cxx.o  -o cmTC_45194 
+Building CXX object CMakeFiles/cmTC_b5f8a.dir/feature_tests.cxx.o
+/usr/bin/g++    -std=c++11 -o CMakeFiles/cmTC_b5f8a.dir/feature_tests.cxx.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_b5f8a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b5f8a.dir/link.txt --verbose=1
+/usr/bin/g++       CMakeFiles/cmTC_b5f8a.dir/feature_tests.cxx.o  -o cmTC_b5f8a 
 make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
 
 
@@ -634,14 +634,14 @@ make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_11e50/fast"
-/usr/bin/make -f CMakeFiles/cmTC_11e50.dir/build.make CMakeFiles/cmTC_11e50.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b3226/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b3226.dir/build.make CMakeFiles/cmTC_b3226.dir/build
 make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_11e50.dir/feature_tests.cxx.o
-/usr/bin/g++    -std=c++98 -o CMakeFiles/cmTC_11e50.dir/feature_tests.cxx.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_11e50
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11e50.dir/link.txt --verbose=1
-/usr/bin/g++       CMakeFiles/cmTC_11e50.dir/feature_tests.cxx.o  -o cmTC_11e50 
+Building CXX object CMakeFiles/cmTC_b3226.dir/feature_tests.cxx.o
+/usr/bin/g++    -std=c++98 -o CMakeFiles/cmTC_b3226.dir/feature_tests.cxx.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_b3226
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3226.dir/link.txt --verbose=1
+/usr/bin/g++       CMakeFiles/cmTC_b3226.dir/feature_tests.cxx.o  -o cmTC_b3226 
 make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
 
 
@@ -705,98 +705,98 @@ make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/
 Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
 Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b0c51/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b0c51.dir/build.make CMakeFiles/cmTC_b0c51.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_22a04/fast"
+/usr/bin/make -f CMakeFiles/cmTC_22a04.dir/build.make CMakeFiles/cmTC_22a04.dir/build
 make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b0c51.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTC_b0c51.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.13/Modules/CheckFunctionExists.c
-Linking C executable cmTC_b0c51
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b0c51.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTC_b0c51.dir/CheckFunctionExists.c.o  -o cmTC_b0c51 /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
+Building C object CMakeFiles/cmTC_22a04.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTC_22a04.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_22a04
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_22a04.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTC_22a04.dir/CheckFunctionExists.c.o  -o cmTC_22a04 /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
 make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function gethostbyname exists passed with the following output:
 Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f9a12/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f9a12.dir/build.make CMakeFiles/cmTC_f9a12.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_81d1c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_81d1c.dir/build.make CMakeFiles/cmTC_81d1c.dir/build
 make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f9a12.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_f9a12.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.13/Modules/CheckFunctionExists.c
-Linking C executable cmTC_f9a12
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f9a12.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTC_f9a12.dir/CheckFunctionExists.c.o  -o cmTC_f9a12 
+Building C object CMakeFiles/cmTC_81d1c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_81d1c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_81d1c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_81d1c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTC_81d1c.dir/CheckFunctionExists.c.o  -o cmTC_81d1c 
 make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function connect exists passed with the following output:
 Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d8afe/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d8afe.dir/build.make CMakeFiles/cmTC_d8afe.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ee334/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ee334.dir/build.make CMakeFiles/cmTC_ee334.dir/build
 make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d8afe.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_d8afe.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.13/Modules/CheckFunctionExists.c
-Linking C executable cmTC_d8afe
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8afe.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTC_d8afe.dir/CheckFunctionExists.c.o  -o cmTC_d8afe 
+Building C object CMakeFiles/cmTC_ee334.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_ee334.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ee334
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee334.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTC_ee334.dir/CheckFunctionExists.c.o  -o cmTC_ee334 
 make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function remove exists passed with the following output:
 Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7f98b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_7f98b.dir/build.make CMakeFiles/cmTC_7f98b.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_23a64/fast"
+/usr/bin/make -f CMakeFiles/cmTC_23a64.dir/build.make CMakeFiles/cmTC_23a64.dir/build
 make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7f98b.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTC_7f98b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.13/Modules/CheckFunctionExists.c
-Linking C executable cmTC_7f98b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7f98b.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTC_7f98b.dir/CheckFunctionExists.c.o  -o cmTC_7f98b 
+Building C object CMakeFiles/cmTC_23a64.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTC_23a64.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_23a64
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_23a64.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTC_23a64.dir/CheckFunctionExists.c.o  -o cmTC_23a64 
 make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function shmat exists passed with the following output:
 Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_54b54/fast"
-/usr/bin/make -f CMakeFiles/cmTC_54b54.dir/build.make CMakeFiles/cmTC_54b54.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_d85bd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d85bd.dir/build.make CMakeFiles/cmTC_d85bd.dir/build
 make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_54b54.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTC_54b54.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.13/Modules/CheckFunctionExists.c
-Linking C executable cmTC_54b54
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54b54.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTC_54b54.dir/CheckFunctionExists.c.o  -o cmTC_54b54 
+Building C object CMakeFiles/cmTC_d85bd.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTC_d85bd.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d85bd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d85bd.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTC_d85bd.dir/CheckFunctionExists.c.o  -o cmTC_d85bd 
 make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
 Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8d827/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8d827.dir/build.make CMakeFiles/cmTC_8d827.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_6e80a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6e80a.dir/build.make CMakeFiles/cmTC_6e80a.dir/build
 make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8d827.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTC_8d827.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.13/Modules/CheckFunctionExists.c
-Linking C executable cmTC_8d827
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d827.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTC_8d827.dir/CheckFunctionExists.c.o  -o cmTC_8d827 -lICE 
+Building C object CMakeFiles/cmTC_6e80a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTC_6e80a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6e80a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e80a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTC_6e80a.dir/CheckFunctionExists.c.o  -o cmTC_6e80a -lICE 
 make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8abde/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8abde.dir/build.make CMakeFiles/cmTC_8abde.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_c3c45/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c3c45.dir/build.make CMakeFiles/cmTC_c3c45.dir/build
 make[1]: Entering directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8abde.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_8abde.dir/CheckIncludeFile.c.o   -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_8abde
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8abde.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_8abde.dir/CheckIncludeFile.c.o  -o cmTC_8abde 
+Building C object CMakeFiles/cmTC_c3c45.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_c3c45.dir/CheckIncludeFile.c.o   -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_c3c45
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c3c45.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_c3c45.dir/CheckIncludeFile.c.o  -o cmTC_c3c45 
 make[1]: Leaving directory '/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles/CMakeTmp'
 
 

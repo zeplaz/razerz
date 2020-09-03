@@ -56,7 +56,7 @@ struct pathz {
     set_file_name(raw_path);
     set_extention(raw_path);
     set_full_path();
-  //  delete raw_path;
+    delete raw_path;
   }
 
    pathz(const char* in_path)

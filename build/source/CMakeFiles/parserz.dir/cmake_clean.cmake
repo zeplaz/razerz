@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.o"
   "CMakeFiles/parserz.dir/parserz/parserlib.cpp.o"
   "../lib/libparserz.pdb"
   "../lib/libparserz.a"

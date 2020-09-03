@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+7,em_attr_A
+<Header_razar>
+  <?Resource?>
+  EMISSION_ATTRZ
+  <Artifact_count>
+2
+  </Artifact_count>
+</Header_razar>
+<emission>
+<SUB_TYPE>
+STATIC_SPOTLIGHT
+</SUB_TYPE>
+<NAME>
+static_spot_A
+</NAME>
+# bool in_shadow_cal; bool has_pos;  bool has_drection;  bool has_b_physiz;  bool is_static;  bool has_partical;
+<emission_flagz>
+{1,1,1,1,1,1,0,1}
+</emission_flagz>
+<emission_colourz>
+{0.00,0.00,0.0}
+{0.4,0.7,0.7}
+{0.1,0.9,0.9}
+</emission_colourz>
+<e_modiferz>
+{1.0}
+{0.09}
+{0.032}
+{0.2181662}
+{0.2617994}
+</e_modiferz>
+</emission>
+
+<emission>
+<SUB_TYPE>
+ETOILE_EMISSION
+</SUB_TYPE>
+<NAME>
+sol_emission
+</NAME>
+<emission_flagz>
+{1,1,0,0,0,0,0,1}
+</emission_flagz>
+<emission_colourz>
+{0.08,0.08,0.2}
+{0.5,0.5,0.5}
+{0.7,0.2,0.4}
+</emission_colourz>
+<e_modiferz>
+{1.0}
+{0.09}
+{0.032}
+</e_modiferz>
+</emission>

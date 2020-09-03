@@ -1,2 +1,2 @@
-/usr/bin/ar qc ../lib/libparserz.a  CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.o CMakeFiles/parserz.dir/parserz/parserlib.cpp.o
+/usr/bin/ar qc ../lib/libparserz.a  CMakeFiles/parserz.dir/parserz/parserlib.cpp.o
 /usr/bin/ranlib ../lib/libparserz.a

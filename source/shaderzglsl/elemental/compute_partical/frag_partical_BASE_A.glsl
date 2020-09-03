@@ -2,9 +2,15 @@
 
 layout(location = 0) out vec4 frag_colour;
 
+const float MAX_CHANNELZ = 5.0;
 in float age_intensity;
 in vec2 pos_intensity;
 
+uniform vec4 colourplus
+{
+colour_channelz[MAX_CHANNELZ];
+}
+uniform bool has_channelz;
 
 /*
 float sin_intzx =  sin(pos_intensity.x);
@@ -15,6 +21,14 @@ vec4 col_posy = mix(vec4(0.952,0.115,0.082,0.8),vec4(0.900,0.17,0.0,0.5),sin_int
 //vec4 col_pos =mix(col_posx,col_posy,0.5);
 frag_colour = mix(col_age,col_posy,sin_intzy);
 */
+
+float rub_indizy_cal(vec2 in_pos_intenzity)
+{
+float out_intz;
+}
+
+return out_intz;
+}
 void main (void)
 {
 

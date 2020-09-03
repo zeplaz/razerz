@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+7,solestial_A
+<Header_razar>
+  <?Resource?>
+ORBITAL_EMITTERZ
+  <Artifact_count>
+2
+  </Artifact_count>
+<Header_razar/>
+
+<orb_emitter>
+<SUB_TYPE>
+ETOILE
+</SUB_TYPE>
+<NAME>
+sol
+</NAME>
+<POS>
+{12,0.5,12}
+</POS>
+<RAD>
+7.0
+</RAD>
+<AU_DIS_ORGIN>
+1
+</AU_DIS_ORGIN>
+<PEIROD>
+1
+</PEIROD>
+<MASS>
+1.0
+</MASS>
+<LUMINOS>
+0.8
+</lUMINOS>
+<ROT_VAL>
+12
+</ROT_VAL>
+
+<emission_attr>
+sol_emission
+</emission_attr>
+
+
+</orb_emitter>

@@ -1,9 +1,10 @@
+
 #include "../basez/texture.hpp"
 //#include "../modualz/phyziz/pysic_lib.hpp"
-#include "../modualz/geometry/geometry.hpp"
-#include "../modualz/phyziz/collision_AI.hpp"
-#include "../modualz/committee/simula_entity.hpp"
-#include "../modualz/geometry/assimp_model.hpp"
+//#include "../modualz/geometry/geometry.hpp"
+//#include "../modualz/phyziz/collision_AI.hpp"
+//#include "../modualz/committee/simula_entity.hpp"
+//#include "../modualz/geometry/assimp_model.hpp"
 
 #define TINYOBJLOADER_IMPLEMENTATION
 #include "../basez/3rdparty/tiny_obj_loader.h"
@@ -43,10 +44,11 @@ static bool TestLoadObj(const char* filename, const char* basepath = NULL,
 
 
 
+
 int main(int argc, char* argv[])
 {
 
-  bullet_collision_detector bullet_phyz_systm;
+  //bullet_collision_detector bullet_phyz_systm;
 
 //  sym_object tso;
   //pathz tpath;
@@ -72,7 +74,7 @@ glm::vec3 end(200.f,10.f,500.f);
 
         bool tiloader = TestLoadObj(test_jeep.c_str());
 */
-
+/*
 glm::vec3 postest(2,2,0);
 glm::quat rotaion_test(90.f,1.f,1.f,1.f);
 glm::vec3 scaletest(1.f);
@@ -88,6 +90,7 @@ bullet_phyz_systm.add_sphere(sheredp_tranformer,1.0,0,20,0,1.0,0);
 
   // fake loop
   bullet_phyz_systm.dynamicsWorld->stepSimulation(1/60.0);
+*/
   //std::cout << tpath.full_path;
   std::cout <<"\n #####compleate\n \n  \a";
   return 0;

@@ -44,28 +44,6 @@ sstream
 
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/errorhandler.hpp
 
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/gl_lib_z.hpp
-GL/glew.h
--
-GL/gl.h
--
-GL/glu.h
--
-GLFW/glfw3.h
--
-glm/glm.hpp
--
-glm/ext.hpp
--
-mathII.hpp
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/mathII.hpp
-errorhandler.hpp
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/errorhandler.hpp
-cpp_libz_base.hpp
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
-io_utilityz.hpp
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.hpp
-
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.hpp
 cpp_libz_base.hpp
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/cpp_libz_base.hpp
@@ -82,21 +60,15 @@ valarray
 cmath
 -
 
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/geometry_parser.cpp
-geometry_parser.hpp
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/geometry_parser.hpp
-
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/geometry_parser.hpp
-parserlib.hpp
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/parserlib.hpp
-../basez/gl_lib_z.hpp
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/gl_lib_z.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/asset_rez_listz.hpp
+../basez/io_utilityz.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.hpp
 
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/parserlib.cpp
 parserlib.hpp
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/parserlib.hpp
 
 /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/parserlib.hpp
-../basez/gl_lib_z.hpp
-/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/gl_lib_z.hpp
+asset_rez_listz.hpp
+/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/parserz/asset_rez_listz.hpp
 

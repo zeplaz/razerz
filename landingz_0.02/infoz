@@ -1,0 +1,7 @@
+
+    Putting your class definition in a MyWindow.H file.
+    Creating a Fl_Box widget in FLUID.
+    In the widget panel fill in the "class" field with MyWindow. This will make FLUID produce constructors for your new class.
+    In the "Extra Code" field put #include "MyWindow.H", so that the FLUID output file will compile.
+
+You must put glwindow->show() in your main code after calling show() on the window containing the OpenGL window. 

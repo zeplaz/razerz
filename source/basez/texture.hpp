@@ -46,6 +46,7 @@ struct ai_texture
                     //glTexParameteri(GL_TEXTURE_2D, GL_GENERATE_MIPMAP, GL_TRUE);
         //  glEnable(GL_TEXTURE_2D);
           std::cout << gluErrorString(glGetError()) << std::endl;
+        //  if(in_flagz)
         //  glGenerateMipmap(GL_TEXTURE_2D);  //Generate num_mipmaps number of mipmaps here.
         //  assert(glGetError() == GL_NO_ERROR);
           //std::cout << gluErrorString(glGetError()) << std::endl;

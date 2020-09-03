@@ -6,15 +6,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/io_utilityz.cpp" "/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/basez.dir/basez/io_utilityz.cpp.o"
   "/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/opengl_utilityz.cpp" "/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/basez.dir/basez/opengl_utilityz.cpp.o"
-  "/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/shader_lib.cpp" "/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/basez.dir/basez/shader_lib.cpp.o"
-  "/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/sym_object.cpp" "/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/basez.dir/basez/sym_object.cpp.o"
-  "/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/basez/texture.cpp" "/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source/CMakeFiles/basez.dir/basez/texture.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
-  "GIT_BRANCH=058f52443ecf71c605c3ed9765c498343c6ab83c"
+  "GIT_BRANCH=0a5043454908f20fac139ab857455c5b99eded3f"
   )
 
 # The include file search paths:

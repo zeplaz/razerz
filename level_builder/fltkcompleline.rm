@@ -1,0 +1,1 @@
+g++  `fltk-config --cxxflags` smape_Ed.cxx  `fltk-config --ldflags` -lfltk -lfltk_images -lpango-1.0 -lpangoxft-1.0 -lgobject-2.0  -ljpeg -lstdc++ -lXfixes -lXext -lpthread -ldl -lm -lX11  -o out

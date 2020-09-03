@@ -56,28 +56,6 @@ CMAKE_BINARY_DIR = /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -89,6 +67,39 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -112,17 +123,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -157,21 +157,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-source/CMakeFiles/modualz.dir/rule:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/modualz.dir/rule
-.PHONY : source/CMakeFiles/modualz.dir/rule
-
-# Convenience name for target.
-modualz: source/CMakeFiles/modualz.dir/rule
-
-.PHONY : modualz
-
-# fast build rule for target.
-modualz/fast:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/build
-.PHONY : modualz/fast
-
-# Convenience name for target.
 source/CMakeFiles/parserz.dir/rule:
 	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/parserz.dir/rule
 .PHONY : source/CMakeFiles/parserz.dir/rule
@@ -185,21 +170,6 @@ parserz: source/CMakeFiles/parserz.dir/rule
 parserz/fast:
 	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/parserz.dir/build.make source/CMakeFiles/parserz.dir/build
 .PHONY : parserz/fast
-
-# Convenience name for target.
-source/CMakeFiles/basez.dir/rule:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/basez.dir/rule
-.PHONY : source/CMakeFiles/basez.dir/rule
-
-# Convenience name for target.
-basez: source/CMakeFiles/basez.dir/rule
-
-.PHONY : basez
-
-# fast build rule for target.
-basez/fast:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/basez.dir/build.make source/CMakeFiles/basez.dir/build
-.PHONY : basez/fast
 
 # Convenience name for target.
 source/CMakeFiles/3rdparty.dir/rule:
@@ -217,19 +187,19 @@ source/CMakeFiles/3rdparty.dir/rule:
 .PHONY : 3rdparty/fast
 
 # Convenience name for target.
-source/CMakeFiles/MCP_cmd.dir/rule:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/MCP_cmd.dir/rule
-.PHONY : source/CMakeFiles/MCP_cmd.dir/rule
+source/CMakeFiles/basez.dir/rule:
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/basez.dir/rule
+.PHONY : source/CMakeFiles/basez.dir/rule
 
 # Convenience name for target.
-MCP_cmd: source/CMakeFiles/MCP_cmd.dir/rule
+basez: source/CMakeFiles/basez.dir/rule
 
-.PHONY : MCP_cmd
+.PHONY : basez
 
 # fast build rule for target.
-MCP_cmd/fast:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/MCP_cmd.dir/build.make source/CMakeFiles/MCP_cmd.dir/build
-.PHONY : MCP_cmd/fast
+basez/fast:
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/basez.dir/build.make source/CMakeFiles/basez.dir/build
+.PHONY : basez/fast
 
 # Convenience name for target.
 source/CMakeFiles/razerz.dir/rule:
@@ -245,33 +215,6 @@ razerz: source/CMakeFiles/razerz.dir/rule
 razerz/fast:
 	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/razerz.dir/build.make source/CMakeFiles/razerz.dir/build
 .PHONY : razerz/fast
-
-MCP_cmd/shader_pipeline_CMD.o: MCP_cmd/shader_pipeline_CMD.cpp.o
-
-.PHONY : MCP_cmd/shader_pipeline_CMD.o
-
-# target to build an object file
-MCP_cmd/shader_pipeline_CMD.cpp.o:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/MCP_cmd.dir/build.make source/CMakeFiles/MCP_cmd.dir/MCP_cmd/shader_pipeline_CMD.cpp.o
-.PHONY : MCP_cmd/shader_pipeline_CMD.cpp.o
-
-MCP_cmd/shader_pipeline_CMD.i: MCP_cmd/shader_pipeline_CMD.cpp.i
-
-.PHONY : MCP_cmd/shader_pipeline_CMD.i
-
-# target to preprocess a source file
-MCP_cmd/shader_pipeline_CMD.cpp.i:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/MCP_cmd.dir/build.make source/CMakeFiles/MCP_cmd.dir/MCP_cmd/shader_pipeline_CMD.cpp.i
-.PHONY : MCP_cmd/shader_pipeline_CMD.cpp.i
-
-MCP_cmd/shader_pipeline_CMD.s: MCP_cmd/shader_pipeline_CMD.cpp.s
-
-.PHONY : MCP_cmd/shader_pipeline_CMD.s
-
-# target to generate assembly for a file
-MCP_cmd/shader_pipeline_CMD.cpp.s:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/MCP_cmd.dir/build.make source/CMakeFiles/MCP_cmd.dir/MCP_cmd/shader_pipeline_CMD.cpp.s
-.PHONY : MCP_cmd/shader_pipeline_CMD.cpp.s
 
 basez/3rdparty/b3Logging.o: basez/3rdparty/b3Logging.cpp.o
 
@@ -408,249 +351,6 @@ basez/opengl_utilityz.cpp.s:
 	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/basez.dir/build.make source/CMakeFiles/basez.dir/basez/opengl_utilityz.cpp.s
 .PHONY : basez/opengl_utilityz.cpp.s
 
-basez/shader_lib.o: basez/shader_lib.cpp.o
-
-.PHONY : basez/shader_lib.o
-
-# target to build an object file
-basez/shader_lib.cpp.o:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/basez.dir/build.make source/CMakeFiles/basez.dir/basez/shader_lib.cpp.o
-.PHONY : basez/shader_lib.cpp.o
-
-basez/shader_lib.i: basez/shader_lib.cpp.i
-
-.PHONY : basez/shader_lib.i
-
-# target to preprocess a source file
-basez/shader_lib.cpp.i:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/basez.dir/build.make source/CMakeFiles/basez.dir/basez/shader_lib.cpp.i
-.PHONY : basez/shader_lib.cpp.i
-
-basez/shader_lib.s: basez/shader_lib.cpp.s
-
-.PHONY : basez/shader_lib.s
-
-# target to generate assembly for a file
-basez/shader_lib.cpp.s:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/basez.dir/build.make source/CMakeFiles/basez.dir/basez/shader_lib.cpp.s
-.PHONY : basez/shader_lib.cpp.s
-
-basez/sym_object.o: basez/sym_object.cpp.o
-
-.PHONY : basez/sym_object.o
-
-# target to build an object file
-basez/sym_object.cpp.o:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/basez.dir/build.make source/CMakeFiles/basez.dir/basez/sym_object.cpp.o
-.PHONY : basez/sym_object.cpp.o
-
-basez/sym_object.i: basez/sym_object.cpp.i
-
-.PHONY : basez/sym_object.i
-
-# target to preprocess a source file
-basez/sym_object.cpp.i:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/basez.dir/build.make source/CMakeFiles/basez.dir/basez/sym_object.cpp.i
-.PHONY : basez/sym_object.cpp.i
-
-basez/sym_object.s: basez/sym_object.cpp.s
-
-.PHONY : basez/sym_object.s
-
-# target to generate assembly for a file
-basez/sym_object.cpp.s:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/basez.dir/build.make source/CMakeFiles/basez.dir/basez/sym_object.cpp.s
-.PHONY : basez/sym_object.cpp.s
-
-basez/texture.o: basez/texture.cpp.o
-
-.PHONY : basez/texture.o
-
-# target to build an object file
-basez/texture.cpp.o:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/basez.dir/build.make source/CMakeFiles/basez.dir/basez/texture.cpp.o
-.PHONY : basez/texture.cpp.o
-
-basez/texture.i: basez/texture.cpp.i
-
-.PHONY : basez/texture.i
-
-# target to preprocess a source file
-basez/texture.cpp.i:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/basez.dir/build.make source/CMakeFiles/basez.dir/basez/texture.cpp.i
-.PHONY : basez/texture.cpp.i
-
-basez/texture.s: basez/texture.cpp.s
-
-.PHONY : basez/texture.s
-
-# target to generate assembly for a file
-basez/texture.cpp.s:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/basez.dir/build.make source/CMakeFiles/basez.dir/basez/texture.cpp.s
-.PHONY : basez/texture.cpp.s
-
-modualz/geometry/assimp_model.o: modualz/geometry/assimp_model.cpp.o
-
-.PHONY : modualz/geometry/assimp_model.o
-
-# target to build an object file
-modualz/geometry/assimp_model.cpp.o:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.o
-.PHONY : modualz/geometry/assimp_model.cpp.o
-
-modualz/geometry/assimp_model.i: modualz/geometry/assimp_model.cpp.i
-
-.PHONY : modualz/geometry/assimp_model.i
-
-# target to preprocess a source file
-modualz/geometry/assimp_model.cpp.i:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.i
-.PHONY : modualz/geometry/assimp_model.cpp.i
-
-modualz/geometry/assimp_model.s: modualz/geometry/assimp_model.cpp.s
-
-.PHONY : modualz/geometry/assimp_model.s
-
-# target to generate assembly for a file
-modualz/geometry/assimp_model.cpp.s:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/modualz/geometry/assimp_model.cpp.s
-.PHONY : modualz/geometry/assimp_model.cpp.s
-
-modualz/geometry/geometry.o: modualz/geometry/geometry.cpp.o
-
-.PHONY : modualz/geometry/geometry.o
-
-# target to build an object file
-modualz/geometry/geometry.cpp.o:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/modualz/geometry/geometry.cpp.o
-.PHONY : modualz/geometry/geometry.cpp.o
-
-modualz/geometry/geometry.i: modualz/geometry/geometry.cpp.i
-
-.PHONY : modualz/geometry/geometry.i
-
-# target to preprocess a source file
-modualz/geometry/geometry.cpp.i:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/modualz/geometry/geometry.cpp.i
-.PHONY : modualz/geometry/geometry.cpp.i
-
-modualz/geometry/geometry.s: modualz/geometry/geometry.cpp.s
-
-.PHONY : modualz/geometry/geometry.s
-
-# target to generate assembly for a file
-modualz/geometry/geometry.cpp.s:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/modualz/geometry/geometry.cpp.s
-.PHONY : modualz/geometry/geometry.cpp.s
-
-modualz/phyziz/bullet_collision.o: modualz/phyziz/bullet_collision.cpp.o
-
-.PHONY : modualz/phyziz/bullet_collision.o
-
-# target to build an object file
-modualz/phyziz/bullet_collision.cpp.o:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.o
-.PHONY : modualz/phyziz/bullet_collision.cpp.o
-
-modualz/phyziz/bullet_collision.i: modualz/phyziz/bullet_collision.cpp.i
-
-.PHONY : modualz/phyziz/bullet_collision.i
-
-# target to preprocess a source file
-modualz/phyziz/bullet_collision.cpp.i:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.i
-.PHONY : modualz/phyziz/bullet_collision.cpp.i
-
-modualz/phyziz/bullet_collision.s: modualz/phyziz/bullet_collision.cpp.s
-
-.PHONY : modualz/phyziz/bullet_collision.s
-
-# target to generate assembly for a file
-modualz/phyziz/bullet_collision.cpp.s:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/modualz/phyziz/bullet_collision.cpp.s
-.PHONY : modualz/phyziz/bullet_collision.cpp.s
-
-modualz/phyziz/collision_AI.o: modualz/phyziz/collision_AI.cpp.o
-
-.PHONY : modualz/phyziz/collision_AI.o
-
-# target to build an object file
-modualz/phyziz/collision_AI.cpp.o:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.o
-.PHONY : modualz/phyziz/collision_AI.cpp.o
-
-modualz/phyziz/collision_AI.i: modualz/phyziz/collision_AI.cpp.i
-
-.PHONY : modualz/phyziz/collision_AI.i
-
-# target to preprocess a source file
-modualz/phyziz/collision_AI.cpp.i:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.i
-.PHONY : modualz/phyziz/collision_AI.cpp.i
-
-modualz/phyziz/collision_AI.s: modualz/phyziz/collision_AI.cpp.s
-
-.PHONY : modualz/phyziz/collision_AI.s
-
-# target to generate assembly for a file
-modualz/phyziz/collision_AI.cpp.s:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/modualz/phyziz/collision_AI.cpp.s
-.PHONY : modualz/phyziz/collision_AI.cpp.s
-
-modualz/phyziz/pysic_lib.o: modualz/phyziz/pysic_lib.cpp.o
-
-.PHONY : modualz/phyziz/pysic_lib.o
-
-# target to build an object file
-modualz/phyziz/pysic_lib.cpp.o:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/modualz/phyziz/pysic_lib.cpp.o
-.PHONY : modualz/phyziz/pysic_lib.cpp.o
-
-modualz/phyziz/pysic_lib.i: modualz/phyziz/pysic_lib.cpp.i
-
-.PHONY : modualz/phyziz/pysic_lib.i
-
-# target to preprocess a source file
-modualz/phyziz/pysic_lib.cpp.i:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/modualz/phyziz/pysic_lib.cpp.i
-.PHONY : modualz/phyziz/pysic_lib.cpp.i
-
-modualz/phyziz/pysic_lib.s: modualz/phyziz/pysic_lib.cpp.s
-
-.PHONY : modualz/phyziz/pysic_lib.s
-
-# target to generate assembly for a file
-modualz/phyziz/pysic_lib.cpp.s:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/modualz.dir/build.make source/CMakeFiles/modualz.dir/modualz/phyziz/pysic_lib.cpp.s
-.PHONY : modualz/phyziz/pysic_lib.cpp.s
-
-parserz/geometry_parser.o: parserz/geometry_parser.cpp.o
-
-.PHONY : parserz/geometry_parser.o
-
-# target to build an object file
-parserz/geometry_parser.cpp.o:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/parserz.dir/build.make source/CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.o
-.PHONY : parserz/geometry_parser.cpp.o
-
-parserz/geometry_parser.i: parserz/geometry_parser.cpp.i
-
-.PHONY : parserz/geometry_parser.i
-
-# target to preprocess a source file
-parserz/geometry_parser.cpp.i:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/parserz.dir/build.make source/CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.i
-.PHONY : parserz/geometry_parser.cpp.i
-
-parserz/geometry_parser.s: parserz/geometry_parser.cpp.s
-
-.PHONY : parserz/geometry_parser.s
-
-# target to generate assembly for a file
-parserz/geometry_parser.cpp.s:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/parserz.dir/build.make source/CMakeFiles/parserz.dir/parserz/geometry_parser.cpp.s
-.PHONY : parserz/geometry_parser.cpp.s
-
 parserz/parserlib.o: parserz/parserlib.cpp.o
 
 .PHONY : parserz/parserlib.o
@@ -678,32 +378,32 @@ parserz/parserlib.cpp.s:
 	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/parserz.dir/build.make source/CMakeFiles/parserz.dir/parserz/parserlib.cpp.s
 .PHONY : parserz/parserlib.cpp.s
 
-ttestz/sysm_test.o: ttestz/sysm_test.cpp.o
+ttestz/func_par_test.o: ttestz/func_par_test.cpp.o
 
-.PHONY : ttestz/sysm_test.o
+.PHONY : ttestz/func_par_test.o
 
 # target to build an object file
-ttestz/sysm_test.cpp.o:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/razerz.dir/build.make source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.o
-.PHONY : ttestz/sysm_test.cpp.o
+ttestz/func_par_test.cpp.o:
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/razerz.dir/build.make source/CMakeFiles/razerz.dir/ttestz/func_par_test.cpp.o
+.PHONY : ttestz/func_par_test.cpp.o
 
-ttestz/sysm_test.i: ttestz/sysm_test.cpp.i
+ttestz/func_par_test.i: ttestz/func_par_test.cpp.i
 
-.PHONY : ttestz/sysm_test.i
+.PHONY : ttestz/func_par_test.i
 
 # target to preprocess a source file
-ttestz/sysm_test.cpp.i:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/razerz.dir/build.make source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.i
-.PHONY : ttestz/sysm_test.cpp.i
+ttestz/func_par_test.cpp.i:
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/razerz.dir/build.make source/CMakeFiles/razerz.dir/ttestz/func_par_test.cpp.i
+.PHONY : ttestz/func_par_test.cpp.i
 
-ttestz/sysm_test.s: ttestz/sysm_test.cpp.s
+ttestz/func_par_test.s: ttestz/func_par_test.cpp.s
 
-.PHONY : ttestz/sysm_test.s
+.PHONY : ttestz/func_par_test.s
 
 # target to generate assembly for a file
-ttestz/sysm_test.cpp.s:
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/razerz.dir/build.make source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.s
-.PHONY : ttestz/sysm_test.cpp.s
+ttestz/func_par_test.cpp.s:
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build && $(MAKE) -f source/CMakeFiles/razerz.dir/build.make source/CMakeFiles/razerz.dir/ttestz/func_par_test.cpp.s
+.PHONY : ttestz/func_par_test.cpp.s
 
 # Help Target
 help:
@@ -711,21 +411,16 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... modualz"
-	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... parserz"
 	@echo "... install"
-	@echo "... basez"
-	@echo "... install/local"
+	@echo "... list_install_components"
+	@echo "... rebuild_cache"
+	@echo "... parserz"
 	@echo "... 3rdparty"
-	@echo "... MCP_cmd"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... basez"
 	@echo "... razerz"
 	@echo "... edit_cache"
-	@echo "... rebuild_cache"
-	@echo "... MCP_cmd/shader_pipeline_CMD.o"
-	@echo "... MCP_cmd/shader_pipeline_CMD.i"
-	@echo "... MCP_cmd/shader_pipeline_CMD.s"
 	@echo "... basez/3rdparty/b3Logging.o"
 	@echo "... basez/3rdparty/b3Logging.i"
 	@echo "... basez/3rdparty/b3Logging.s"
@@ -741,39 +436,12 @@ help:
 	@echo "... basez/opengl_utilityz.o"
 	@echo "... basez/opengl_utilityz.i"
 	@echo "... basez/opengl_utilityz.s"
-	@echo "... basez/shader_lib.o"
-	@echo "... basez/shader_lib.i"
-	@echo "... basez/shader_lib.s"
-	@echo "... basez/sym_object.o"
-	@echo "... basez/sym_object.i"
-	@echo "... basez/sym_object.s"
-	@echo "... basez/texture.o"
-	@echo "... basez/texture.i"
-	@echo "... basez/texture.s"
-	@echo "... modualz/geometry/assimp_model.o"
-	@echo "... modualz/geometry/assimp_model.i"
-	@echo "... modualz/geometry/assimp_model.s"
-	@echo "... modualz/geometry/geometry.o"
-	@echo "... modualz/geometry/geometry.i"
-	@echo "... modualz/geometry/geometry.s"
-	@echo "... modualz/phyziz/bullet_collision.o"
-	@echo "... modualz/phyziz/bullet_collision.i"
-	@echo "... modualz/phyziz/bullet_collision.s"
-	@echo "... modualz/phyziz/collision_AI.o"
-	@echo "... modualz/phyziz/collision_AI.i"
-	@echo "... modualz/phyziz/collision_AI.s"
-	@echo "... modualz/phyziz/pysic_lib.o"
-	@echo "... modualz/phyziz/pysic_lib.i"
-	@echo "... modualz/phyziz/pysic_lib.s"
-	@echo "... parserz/geometry_parser.o"
-	@echo "... parserz/geometry_parser.i"
-	@echo "... parserz/geometry_parser.s"
 	@echo "... parserz/parserlib.o"
 	@echo "... parserz/parserlib.i"
 	@echo "... parserz/parserlib.s"
-	@echo "... ttestz/sysm_test.o"
-	@echo "... ttestz/sysm_test.i"
-	@echo "... ttestz/sysm_test.s"
+	@echo "... ttestz/func_par_test.o"
+	@echo "... ttestz/func_par_test.i"
+	@echo "... ttestz/func_par_test.s"
 .PHONY : help
 
 

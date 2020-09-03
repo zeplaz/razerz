@@ -1,7 +1,6 @@
 #pragma once
 
 #include "parserlib.hpp"
-#include "../basez/gl_lib_z.hpp"
 
  struct mesh_vertex
 {

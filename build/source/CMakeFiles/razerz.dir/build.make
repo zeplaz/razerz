@@ -57,33 +57,31 @@ include source/CMakeFiles/razerz.dir/progress.make
 # Include the compile flags for this target's objects.
 include source/CMakeFiles/razerz.dir/flags.make
 
-source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.o: source/CMakeFiles/razerz.dir/flags.make
-source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.o: ../source/ttestz/sysm_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.o"
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/ttestz/sysm_test.cpp
+source/CMakeFiles/razerz.dir/ttestz/func_par_test.cpp.o: source/CMakeFiles/razerz.dir/flags.make
+source/CMakeFiles/razerz.dir/ttestz/func_par_test.cpp.o: ../source/ttestz/func_par_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object source/CMakeFiles/razerz.dir/ttestz/func_par_test.cpp.o"
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/razerz.dir/ttestz/func_par_test.cpp.o -c /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/ttestz/func_par_test.cpp
 
-source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.i"
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/ttestz/sysm_test.cpp > CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.i
+source/CMakeFiles/razerz.dir/ttestz/func_par_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/razerz.dir/ttestz/func_par_test.cpp.i"
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/ttestz/func_par_test.cpp > CMakeFiles/razerz.dir/ttestz/func_par_test.cpp.i
 
-source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.s"
-	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/ttestz/sysm_test.cpp -o CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.s
+source/CMakeFiles/razerz.dir/ttestz/func_par_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/razerz.dir/ttestz/func_par_test.cpp.s"
+	cd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/build/source && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/gitrepoz/razarz_v0.03/source/ttestz/func_par_test.cpp -o CMakeFiles/razerz.dir/ttestz/func_par_test.cpp.s
 
 # Object files for target razerz
 razerz_OBJECTS = \
-"CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.o"
+"CMakeFiles/razerz.dir/ttestz/func_par_test.cpp.o"
 
 # External object files for target razerz
 razerz_EXTERNAL_OBJECTS =
 
-bin/razerz: source/CMakeFiles/razerz.dir/ttestz/sysm_test.cpp.o
+bin/razerz: source/CMakeFiles/razerz.dir/ttestz/func_par_test.cpp.o
 bin/razerz: source/CMakeFiles/razerz.dir/build.make
 bin/razerz: lib/lib3rdparty.a
 bin/razerz: lib/libbasez.a
-bin/razerz: lib/libmodualz.a
 bin/razerz: lib/libparserz.a
-bin/razerz: lib/libMCP_cmd.a
 bin/razerz: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 bin/razerz: /usr/lib/x86_64-linux-gnu/libGLX.so
 bin/razerz: /usr/lib/x86_64-linux-gnu/libGLU.so

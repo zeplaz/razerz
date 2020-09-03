@@ -1,0 +1,39 @@
+
+
+g++ -std=c++17  main_landzETgui_t.cpp graphicz/gl_ctlr.cpp graphicz/gui_opengl_uility.cpp   -o land_test.out -lfltk -lfltk_gl  -lXext -lX11 -lm -ldl -lGL -lGLEW -lXrender -lGLU -lpango-1.0 -lpangocairo-1.0 -lpangoft2-1.0  -lpangoxft-1.0 -lXcursor -lXft -lXfixes -lXinerama
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-lXext -lm   -lXcursor -lGLEW -lGL -pthread -ldl -lXrender -lX11 -lXft -lm -lXext -lfontconfig  -lXinerama -lfltk -lfltk_gl  -lXcursor -lGLEW -lGL -pthread -ldl -lXrender -lX11 -lXft -lm -lXext -lfontconfig  -lXinerama
+
+
+
+
+-lXext -lm  -lXcursor -lGLEW -lGL -pthread -ldl -lXrender -lX11 -lXft -lm -lXext -lfontconfig  -lXinerama
+
+g++ -std=c++17 -I/usr/local/include -I/usr/local/include/FL/images -I/usr/include/freetype2   OpenGL3test.cxx   -o opentest.out -L/usr/local/lib
+-lfltk -lfltk_forms -lfltk_gl -lfltk_images -lXfixes -lXft -lfontconfig -lGL -lm -lGLU -lGLEW  -pthread -ldl -lXrender -lX11 -ljpeg -lpng  -lXcursor -lXinerama -lXext
+
+
+g++ -std=c++17 -I/usr/local/include -I/usr/local/include/FL/images -I/usr/include/freetype2   OpenGL3test.cxx   -o opentest.out -L/usr/local/lib -lfltk -lfltk_forms -lfltk_gl
+-lfltk_images -lXfixes -lXft -lGL  -lGLU -lGLEW  -pthread -ldl -lXrender  -ljpeg  -lXcursor -lXinerama -lXext -lX11 -lm -lpango-1.0 -lglib-2.0
+     -lgobject-2.0         -lgmodule-2.0         -lffi             -lcairo         -lpixman-1         -lpng         -lfreetype
+       -lpangocairo-1.0         -lpangoft2-1.0         -lharfbuzz         -lfontconfig         -lexpat                `fltk-config --use-forms --use-gl --use-images --ldflags`
+
+
+
+
+       g++ -std=c++17  main_landzETgui_t.cpp graphicz/gl_ctlr.cpp graphicz/gui_opengl_uility.cpp   -o land_test.out -lfltk -lfltk_gl  -lXext -lX11 -lm -ldl -lGL -lGLEW -lXrender -lGLU -lpango-1.0 -lXcursor -lXft -lXfixes -lXinerama

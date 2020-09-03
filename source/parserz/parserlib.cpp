@@ -30,6 +30,61 @@ unsigned int parser::index_pars(std::string& in_substring)
    return out_index;
 }
 
+
+int parser::parser_base::load_run(const pathz& in_pathxml)
+{
+
+   std::vector<std::string> substingz = parser::run_xmlobj_parse(in_pathxml.full_path);
+
+   std::cout <<"->###begin sort\n";
+   unsigned int current_0jk_index;
+    int i;
+   for( i =0; i<substingz.size(); i++)
+     {
+      switch(str2int_run(substingz.at(i).c_str()))
+       {
+           case item_type :
+           {
+             i = item_selection(substingz,i);
+           break;
+           }
+       }//endswitch
+     }//endfor
+     return i;
+}
+
+std::vector<std::string> parser::run_xmlobj_parse(const pathz& in_xml_path)
+{
+  //std::cout <<"\n#->running textture parser func\n";
+  std::ifstream file_config(in_xml_path.full_path);
+  std::string file_in_string;
+  file_config.seekg(0, std::ios::end);
+  file_in_string.reserve(file_config.tellg());
+  file_config.seekg(0, std::ios::beg);
+  file_in_string.assign((std::istreambuf_iterator<char>(file_config)),
+              std::istreambuf_iterator<char>());
+
+//  std::regex rexal( R"#(\s*<\s*(\S+)\s*>\s*(\S+)\s*<\s*///\1\s*>\s*)#");
+/*
+  std::vector<std::string> substingz;
+  const std::sregex_token_iterator end;
+  std::vector<int> indexzr{1,2};
+
+  for(std::sregex_token_iterator reg_iter (file_in_string.begin(), file_in_string.end(), rexal, indexzr);
+      reg_iter!=end; ++reg_iter)
+      {
+        substingz.push_back(*reg_iter);
+      }
+  for(std::sregex_token_iterator reg_iter (substingz.at(1).begin(), substingz.at(1).end(), rexal, indexzr);
+      reg_iter!=end; ++reg_iter)
+      {
+        substingz.push_back(*reg_iter);
+      }
+      return substingz;*/
+}
+
+
+
 void parser::parser_base::header_read(const pathz&  in_path)
   {
     std::cout << "\n ###PARSING::setup;\n";
@@ -73,9 +128,9 @@ void parser::parser_base::header_read(const pathz&  in_path)
                  <<  line.substr(0,dlmit_pos) << '\n';
       //  <<  line_two.substr(dlmit_pos+1)   << '\n';
       int header_size = stoi(line.substr(0,dlmit_pos));
-      std::string filename = line.substr(dlmit_pos+1,std::string::npos);
+      std::string list_name = line.substr(dlmit_pos+1,std::string::npos);
 
-        std::cout  << "->filename is::" << filename <<'\n' ;
+        std::cout  << "->list_name is::" << list_name <<'\n' ;
         std::cout << "->header line size is::" << header_size << '\n' <<'\n';
 
 
@@ -107,67 +162,31 @@ void parser::parser_base::header_read(const pathz&  in_path)
 
         else if(string_matcher[REZ_TYPE]== "SHADER_LIST")
         {
-         std::cout << "TextureList detected!\n";
+         std::cout << "shader detected!\n";
          new_file.pf_type   =Parse_File_Type::SHADER_LIST;
         }
 
-        file_map.insert(std::make_pair(in_path.file_name,new_file));
+        else if(string_matcher[REZ_TYPE]== "ORBITAL_EMITTERZ")
+        {
+         std::cout << " oberital_emitter detected!\n";
+         new_file.pf_type   =Parse_File_Type::ORBITAL_EMITTERZ;
+        }
+
+        else if(string_matcher[REZ_TYPE]== "EMISSION_ATTRZ")
+        {
+         std::cout << "emission_attrbutz detected!\n";
+         new_file.pf_type   =Parse_File_Type::EMISSION_ATTRZ;
+        }
+
+
+        file_map.insert(std::make_pair(list_name,new_file));
     }
   }
 
 
-  std::vector<std::string> parser::run_xmlobj_parse(const pathz& in_xml_path)
-  {
-    //std::cout <<"\n#->running textture parser func\n";
-    std::ifstream file_config(in_xml_path.full_path);
-    std::string file_in_string;
-    file_config.seekg(0, std::ios::end);
-    file_in_string.reserve(file_config.tellg());
-    file_config.seekg(0, std::ios::beg);
-    file_in_string.assign((std::istreambuf_iterator<char>(file_config)),
-                std::istreambuf_iterator<char>());
-
-  //  std::regex rexal( R"#(\s*<\s*(\S+)\s*>\s*(\S+)\s*<\s*///\1\s*>\s*)#");
-/*
-    std::vector<std::string> substingz;
-    const std::sregex_token_iterator end;
-    std::vector<int> indexzr{1,2};
-
-    for(std::sregex_token_iterator reg_iter (file_in_string.begin(), file_in_string.end(), rexal, indexzr);
-        reg_iter!=end; ++reg_iter)
-        {
-          substingz.push_back(*reg_iter);
-        }
-    for(std::sregex_token_iterator reg_iter (substingz.at(1).begin(), substingz.at(1).end(), rexal, indexzr);
-        reg_iter!=end; ++reg_iter)
-        {
-          substingz.push_back(*reg_iter);
-        }
-        return substingz;*/
-  }
 
 
-  int parser::parser_base::load_run(const pathz& in_pathxml)
-  {
 
-     std::vector<std::string> substingz = parser::run_xmlobj_parse(in_pathxml.full_path);
-
-     std::cout <<"->###begin sort\n";
-     unsigned int current_0jk_index;
-      int i;
-     for( i =0; i<substingz.size(); i++)
-       {
-        switch(str2int_run(substingz.at(i).c_str()))
-         {
-             case item_type :
-             {
-               i = item_selection(substingz,i);
-             break;
-             }
-         }//endswitch
-       }//endfor
-       return i;
-  }
 
 
 /*extra*/

@@ -1,0 +1,150 @@
+# Blender MTL File: 'rail_strate_base_01.blend'
+# Material Count: 14
+
+newmtl Material.001
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.646199 0.646199 0.646199
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 3
+map_Kd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/godot/vox_test/texturez/trackz_2_laytex.png
+
+newmtl Material.003
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/godot/vox_test/texturez/lanch_rail_03.png
+
+newmtl Material.005
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/godot/vox_test/texturez/lanch_rail_03.png
+
+newmtl Material.006
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/godot/vox_test/texturez/lanch_rail_03.png
+
+newmtl Material.007
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/godot/vox_test/texturez/lanch_rail_03.png
+
+newmtl Material.008
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/godot/vox_test/texturez/lanch_rail_03.png
+
+newmtl Material.009
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/godot/vox_test/texturez/lanch_rail_02.png
+
+newmtl Material.010
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/godot/vox_test/texturez/lanch_rail_03.png
+
+newmtl Material.012
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Materialboltz
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/godot/vox_test/texturez/lanch_rail_02.png
+
+newmtl None
+Ns 500
+Ka 0.8 0.8 0.8
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+
+newmtl bord
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl rail_01
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.087629 0.087629 0.087629
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl rail_metreal_bandzmetal
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.646199 0.646199 0.646199
+Ke 0.000000 0.000000 0.000000
+Ni 0.000000
+d 1.000000
+illum 3
+map_Kd /media/orgburo/07bccd33-16a5-4a34-8366-71405122c7bf/Dev_envo_workspace/godot/vox_test/texturez/trackz_2_laytex.png

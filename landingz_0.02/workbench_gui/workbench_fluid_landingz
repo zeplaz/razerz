@@ -1,0 +1,72 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0400
+header_name {.h}
+code_name {.cxx}
+class opengl_windowUI {open
+} {
+  Function {opengl_windowUI()} {open
+  } {
+    Fl_Window main_window {
+      label main_window open
+      xywh {1062 116 1165 840} type Double visible
+    } {
+      Fl_Group {} {open
+        xywh {0 0 1180 725} align 6
+      } {
+        Fl_Group {} {
+          label main_view open
+          xywh {5 53 1155 672} align 9
+        } {
+          Fl_Box {} {
+            label gl_frame
+            xywh {45 53 535 629} box BORDER_FRAME color 63 align 6 resizable
+          }
+          Fl_Box gl_wfwk {
+            label gl_wfwk_view selected
+            xywh {60 53 520 619} box SHADOW_FRAME color 143 align 5
+            code0 {\#include "../graphicz/gl_ctlr.hpp"}
+            class gl_window_framework
+          }
+        }
+        Fl_Group {} {
+          label main_menu open
+          xywh {0 0 1180 40} align 33
+        } {
+          Fl_Menu_Bar {} {
+            label menu_bar_main
+            xywh {0 0 1180 20}
+          } {
+            Submenu {} {
+              label {file/i/o} open
+              xywh {0 0 70 21}
+            } {
+              MenuItem {} {
+                label save
+                user_data {"save"}
+                callback file_menu_cb
+                xywh {5 5 36 21}
+              }
+              MenuItem {} {
+                label load
+                xywh {0 0 36 21}
+              }
+              MenuItem {} {
+                label quit
+                user_data {"quit"}
+                callback file_menu_cb
+                xywh {0 0 36 21}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  Function {show(int argc,char **argv)} {} {
+    code {main_window->show(argc,argv);} {}
+  }
+  Function {file_menu_cb(Fl_Widget*,void*)} {open return_type {static void}
+  } {
+    code {printf("\#\#DEBUG::file_menu_callback\\n");} {}
+  }
+}

@@ -6,9 +6,8 @@
   #include <iostream>
   #include <memory>
 
-#IF
   #include "basez/engine_enum_defz.hpp"
-
+  #include "../graphicz/gl_ctlr.hpp"
 
 
 namespace landingz
@@ -60,10 +59,48 @@ struct rez_mgmt
   //  std::array<view_lenz,6> lenz_array;
     //view_lenz* prim_lenz;
 };
-
 inline static rez_mgmt* global_r_mgmt=nullptr;
 
 
+/*
+
+
+class trait_tag
+{
+
+};
+decltype(std::decval<T1>()<std::declval<T2>())
+
+
+
+/*
+using OS_DEF_TYPE = std::type::value int;
+//
+struct system_config
+{
+};
+
+//using os_TYPE = std::type<>
+#if (_WIN32)
+#endif
+constexpr auto is_os = isI
+{
+
+}
+
+template<typename Type_OS>
+struct Is_window<std::void_t<decltype(std::declval<Type_OS>)>>:std::true_type
+{
+
+};
+constexpr auto Is_windowz_lamda = [](auto f)
+{
+  return [](auto&&... args)
+  {
+
+  }
+}
+template <typename Os_type>*/
 struct Engine
 {
   Engine_State engine_state;
@@ -78,12 +115,7 @@ struct Engine
   std::string terminal_cmd;
 
 
-class trait_tag
-{
-
-};
-
-template<typename PTR_shr>//, typename trait = trait_tag::>
+template<typename PTR_shr,typename os_tag>//, typename trait = trait_tag::>
   class driver
   {
       protected :
@@ -104,7 +136,8 @@ template<typename PTR_shr>//, typename trait = trait_tag::>
   {
     status = new_stat;
   }
-
+  // a template to check the OS and then only acitave the type with the ablity to have a
+  //memoryreader depolyed.. and set nessary flags.
   std::string read_consle()
   {
     std::string l_cmd;

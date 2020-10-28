@@ -16,6 +16,7 @@
 
 
 #include "graphicz/gl_ctlr.hpp"
+#include "workbench_gui/workbench_fluid_landingz.h"
 
 #include <array>
 #include <utility>

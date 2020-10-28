@@ -1,5 +1,11 @@
 
+///look into VK_buffer_device_address
 
+/*
+TODO futrue tools a gui baed app ealsy allowing you to reanage shaders and locations of then
+files and then when the object is outted. or whaver its writes to the shaer list the needed info.
+
+*/
 #ifndef LANDINGZ_OPEN_GL_BASE_HPP
 #define LANDINGZ_OPEN_GL_BASE_HPP
 
@@ -7,12 +13,19 @@
 #include "../../MCP_cmd/basez/flag_templatez.hpp"
 
 
+enum shader_unit_builds {
+  GLYPH_BASE,
+  PARTICAL_COMP_VIZ
+};
+
+using shd_mode = int;
+
 enum class shader_type : unsigned char {
      SHADER_NULL         = 0x00,
      COMPUTE_SHADER      = 0x02,
      VERTEX_SHADER       = 0x04,
      FRAGMENT_SHADER     = 0x08,
-     TESS_CONTROL_SHADER = 0x10,
+     TESS_CONTROL_SHADER = 0x11,
      TESS_EVAL_SHADER    = 0x20,
      GEOMETRY_SHADER     = 0x40,
      ALL_PIPE            = 0x80
@@ -49,12 +62,19 @@ enum SHDtype_index : uint8_t
 
 
 
+struct pathz
+{
+  char* the_path;
+  int id;
+
+};
 //using ss_shader_array  = std::array<shader_seprate,5>;
 
 class shader_landingz_base
 {
   protected :
   shader_type contained_shaders=shader_type::SHADER_NULL;
+
   public :
   GLuint gl_shaderprgm_ID;
 
@@ -134,4 +154,135 @@ class shader_landingz_base
   }
 };
 
+
+class sharder_parser{
+
+public :
+void run_on_file(const pathz& in_path)
+{
+
+  int gtell;
+  if(int num_shdprgmz = read_header(in_path,gtell))
+   {
+    for(int i =0; i< num_shdprgmz; i++)
+     {
+      ///paser the fipe
+      //
+
+
+      //
+      switch(quel_shader_type(in_path->the_path,gtell))
+      {
+       case COMPLEATE_PRGM :
+       {
+
+        shader_complete();
+        break;
+       }
+
+       case PIPE_PROGRAM :
+       {
+         shader_pipe(in_path->the_path,gtell);
+         break;
+       }
+
+       }
+      }
+    }
+  }
+
+protected :
+ shader_landingz_base* shader_complete(char* in_raw_shader, int gtell)
+{
+
+  shader_landingz_base* slb = new shader_landingz_base();
+
+
+  load_file_single_shader_prgm()
+
+
+}
+
+
+
+// look at "shader object being some kind of basic_oithing???" overload >> to write outf path and other such
+//stuff
+  shad_mode quel_shader_type(fstream& in_fstm)
+  {
+    std::string temp_string;
+    char shrchar[10];
+    in_fstm.get(shrchar,10);
+    >> temp_string;
+
+    if(temp_string.at(0) == '<' && temp_string.at(8) == ':')
+    {
+
+    }
+
+  }
+
+
+
+  shd_mode quel_shader_type(in_path->the_path, int& gtell)
+  {
+
+      std::fstream fsrm;
+      fsrm.seekg(gtell,fsrm.beg);
+
+      fsrm.close();
+  }
+
+    void shader_pipe(char* in_raw_shader, int gtell);
+
+
+    int read_header(std::fstream& fstrm)
+     {
+        fstrm.open(in_path->the_path);
+        if(fstrm >> std::string temp_string)
+         {
+           int numofshaderz;
+           if(temp_string == "<|header|>")
+            {
+              fstrm >> temp_string;
+              if(temp_string == "SHADERZ")
+              {
+                fstrm >> numofshaderz;
+                //gtell = fstrm.tellg();
+                //fstrm.close();
+                return numofshaderz;
+              }
+             }
+           }
+          //fstrm.close();
+        return PARSER_FAIL;
+      }
+
+
+
+  int read_header(const pathz& in_path, int& gtell)
+   {
+      std::fstream fstrm;
+
+      fstrm.open(in_path->the_path);
+      if(fstrm >> std::string temp_string)
+       {
+         int numofshaderz;
+         if(temp_string == "<|header|>")
+          {
+            fstrm >> temp_string;
+            if(temp_string == "SHADERZ")
+            {
+              fstrm >> numofshaderz;
+              gtell = fstrm.tellg();
+              fstrm.close();
+              return numofshaderz;
+            }
+           }
+         }
+        fstrm.close();
+      return PARSER_FAIL;
+    }
+
+
+};
 #endif

@@ -1,0 +1,123 @@
+
+cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
+
+set(project_name 0vulkan_test)
+
+Project(${project_name} LANGUAGES CXX)
+
+include(GNUInstallDirs)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY
+    ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY
+    ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
+
+message("CMAKE_SYSTEM_NAME: ${CMAKE_SYSTEM_NAME}")
+
+if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+SET(OperatingSystem "Linux")
+message(CHECK_PASS " ::linux os detected" )
+
+else()
+message(CHECK_START " ::None linux build.... windowz?")
+endif()
+
+add_definitions(-std=c++17)
+    
+LIST(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/3rd_party/cmake")
+
+#set(HAVE_LIBC TRUE)
+
+
+add_library(modualz "")
+
+target_sources(modualz
+  PRIVATE
+  vk_abstracionz.cpp
+  vulkan_api.cpp
+  vk_shaderz.cpp
+  exrtn_vulkan.cpp
+  PUBLIC
+  ${CMAKE_CURRENT_LIST_DIR}/vk_abstracionz.hpp
+  ${CMAKE_CURRENT_LIST_DIR}/vulkan_api.hpp
+  ${CMAKE_CURRENT_LIST_DIR}/vk_shaderz.hpp
+  ${CMAKE_CURRENT_LIST_DIR}/vulkan_definz.hpp
+  ${CMAKE_CURRENT_LIST_DIR}/vulkani_strucz.hpp
+  ${CMAKE_CURRENT_LIST_DIR}/exrtn_vulkan.hpp
+)
+
+set(SOURCE_FILEZ 
+vk_abstracionz.cpp
+  vulkan_api.cpp
+  vk_shaderz.cpp
+  exrtn_vulkan.cpp
+  main.cpp)
+
+add_executable(${project_name} ${SOURCE_FILEZ})
+#target_link_libraries( ${PROJECT_NAME} modualz)
+
+find_package(Vulkan REQUIRED FATAL_ERROR)
+find_package(glslang REQUIRED FATAL_ERROR)
+find_package(Threads REQUIRED)
+message("glslang: ${glslang_FOUND}")
+
+if (NOT GLSLANG_INSTALL_DIR AND DEFINED ENV{GLSLANG_INSTALL_DIR})
+    set(GLSLANG_INSTALL_DIR $ENV{GLSLANG_INSTALL_DIR})
+endif()
+
+if(UNIX)
+include(FindPkgConfig)
+option(BUILD_WSI_XCB_SUPPORT "Build XCB WSI support" ON)
+option(BUILD_WSI_XLIB_SUPPORT "Build Xlib WSI support" ON)
+find_package(XCB REQUIRED)
+message("  pakcage::: XCB: ${xcb_FOUND}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DVK_USE_PLATFORM_XCB_KHR")
+
+find_package(X11 REQUIRED)
+
+add_subdirectory(3rd_party)
+link_libraries(${XCB_LIBRARIES})
+add_definitions(-DVK_USE_PLATFORM_XCB_KHR)
+endif()
+
+IF (NOT Vulkan_FOUND)
+		find_library(Vulkan_LIBRARY NAMES vulkan HINTS "$ENV{VULKAN_SDK}/lib" "${CMAKE_SOURCE_DIR}/libs/vulkan" REQUIRED)
+		IF (Vulkan_LIBRARY)
+			set(Vulkan_FOUND ON)
+			MESSAGE("Using bundled Vulkan library version")
+		ENDIF()
+	ENDIF()
+
+
+#find_package(GLSLang COMPONENTS GLSLang) #find_package(GLSLang COMPONENTS GLSLang SPRIV)
+if(Vulkan_FOUND)
+
+    message(CHECK_PASS "::VULKAN package found")
+   
+    if(WIN32)
+        target_link_libraries(${project_name} Vulkan::vulkan)
+        target_include_directories(${project_name} PRIVATE Vulkan::Vulkan)
+
+        target_link_libraries(${project_name} PRIVATE glslang::glslang glslang::SPIRV)
+        target_include_directories(${project_name} PRIVATE glslang::glslang glslang::SPIRV)
+       
+    else()
+        target_include_directories(${project_name} PUBLIC ${VULKAN_INCLUDE_DIRS})
+        target_link_libraries(${project_name} ${VULKAN_LIB_LIST})
+        #target_link_libraries(${project_name} Vulkan::vulkan)
+        target_include_directories(${project_name} PUBLIC ${GLSLANG_INCLUDE_DIRS})
+        target_link_libraries(${project_name} ${GLSLANG_LIB_LIST})
+        message(CHECK_PASS "::VULKAN  and glslanflinux SHOULD BE targetlinked...")
+    endif()
+
+endif()
+link_libraries(${XCB_LIBRARIES} ${Vulkan_GLSLANG} ${Vulkan_LIBRARY} ${Vulkan_LIBRARY}${CMAKE_THREAD_LIBS_INIT})
+
+
+#target_link_libraries(
+    #target_name
+    #PUBLIC
+     #   libA
+        #$<$<PLATFORM_ID:Windows>:wsock32>
+    #PRIVATE
+       # $<$<PLATFORM_ID:Linux>:libB>
+ #       libC

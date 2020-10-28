@@ -23,19 +23,6 @@ static Fl_Double_Window* build_gui()
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
  bool gl_window_framework::opengl_context_startup()
  {
    if(gl_windows_active != 0)
@@ -134,7 +121,6 @@ void  gl_window_framework::draw()
         std::cerr << "####ERROR FAILURE TO LOAD GLHANDLE????\n";
         return;
       }
-
       glViewport(0,0,pixel_w(),pixel_h());
       first_run = false;
     }
@@ -157,6 +143,9 @@ void  gl_window_framework::draw()
       //rest of ilisatiotion sutf..
       std::cout <<"DRAWCALL NOT VAILD ATEMPTIGN VIEWPORRT??\n";
       glViewport(0, 0, pixel_w(), pixel_h());
+    //  glViewport(0,0,w(),h());
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
     }
 
     if(!context_valid())
@@ -166,7 +155,8 @@ void  gl_window_framework::draw()
     glClearColor(rValue, gValue, bValue, bAlpha);
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
-
+    gl_instance->render_current_scene();
+    
     //glUseProgram();
     //glUniform...
     ///drawz//

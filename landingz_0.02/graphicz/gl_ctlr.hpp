@@ -24,11 +24,13 @@
 //defined in fl_base
 static Fl_Double_Window* build_gui();
 
-class gl_window_framework : public Fl_Gl_Window{
+class gl_texturez;
+class gl_shaderz;
 
+class gl_ops
+{
 
-public :
-
+  public :
   struct {
     glm::mat4 view_projection;
     glm::mat4 view_matrix;
@@ -69,40 +71,84 @@ struct lenz_data{
   }
 }m_lenz_data;
 
-protected :
-static int gl_windows_active;
-bool opengl_context_startup();
-int gl_version_major;
-//GLint current_shader_program;
-Fl_Text_Display *output;
-void add_output(const char *format, ...);
+  protected :
+  int id;
+  int gl_version_major;
+  int current_scene;
 
- bool run_viewdata_inialzation()
- {  Fl::use_high_res_GL(true);
-    gl_matrixz.view_projection =glm::mat4(1.f);
-    gl_matrixz.view_matrix = glm::mat4(1.f);
-    gl_matrixz.Projection = glm::mat4(1.f);
-    m_lenz_data = lenz_data();
- }
+  std::unordered_map<std::string,GLint> shader_prgm_map;
+  std::unordered_map<int,gl_texturez> texture_map;
+  public :
+
+  inline void set_scene(int in_scene) { current_scene = in_scene};
+  inline void get_scene()
+  {
+    return current_scene;
+  }
+
+  void render_current_scene();
+
+  void shader_setup();
+  void change_shader_program(int window, GLint shaderProgram);
+
+  bool load_active_textures();
+
+  void view_matex_inilzation()
+{
+  gl_matrixz.view_projection =glm::mat4(1.f);
+  gl_matrixz.view_matrix = glm::mat4(1.f);
+  gl_matrixz.Projection = glm::mat4(1.f);
+  m_lenz_data = lenz_data();
+}
+
+};
+
+class gl_window_framework : public Fl_Gl_Window{
+
+protected :
+
+  static int gl_windows_active;
+  bool opengl_context_startup();
+    //GLint current_shader_program;
+  Fl_Text_Display *output;
+  void add_output(const char *format, ...);
 
 public :
 
-~gl_window_framework(){gl_windows_active--;}
-void shader_setup();
-void change_shader_program(int window, int shaderProgram);
-bool load_active_textures();
+ double size_scale;
+ std::shared_ptr<gl_ops> gl_instance;
 
-gl_window_framework(int X, int Y, int W, int H, const char *L):  Fl_Gl_Window(X,Y,W,H,L)
+ ~gl_window_framework(){gl_windows_active--;}
+ void draw();
+ virtual int handle(int event);
 
+ gl_window_framework(int X, int Y, int W, int H, const char *L):  Fl_Gl_Window(X,Y,W,H,L)
   {
     this->mode(FL_OPENGL3|FL_DOUBLE|FL_ALPHA);
     gl_version_major = 0;
-    run_viewdata_inialzation();
-
+    gl_insiance = nullptr;
   }
 
-void draw();
-virtual int handle(int event);
+ inline void bind_gl_instance(std::shared_ptr<gl_ops> in_opz)
+  {
+   gl_instance = in_opz;
+  }
+
+
+ inline  void run_viewdata_inialzation()
+   {
+    Fl::use_high_res_GL(true);
+    if(gl_instance !=nullptr)
+      {
+       gl_instance->view_matex_inilzation();
+      }
+    else
+      {
+        std::cerr << "###\n##-->>WARNING gl_ops missing, gl_instinace is null can not set view marexz.
+        plz bind gl_insiance to this window and run again..or drectly\n\n";
+        }
+    }
+
     //draw gemoetry.. calll
 };
 

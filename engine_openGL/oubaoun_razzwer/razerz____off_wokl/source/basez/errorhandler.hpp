@@ -1,0 +1,18 @@
+
+#ifndef RA_ERROR_HANDLER_HPP
+#define RA_ERROR_HANDLER_HPP
+
+ enum Exit_Error_Code : int{
+
+   PARSER_FAIL = -11,
+   TEXTURE_FAIL = -12,
+   SHADER_FAIL = -13,
+   MAIN_FAIL = -14,
+   ENGINE_FAILURE = -15,
+   OPENGL_FAILCAUGHT = -16,
+   FILE_FORMATE_ERROR = -17,
+   MAPLOOKUP_FAIL = -18,
+   SHADER_LINK_FAIL = -19,
+ };
+
+ #endif

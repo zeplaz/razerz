@@ -1,0 +1,46 @@
+
+
+apt install mesa-utils {check opengl vszionz}
+
+sudo add-apt-repository ppa:kisak/kisak-mesa
+sudo apt-get dist-upgrade
+sudo apt-get install libssl-dev
+!download; cmake
+run  in cmakesorce
+{
+./confiugre
+make
+sudo make install
+}
+ sudo apt-get install  libxrandr-dev 
+ sudo apt-get install libxinerama-dev
+ sudo apt-get install libxcursor-dev
+ sudo apt-get install libxi-dev
+!download; glfw
+run::{
+cmake . 
+make
+make install
+}
+sudo apt-get install libglm-dev
+
+git clone https://github.com/opencv/opencv.git
+ run{mkdir build
+ cd build
+cmake ../
+ make
+ sudo make install
+}::TODO@**->sudo make install
+
+[compiler] sudo apt-get install build-essential
+[required] sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+[optional] sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
+sudo apt-get install libgstreamer-plugins-base1.0-dev
+
+opencv from git. fresh build likely need some depedences.system sysfic
+downlad assimp from git
+cmake CMakeLists.txt
+make -j4
+
+
+

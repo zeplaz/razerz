@@ -1,0 +1,5 @@
+g++ -std=c++17  -Wall -Wextra  bui_tstz2.cpp -I/usr/local/include/opencv4
+ -lGL -lglut -lGLEW -pthread -ldl -lGLU -lGL -lrt -lXrandr -lXxf86vm
+ -lXi -lXinerama -lX11   -lopencv_core -lopencv_imgproc -lopencv_highgui
+  -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_videoio -lGL
+  -lglut -lGLEW

@@ -3,8 +3,8 @@
 
 #define WORKGROUP_SIZE 512
 const int  PARTCL_UNI_BIDN_INDX = 3;
-//const int  PARTCL_U_VELOC_INDEX =4;
-const int  PARTCL_POS_VOLOCITY_INDX = 4;
+const int  PARTCL_U_VELOC_INDEX =4;
+const int  PARTCL_POS_VOLOCITY_INDX = 7;
 const int  PARTCL_U_POS_INDEX =5;
 const int  PARTCL_U_ORGIN_INDEX =6;
 //orginze intow two subrunties thus can batch commute calls.
@@ -21,7 +21,7 @@ layout(std140,binding =PARTCL_UNI_BIDN_INDX) uniform attached_bock
   vec4 partc_attractor[MAX_PARTC_ATTACTOR];//xyz and w used as mass? why 64?
 };
 
-layout (set = 0, binding = PARTCL_POS_VOLOCITY_INDX,rgba32f) uniform imageBuffer velocity_buffer;
+layout (set = 0, binding = PARTCL_POS_VOLOCITY_INDX,rgba32f) uniform imageBuffer velocity_pos_buffer;
 
 layout (set = 0, binding = PARTCL_U_VELOC_INDEX,rgba32f) uniform imageBuffer velocity_buffer;
 layout (set = 0, binding = PARTCL_U_POS_INDEX, rgba32f)  uniform imageBuffer pos_buffer;

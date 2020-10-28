@@ -21,6 +21,9 @@ tests with normal maps, compute partical shaders, and glyphs
 ### Images_captures_&old_data
 here you will find lots of images, videos and screen caps of exeperments and results!
 
+### data_extrn
+contains models and the modal maps {normal maps, parlaxmaps specularmaps etc}
+contains models built by me or neil c. 
 ### level_builder
 not much happehning here, small image processing for making art, but will be used
 to genreate levels and other image and genrational data. offline tools.

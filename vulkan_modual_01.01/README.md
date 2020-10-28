@@ -25,8 +25,12 @@ Makefile to make build.
 this file is very imporant it is used to sort out shaders that are located
 in the folder ../shaderglsl it also outlines some info that is used in them 
 this is done to allow for on the fly recompling of shaders well program is running
-of changes made to them in devlopment witout needing to recomple the main program.
+of changes made to them in devlopment witout needing to recomple the main program. in the future precomplied SIRV-5 will be kept but as things
+are in a state of flux this method and useing a c++ gslang modual inside program to complie on the runtime
 
+### ../shaderglsl
+this folder is located above this root. as it is shared with other engine parts and tests.
+ contains the raw glsl 
 ### src
 cpp files.
 ### headers

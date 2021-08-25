@@ -174,7 +174,7 @@ template <class resource_, typename out_data_pak>
           }
           case Parse_File_Type::EMISSION_ATTRZ :
           {
-              = handle_emission_material(it->second);
+            handle_emission_material(it->second);
             break;
           }
 

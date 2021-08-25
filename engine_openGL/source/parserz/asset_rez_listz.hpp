@@ -21,7 +21,7 @@ enum class Parse_File_Type{
   EMISSION_ATTRZ
 };
 
-const  pathz em_attr_BASE_sol_A_xml_path("../../scene_gen/emission_meterial_attr_A.xml");
+const  pathz em_attr_BASE_sol_A_xml_path("../scene_gen/emission_meterial_attr_A.xml");
 const  pathz solesital_light_sol_A_xml_path("../../scene_gen/emission_meterial_attr_A.xml");
 const  pathz shaders_xml_path("../../shaderzglsl/file_list_shader.xml");
 const pathz neil_xml_path("../../data_extrn/neil/local_asset_list.xml");

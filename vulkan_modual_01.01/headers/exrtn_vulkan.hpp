@@ -15,13 +15,13 @@
 #include <xcb/xcb.h>
 #endif
 #include <vulkan/vulkan.hpp>
-#include "../3rd_party/glad/include/vk_platform.h" 
-//#include "glad/include/vulkan.h" 
+#include "../3rd_party/glad/include/vk_platform.h"
+//#include "glad/include/vulkan.h"
 //#include <vulkan/vulkan.h>
 
 namespace  external_vulkan{
 
-	
+
 // A basic debug callback. A more advanced one could be created, but this will do for basic debugging
 VKAPI_ATTR VkBool32 VKAPI_CALL MyDebugReportCallback(
 	VkDebugReportFlagsEXT       flags,
@@ -41,19 +41,16 @@ VKAPI_ATTR VkBool32 VKAPI_CALL MyDebugReportCallback(
 VkDebugReportCallbackEXT CreateDebugger(const VkInstance& instance);
 void DestroyDebugger(const VkInstance & instance, const VkDebugReportCallbackEXT & debugger);
 
-VkResult CreateDebugUtilsMessengerEXT(VkInstance instance, const VkDebugUtilsMessengerCreateInfoEXT* pCreateInfo, 
+VkResult CreateDebugUtilsMessengerEXT(VkInstance instance, const VkDebugUtilsMessengerCreateInfoEXT* pCreateInfo,
                                      const VkAllocationCallbacks* pAllocator, VkDebugUtilsMessengerEXT* pDebugMessenger);
 
-void DestroyDebugUtilsMessengerEXT(VkInstance instance, VkDebugUtilsMessengerEXT debugMessenger, 
+void DestroyDebugUtilsMessengerEXT(VkInstance instance, VkDebugUtilsMessengerEXT debugMessenger,
                                     const VkAllocationCallbacks* pAllocator);
-
 
 void populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo);
 
-
 static bool  memory_type_from_properties(VkPhysicalDeviceMemoryProperties& dmemory_properties, uint32_t typeBits,
-														 VkFlags requirements_mask, uint32_t *typeIndex); 
-
+														 VkFlags requirements_mask, uint32_t *typeIndex);
 
 }
 
@@ -75,7 +72,19 @@ void loadDebugUtilsCommands( VkInstance instance ){
 	CreateDebugUtilsMessengerEXTDispatchTable[instance] = reinterpret_cast<PFN_vkCreateDebugUtilsMessengerEXT>( temp_fp );
 
 	temp_fp = vkGetInstanceProcAddr( instance, "vkDestroyDebugUtilsMessengerEXT" );
-	if( !temp_fp ) throw "Failed to load vkDestroyDebugUtilsMessengerEXT"; // check shouldn't be necessary (based on spec)
+	if( !temp_fp ) throw "Failed to load vkDestroyDebugUtilsMe  	{
+  		// If the surface size is undefined, the size is set to
+  		// the size of the images requested.
+  		extent.width = width;
+  		extent.height = height;
+  	}
+      else
+  	{
+  		// If the surface size is defined, the swap chain size must match
+  		extent = swapchain_details.capabilities.currentExtent;
+  		width = swapchain_details.capabilities.currentExtent.width;
+  		height = swapchain_details.capabilities.currentExtent.height;
+  	}ssengerEXT"; // check shouldn't be necessary (based on spec)
 	DestroyDebugUtilsMessengerEXTDispatchTable[instance] = reinterpret_cast<PFN_vkDestroyDebugUtilsMessengerEXT>( temp_fp );
 
 	temp_fp = vkGetInstanceProcAddr( instance, "vkSubmitDebugUtilsMessageEXT" );

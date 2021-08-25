@@ -105,9 +105,6 @@ static std::vector<pathz> return_texturez_from_auto_load( const pathz& in_path)
 
 
 
-
-
-
 class texture_2 : public sym_object
 {
   private :

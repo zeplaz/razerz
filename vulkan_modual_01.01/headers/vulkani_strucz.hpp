@@ -26,25 +26,15 @@ static PFN_vkGetDeviceProcAddr g_gdpa = NULL;
         }                                                                                                        \
     }
 
-
-
 /*********************************************
- * 
- * STRUCTZ::: used for parts in classes, and helpers ::: abstracting vulkan datastructes. 
-** 
+ *
+ * STRUCTZ::: used for parts in classes, and helpers ::: abstracting vulkan datastructes.
+**
 **********************************************/
 
-
 /*
-** SWAP CHAIN STUCTZZ 
+** SWAP CHAIN STUCTZZ
 */
-
-
-typedef struct swapchain_buffer_type {
-VkImage image;
-VkImageView view;
-
-} swapchain_buffer;
 
 
 
@@ -53,17 +43,15 @@ typedef struct queue_family_indices
     {
         std::optional<uint32_t> graphics_Family;
         std::optional<uint32_t> present_Family;
-        std::optional<uint32_t> compute_Family; 
-        std::optional<uint32_t> transfer_Family; 
+        std::optional<uint32_t> compute_Family;
+        std::optional<uint32_t> transfer_Family;
     // VK_QUEUE_SPARSE_BINDING_BIT
 
         bool does_exist()
         {
         return graphics_Family.has_value() &&  present_Family.has_value();
-      }      
+      }
     };
-
-
 
 typedef struct swapchain_support_details_type
 {
@@ -71,7 +59,6 @@ typedef struct swapchain_support_details_type
     std::vector<VkSurfaceFormatKHR> formats;
     std::vector<VkPresentModeKHR> presentModes;
 }swapchain_support_details;
-
 
 struct device_score_card
 {
@@ -83,37 +70,32 @@ struct device_score_card
       if(this->index == b.index)
       {return true;}
 
-      return false; 
+      return false;
      }
-    
+
     bool operator !=(const device_score_card &b) const
          {
              if (this->score != b.score)
              {return true;}
 
-             return false; 
+             return false;
          }
     bool operator <(const device_score_card &b) const
          {
-            if (this->score < b.score) 
+            if (this->score < b.score)
             {return true;}
 
 
-            return false;  
+            return false;
          }
     bool operator >(const device_score_card &b) const
          {
             if (this->score > b.score)
             {return true;}
 
-            return false;     
+            return false;
          }
      };
-
-
-
-
-
 
      /*
 //*********************************************
@@ -125,10 +107,10 @@ struct device_score_card
 ***********************************************
 */
 
-
 struct vulkan_occurance
-{   
-       
+{
+
+    size_t currentFrame = 0;
     VkInstance vk_instance = VK_NULL_HANDLE;
 
     VkDebugUtilsMessengerEXT debugMessenger;
@@ -143,20 +125,64 @@ struct vulkan_occurance
     VkQueue present_queue;
     VkQueue compute_queue;
 
-
-    VkCommandPool command_pool;
-    std::vector<VkCommandBuffer> command_buffers;
-
     VkRenderPass render_Pass;
-    VkPipelineLayout pipeline_Layout;
+   // VkDescriptorSetLayout graphics_descriptorSetLayout;
+   // VkDescriptorSetLayout compute_descriptorSetLayout;
+   // VkPipelineLayout graphics_pipeline_Layout;
+   // VkPipelineLayout compute_pipeline_Layout;
+    std::vector<VkSemaphore> imageAvailableSemaphores;
+    std::vector<VkSemaphore> renderFinishedSemaphores;
+    std::vector<VkFence> inFlightFences;
+    std::vector<VkFence> imagesInFlight;
 
+    VkDescriptorSetLayout descriptor_set_layout[3];
+
+
+    VkImage depthImage;
+    VkDeviceMemory depthImageMemory;
+    VkImageView depthImageView;
+
+   VkDescriptorPool descriptorPool;
+
+
+    struct {
+		uint32_t queueFamilyIndex;					// Used to check if compute and graphics queue families differ and require additional barriers
+		VkPipelineLayout pipelineLayout;			// Layout of the graphics pipeline
+		VkPipeline pipeline;						// Particle rendering pipeline
+		VkSemaphore compute_semaphore;                      // Execution dependency between compute & graphic submission
+        std::vector<VkCommandBuffer> command_buffers;
+        VkCommandPool commandPool;
+
+        std::vector<VkDescriptorSet> descriptorSets;
+
+        std::vector<VkBuffer> uniformBuffers;
+        std::vector<VkDeviceMemory> uniformBuffersMemory;
+
+	} graphics;
+
+    struct {
+		uint32_t queueFamilyIndex;					// Used to check if compute and graphics queue families differ and require additional barriers
+	    VkCommandPool commandPool;					// Use a separate command pool (queue family may differ from the one used for graphics)
+			// Command buffer storing the dispatch commands and barriers
+		VkSemaphore compute_semaphore;                      // Execution dependency between compute & graphic submission
+		VkPipelineLayout pipelineLayout;			// Layout of the compute pipeline
+		VkPipeline pipeline;
+        VkCommandBuffer primary_command_buffer;
+        std::vector<VkCommandBuffer> command_buffers;
+
+       // VkDescriptorPool descriptorPool;
+        std::vector<VkDescriptorSet> descriptorSets;
+
+        std::vector<VkBuffer> uniformBuffers;
+        std::vector<VkDeviceMemory> uniformBuffersMemory;
+
+	}compute;
 };
 
 /*********************************************
 
 ***********************************************
 */
-
 
 #if defined(_WIN32)
  struct  manual_window_parmz
@@ -179,7 +205,6 @@ struct  manual_window_parmz
 
 #elif defined(VK_USE_PLATFORM_XLIB_KHR)
 
-
 struct  manual_window_parmz
 {
 
@@ -190,19 +215,18 @@ struct  manual_window_parmz
 #endif// end of OS spsific code.
 
 class base_windows_handler {
-    public : 
+    public :
     virtual bool on_window_resize() = 0;
     virtual bool draw() = 0;
 
-    virtual bool ready_to_render() const final 
+    virtual bool ready_to_render() const final
     {
         return can_be_rendered;
     }
 
     base_windows_handler() : can_be_rendered(false) {};
-    
-    virtual ~base_windows_handler() = default;
 
+    virtual ~base_windows_handler() = default;
 
     protected :
     bool can_be_rendered;
@@ -211,22 +235,18 @@ class base_windows_handler {
 
 class vulkan_window_ctlr
 {
-public: 
+public:
 
     bool create( const char *nameofwindow);
     bool window_render_loop(base_windows_handler &in_window_handle) const;
-    manual_window_parmz     get_manual_window_controls() const; 
-
-
+    manual_window_parmz     get_manual_window_controls() const;
 private :
-
     manual_window_parmz window_controls;
-
 };
 //utiltizeclasses
 
 class dev_comper
-{ 
+{
 public:
   bool operator() (const device_score_card& lhs, const device_score_card&rhs) const
   {
@@ -235,18 +255,13 @@ public:
 };
 
 
-
-
 /***************************************************\
-
-
-
 
 
 /*&memory type belongs to a heap with the VK_MEMORY_HEAP_DEVICE_LOCAL_BIT set.
 
 = VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT;
-VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT 
+VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT
 
  VK_BUFFER_USAGE_TRANSFER_SRC_BIT = 0x00000001,
     VK_BUFFER_USAGE_TRANSFER_DST_BIT = 0x00000002,
@@ -263,38 +278,34 @@ VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT
 class manged_buffer_memory
 {
 
-    VkDeviceSize data_size; 
-    VkMemoryPropertyFlags buff_mem_flags;
+    VkDeviceSize data_size= VK_NULL_HANDLE;
+  //  VkMemoryPropertyFlags buff_mem_flags;
     VkBuffer buffer = VK_NULL_HANDLE;
-    VkDeviceMemory buffer_memory= VK_NULL_HANDLE; 
+    VkDeviceMemory buffer_memory= VK_NULL_HANDLE;
 
-    public: 
+    public:
 
-   void inialze()
+   void initalize(VkDeviceSize size, VkBufferCreateFlags flags, VkBufferUsageFlags usage =VK_BUFFER_USAGE_STORAGE_BUFFER_BIT, VkSharingMode sharemode = VK_SHARING_MODE_CONCURRENT,
+                  uint32_t qfamindex =0, pQueueFamilyIndices qfamIndices = VK_NULL_HANDLE)
    {
+
+     data_size =size;
        VkBufferCreateInfo buffinfo {};
 
         buffinfo.sType = VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO;
+        buffinfo.flags = flags;
         buffinfo.size = data_size;
-        buffinfo.usage = VK_BUFFER_USAGE_STORAGE_BUFFER_BIT;
-        buffinfo.sharingMode =VK_SHARING_MODE_CONCURRENT;
-        
-
-   } 
- void  set_memory_type(VkMemoryPropertyFlags in_flag)
-
- {
-     buff_mem_flags = in_flag;
- }
+        buffinfo.usage = usage;
+        buffinfo.sharingMode =sharemode;
+        buffinfo.queueFamilyIndexCount =qfamindex;
+        buffinfo.pQueueFamilyIndices =qfamIndices;
+   }
 
 
- void set_sizedata_unisgnedint(unsigned int n)
- {
-     data_size = sizeof(unsigned int)*n;
- }
-
-     
-
+   void update_size(VkDeviceSize in_size)
+   {
+     //destory memory and remake it!
+   }
 
 };
 /*
@@ -316,9 +327,9 @@ class file_reader
     {
         read_file(filename);
     }
-    
+
 static  std::vector<char> read_file(const std::string& filename)
-{   
+{
     std::ifstream file(filename,std::ios::ate|std::ios::binary);
     if(!file.is_open())
     {

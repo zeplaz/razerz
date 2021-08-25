@@ -1,12 +1,10 @@
 #ifndef VULKAN_MODUAL_SHADERZ_01_HPP
 #define VULKAN_MODUAL_SHADERZ_01_HPP
 
-
 //clibz
 #include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
-
 
 //STLz
 #include <tuple>
@@ -14,246 +12,101 @@
 #include <sstream>
 #include <algorithm>
 #include <unordered_map>
-
-//glm
-#define GLM_ENABLE_EXPERIMENTAL
-#include <glm/glm.hpp>
-#include <glm/gtx/hash.hpp>
-
+#include <array>
 
 //glslang
-//#include "3rd_party/glslang_linux_Release/include/glslang/Public/ShaderLang.h"
-//#include "3rd_party/glslang_linux_Release/include/glslang/SPIRV/GlslangToSpv.h"
-//#include "3rd_party/glslang_linux_Release/include/glslang/SPIRV/spirv.hpp"
-
 #include <glslang/Public/ShaderLang.h>
-//#include "3rd_party/glslang-master/glslang/Public/ShaderLang.h"
 #include <glslang/SPIRV/GlslangToSpv.h>
 #include <glslang/SPIRV/SpvTools.h>
 #include <glslang/SPIRV/spirv.hpp>
 #include <glslang/build_info.h>
-//#include <glslang/OSDependent/osinclude.h>
 
 #include <glslang/SPIRV/GLSL.std.450.h>
 #include <glslang/SPIRV/doc.h>
 #include <glslang/SPIRV/disassemble.h>
 
-//#include <spirv/unified1/spirv.hpp11>
-
-//#include <DirStackFileIncluder.h>
-/*
-#pragma comment(lib,"3rd_party/glslang_linux_Release/lib/libglslang.a")
-#pragma comment(lib,"3rd_party/glslang_linux_Release/lib/libMachineIndependent.a")
-#pragma comment(lib,"3rd_party/glslang_linux_Release/lib/libGenericCodeGen.a")
-#pragma comment(lib,"3rd_party/glslang_linux_Release/lib/libOSDependent.a")
-*/
-
 // inernal
 #include "vulkan_definz.hpp"
 
-const int  PARTCL_UNI_BIDN_INDX = 3;
-const int  PARTCL_U_VELOC_INDEX =4;
-const int  PARTCL_U_POS_INDEX =5;
-const int  PARTCL_U_ORGIN_INDEX =6;
 
-
-#ifdef __unix 
+#ifdef __unix
 constexpr const char* DEFUALT_ROOT_SHDER_PATH = "../shaderzglsl";
 #define fopen_s(pFile,filename,mode) ((*(pFile))=fopen((filename),  (mode)))==NULL
 #else
 constexpr const char* DEFUALT_ROOT_SHDER_PATH = "..\shaderzglsl";
 #endif
 
-
 //usingz and enumz
 using vx_attr_desc_tuple =  std::tuple<uint32_t, uint32_t,VkFormat,uint32_t> ;
 //VK_FORMAT_R32G32_SFLOAT
 
 enum VX_ATTR_DESC_LOC{
-  
+
  VX_BINDING_LOC = 0,
  VX_LOCATION_LOC = 1,
  VX_FORMAT_LOC = 2,
  VX_OFFSET_LOC = 3
-
 };
 
-enum RAW_SHADER_LOC 
+enum RAW_SHADER_LOC
 {
     RAW_SHADER_NAME_POS  = 1,
     RAW_SHADER_PATH_FLAGZ_POS  = 2
-   
 };
 
-constexpr int GLSL_DEFULT_VER = 120;
+constexpr int GLSL_DEFULT_VER = 450;
+constexpr int VULKAN_CLIENT_VIERSON =100;
 
-
-/*
-*
-*extending the hasher function so templates can be aded without polluting standerd library namesapce.. also, feel free to extend.
-
-@::EXTENTIONS::::
-static var:: last_hash;
-pt_func::oytput_debug()->string 
-
-
-
-last_hash 
-.. TODO::: finialze the debuger functions 
-*
-*
-*/
-
-
-template<typename type>
-class hasher: public std::hash<type>{
-
-    
-    static size_t last_hash;
-
-    std::string output_debug()
-    {
-        //  std::string temp = "LAST_hahs::" + std::to_string(last_hash);
-        return std::string("LAST_hash::" + std::to_string(last_hash));
-
-    }
-};
-
-
-
-struct glyph_vertex{
-   glm::vec4  vertex_pos_texcord;
-
-   bool operator ==(const glyph_vertex& other) const noexcept
-   {
-    return vertex_pos_texcord == other.vertex_pos_texcord;
-   }
-};
-
-template<> struct hasher<glyph_vertex>
-    {
-    std::size_t operator()(glyph_vertex const& bv) const noexcept
-    {
-     return hasher<glm::vec4>()(bv.vertex_pos_texcord);
-    }
-    };
-
-
-struct base_vertex{
-    glm::vec3 pos;
-    glm::vec4 base_colour;
-    glm::vec2 textel_uv;
-
- bool operator ==(const base_vertex& other) const
-  {
-    return pos == other.pos && base_colour == other.base_colour && textel_uv == other.textel_uv; 
-  }
-
-};
-
-template<> struct hasher<base_vertex>
-    {
-    std::size_t operator()(base_vertex const& bv) const noexcept
-    {
-     return ((hasher<glm::vec3>()(bv.pos) ^
-            (hasher<glm::vec3>()(bv.base_colour) << 1)) >> 1) ^
-            (hasher<glm::vec2>()(bv.textel_uv) << 1);
-    }
-    };
-
-struct compute_vertex_A{
-    glm::vec4 vert;
-    bool operator ==(const compute_vertex_A& other) const noexcept
-    {
-        return vert == other.vert;
-    }
-};
-template<> struct hasher<compute_vertex_A>
-    {
-    std::size_t operator()(compute_vertex_A const& bv) const noexcept
-    {
-     return hasher<glm::vec4>()(bv.vert);
-    }
-    };
-
-/*
-
-namespace std {
-    template<> struct hash<base_vertex> {
-        size_t operator()(base_vertex const& vertex) const {
-            return ((hash<glm::vec3>()(vertex.pos) ^
-                   (hash<glm::vec3>()(vertex.color) << 1)) >> 1) ^
-                   (hash<glm::vec2>()(vertex.texCoord) << 1);
-        }
-    };
-}*/
-
+std::string trim(const std::string& str, std::vector<char> toremove);
+inline int stage_pos( const Shader_Stagez& in_stage);
 
 struct shader_pipe_raw
 {
-
-std::string folder_path;    
+std::string folder_path;
 Shader_Stagez stage_flags;
 EShLanguage esl_stage_flags;
 std::string pipe_name;
 std::vector<std::string> stage_filenames;
 
 std::vector<std::pair<EShLanguage,std::string>> stage_pair;
-
-
 std::vector<VkVertexInputAttributeDescription> vinput_attr_des;
-std::vector<VkDescriptorSetLayoutBinding> desc_layout_bindingz;
-
-/*
-std::string code_path(int index)
-{   
-
-    
-    std::stringstream iss(stage_filenames)
-    std::string path = folder_path;
-    path +=stage_filenames.at(index);
-    return path;
-}*/
 
 };
 
-
-std::string trim(const std::string& str, std::vector<char> toremove);
-
 class razar_vulkan_includer : public glslang::TShader::Includer
-{   
-    public : 
-  razar_vulkan_includer() : externalLocalDirectoryCount(0) {}
-  
- virtual IncludeResult* includeLocal(const char* headerName,
+{
+  public :
+   razar_vulkan_includer() : externalLocalDirectoryCount(0) {}
+   virtual IncludeResult* includeLocal(const char* headerName,
                                         const char* includerName,
                                         size_t inclusionDepth) override
-    {  
-        return readLocalPath(headerName, includerName, (int)inclusionDepth);
-    }
-        virtual void pushExternalLocalDirectory(const std::string& dir)
-    {
+     {
+       return readLocalPath(headerName, includerName, (int)inclusionDepth);
+     }
+
+     virtual void pushExternalLocalDirectory(const std::string& dir)
+     {
         directoryStack.push_back(dir);
         externalLocalDirectoryCount = (int)directoryStack.size();
-    }
+     }
 
-    virtual void releaseInclude(IncludeResult* result) override
-    {
-        if (result != nullptr) {
+     virtual void releaseInclude(IncludeResult* result) override
+     {
+       if (result != nullptr)
+        {
             delete [] static_cast<tUserDataElement*>(result->userData);
             delete result;
         }
-    }
+     }
 
-    virtual ~razar_vulkan_includer() override { }
-
+     virtual ~razar_vulkan_includer() override { }
 
     protected :
-        int externalLocalDirectoryCount;
-        std::vector<std::string> directoryStack;
-        typedef char tUserDataElement;
-      virtual IncludeResult* readLocalPath(const char* headerName, const char* includerName, int depth)
-    {
+     int externalLocalDirectoryCount;
+     std::vector<std::string> directoryStack;
+     typedef char tUserDataElement;
+     virtual IncludeResult* readLocalPath(const char* headerName, const char* includerName, int depth)
+     {
         // Discard popped include directories, and
         // initialize when at parse-time first level.
         directoryStack.resize(depth + externalLocalDirectoryCount);
@@ -270,36 +123,36 @@ class razar_vulkan_includer : public glslang::TShader::Includer
                 return newIncludeResult(path, file, (int)file.tellg());
             }
         }
-
         return nullptr;
-    }
+      }
 
-        virtual std::string getDirectory(const std::string path) const
-    {
+      virtual std::string getDirectory(const std::string path) const
+      {
         size_t last = path.find_last_of("/\\");
         return last == std::string::npos ? "." : path.substr(0, last);
-    }
-        virtual IncludeResult* newIncludeResult(const std::string& path, std::ifstream& file, int length) const
-    {
+      }
+      virtual IncludeResult* newIncludeResult(const std::string& path, std::ifstream& file, int length) const
+      {
         char* content = new tUserDataElement [length];
         file.seekg(0, file.beg);
         file.read(content, length);
         return new IncludeResult(path, content, length, content);
-    }
-                                     
+      }
 };
 
 class parser_vulkan_modual{
 
-protected : 
+protected :
 TBuiltInResource Defult_Resources;
 static std::unordered_map<std::string,shader_pipe_raw> shader_raw_pipez;
-static std::unordered_map<std::string, std::pair<Shader_Stagez,std::vector<std::vector<unsigned int>>>> compled_pipe_code;
+//static std::unordered_map<std::string, std::pair<Shader_Stagez,std::vector<std::vector<unsigned int>>>> compled_pipe_code;
+static std::unordered_map<std::string, std::pair<Shader_Stagez,std::array<std::vector<unsigned int>,6>>> compled_pipe_code;
+
 static bool glslangInitialized;
 
 void init_glslang();
 
-public : 
+public :
 ~parser_vulkan_modual()
 {
   glslang::FinalizeProcess();
@@ -310,17 +163,17 @@ parser_vulkan_modual()
   init_glslang();
 }
 
+const std::vector<VkVertexInputAttributeDescription> get_vertex_input_attr_desc(std::string name);
+
 VkFormat parse_vk_formate(std::stringstream& iss);
 Shader_Stagez shader_stages_active(std::stringstream& in_sstream);
 EShLanguage shader_stage_SPIRV(std::stringstream& in_sstream);
-
 uint32_t shader_offset(std::stringstream& iss);
-
 void shader_info_reader(const char* in_path);
 void pipe_define_data(std::stringstream& iss);
-
 void gen_complie_from_pipe(shader_pipe_raw& in_raw_pipe);
 const std::vector<unsigned int> gen_SPIRV(EShLanguage in_shd_type, std::string path);
+std::vector<unsigned int> return_raw_SPIRV(std::string name, Shader_Stagez stage);
 
 };
 
@@ -328,11 +181,9 @@ const std::vector<unsigned int> gen_SPIRV(EShLanguage in_shd_type, std::string p
 template<class data_struct>
 struct vertex_vulkan{
 
-
   data_struct data;
-  
 
-    static VkVertexInputBindingDescription get_binding_descrption(uint32_t index_binding)
+  static VkVertexInputBindingDescription get_binding_descrption(uint32_t index_binding)
     {
         VkVertexInputBindingDescription binding_description{};
         binding_description.binding = index_binding;
@@ -341,83 +192,56 @@ struct vertex_vulkan{
         return binding_description;
     }
 
-static VkVertexInputAttributeDescription get_attraibute_descriptions(vx_attr_desc_tuple& in_attr_desc)
-{
-    VkVertexInputAttributeDescription attr_desc{};
-    attr_desc.binding = std::get<VX_BINDING_LOC>(in_attr_desc);
-    attr_desc.location = std::get<VX_LOCATION_LOC>(in_attr_desc);
-    attr_desc.format = std::get<VX_FORMAT_LOC>(in_attr_desc); 
-    attr_desc.offset = std::get<VX_OFFSET_LOC>(in_attr_desc);
+  static VkVertexInputAttributeDescription get_attraibute_descriptions(vx_attr_desc_tuple& in_attr_desc)
+  {
+      VkVertexInputAttributeDescription attr_desc{};
+      attr_desc.binding = std::get<VX_BINDING_LOC>(in_attr_desc);
+      attr_desc.location = std::get<VX_LOCATION_LOC>(in_attr_desc);
+      attr_desc.format = std::get<VX_FORMAT_LOC>(in_attr_desc);
+      attr_desc.offset = std::get<VX_OFFSET_LOC>(in_attr_desc);
 
-}
+	  return attr_desc;
+  }
 
 bool operator ==(const vertex_vulkan& other) const {
-    return data == other.data; 
+    return data == other.data;
 }
 
 size_t operator()(vertex_vulkan const& vv) const noexcept
-{   
-    //size_t val = 
+{
+    //size_t val =
     return    std::hash<data_struct>{}(data);
 }
-/*
-    static std::vector<VkVertexInputAttributeDescription> get_attraibute_descriptions(vx_attr_desc_tuple& in_attr_desc)
-    {
 
-        //std::vector<vx_attr_desc_tuple> attuvyte_descs(); 
-       // std::vector<vx_attr_desc_tuple>
-
-
-
-
-    }*/
 };
 
 
 class fix_funnction_handle{
 
-VkPipelineVertexInputStateCreateInfo gen_vertex_input_info()
-{
-VkPipelineVertexInputStateCreateInfo vertexInputInfo{};
-vertexInputInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
-vertexInputInfo.vertexBindingDescriptionCount = 0;
-vertexInputInfo.pVertexBindingDescriptions = nullptr; // Optional
-vertexInputInfo.vertexAttributeDescriptionCount = 0;
-vertexInputInfo.pVertexAttributeDescriptions = nullptr; // Optional
+  VkPipelineVertexInputStateCreateInfo gen_vertex_input_info()
+  {
+  VkPipelineVertexInputStateCreateInfo vertexInputInfo{};
+  vertexInputInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
+  vertexInputInfo.vertexBindingDescriptionCount = 0;
+  vertexInputInfo.pVertexBindingDescriptions = nullptr; // Optional
+  vertexInputInfo.vertexAttributeDescriptionCount = 0;
+  vertexInputInfo.pVertexAttributeDescriptions = nullptr; // Optional
 
-return vertexInputInfo;
+  return vertexInputInfo;
 
+    }
+  VkPipelineInputAssemblyStateCreateInfo gen_assembly_state_info()
+  {
 
-}
-VkPipelineInputAssemblyStateCreateInfo gen_assembly_state_info()
-{
+  VkPipelineInputAssemblyStateCreateInfo inputAssembly{};
+  inputAssembly.sType = VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO;
+  inputAssembly.topology = VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST;
+  inputAssembly.primitiveRestartEnable = VK_FALSE;
 
-VkPipelineInputAssemblyStateCreateInfo inputAssembly{};
-inputAssembly.sType = VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO;
-inputAssembly.topology = VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST;
-inputAssembly.primitiveRestartEnable = VK_FALSE;
-
-return inputAssembly;
-
-}
-
-
+  return inputAssembly;
+  }
 };
 
-class vulkan_shader_uility
-{
-   /*/ bool read_shader()
-    {
-
-           FILE* shaderStream;
-
-            if(fopen_s(&shaderStream,file_path.string().c_str(),"rb")!=NULL)
-            {
-
-}
-    }*/
-
-};
 static void InitResources(TBuiltInResource &Defult_Resources) {
     Defult_Resources.maxLights = 120;
 		Defult_Resources.maxClipPlanes = 6;
@@ -515,7 +339,7 @@ static void InitResources(TBuiltInResource &Defult_Resources) {
 		Defult_Resources.limits.generalSamplerIndexing = 12;
 		Defult_Resources.limits.generalVariableIndexing = 12;
 		Defult_Resources.limits.generalConstantMatrixVectorIndexing = 12;
-        Defult_Resources.maxPatchVertices = 32;
+    Defult_Resources.maxPatchVertices = 32;
 		Defult_Resources.maxTessGenLevel = 64;
 		Defult_Resources.maxViewports = 16;
 		Defult_Resources.maxVertexAtomicCounters = 0;
